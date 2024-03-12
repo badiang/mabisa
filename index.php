@@ -10,6 +10,7 @@
     <meta name="author" content="">
 
     <title>MABISA | USTP</title>
+    <link rel="icon" type="image/x-icon" href="/img/icon/favicon.ico">
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -52,13 +53,13 @@
         <!-- <div class="row"> -->
 
             <div class="col-xl-7 col-lg-12 col-md-9">
-                <div class="card o-hidden border-0 shadow-lg my-5" style="border-radius: 5%;">
+                <div class="card o-hidden border-0 shadow-lg my-5" style="border-radius: 5%; background-color:#330033">
                     <div class="card-body p-0">
                         <div class="row">
                             <div class="col-lg-6 mv_hide">
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <div class="p-5" style="color: black">
+                                        <div class="p-5" style="color: white">
                                             <h2><b>Vision</b></h2>
                                             <h5 class="text-justify">A strongly determined and highly trusted Department committed  to capacitate and nurture local government units, public order and safety institutions to sustain peaceful, progressive, and resillient communities where people live happily.</h5>
                                         </div>
@@ -66,7 +67,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <div class="p-5" style="color: black;">
+                                        <div class="p-5" style="color: white;">
                                             <h2><b>Mission</b></h2>
                                             <h5 class="text-justify"> The Department shall promote peace and order, ensure public safety, strenghten capability of Local Government Units through active peoples participation and professionalized corps and civil servants.</h5>
                                         </div>
@@ -74,11 +75,15 @@
                                 </div>
                             </div>
                             <!-- <div class="col-lg-6" style="background-color: background: rgb(184,210,59);background: linear-gradient(342deg, rgba(184,210,59,1) 0%, rgba(234,34,34,1) 53%, rgba(0,108,255,1) 100%);opacity: 0.9;"> -->
-                            <div class="col-lg-6" style="background-color: #330033">
+                            <div class="col-lg-6" style="background-color: #ffffff">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <img src="img/logo/logo.png" width="300" height="300">
+                                    <br>
+                                    <br>
+                                    <br>
+                                        <img src="img/logo/index3.png" width="250" height="75">
                                     </div>
+                                    <br>
                                     <form class="user mt-4" action="actions/login.php" method="post">
                                         <div class="form-group">
                                             <label for="username"><b>Login:</b></label>
@@ -94,7 +99,7 @@
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
                                                 <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label text-white" for="customCheck">Remember
+                                                <label class="custom-control-label text-grey" for="customCheck">Remember
                                                     Me</label>
                                             </div>
                                         </div>
