@@ -11,10 +11,9 @@
 
     <title>MABISA | ALORAN</title>
     <link rel="icon" href="img/icon/favicon.png"/>
-=======
+
     <title>MABISA | Aloran</title>
     <link rel="icon" type="image/x-icon" href="/img/icon/favicon.ico">
->>>>>>> 017a19a93179287ab05592b16177af31c98e255c
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
