@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>MABISA | USTP</title>
-    <link rel="icon" type="image/x-icon" href="/img/icon/favicon.ico">
+    <title>MABISA | ALORAN</title>
+    <link rel="icon" href="img/icon/favicon.png"/>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -81,7 +81,7 @@
                                     <br>
                                     <br>
                                     <br>
-                                        <img src="img/logo/index3.png" width="250" height="75">
+                                        <img src="img/logo/index.png" width="250" height="75">
                                     </div>
                                     <br>
                                     <form class="user mt-4" action="actions/login.php" method="post">
