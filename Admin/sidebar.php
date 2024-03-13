@@ -8,7 +8,7 @@
                     <i class="fas fa-laugh-wink"></i>
                 </div> -->
                 <!-- <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div> -->
-                <img src="../img/logo/logo.png" width="75" height="95">
+                <img src="../img/logo/icon.png" width="75" height="95">
             </a>
 
             <!-- Divider -->
