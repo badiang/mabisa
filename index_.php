@@ -8,8 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+<<<<<<< HEAD
 
     <title>MABISA | ALORAN</title>
+=======
+<!-- Remove -->
+    <title>MABISA | Aloran</title>
+    <link rel="icon" type="image/x-icon" href="/img/icon/favicon.ico">
+>>>>>>> c88a2c13e69260b2541aff5bab43072cc0fa245f
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
