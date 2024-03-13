@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>MABISA | USTP</title>
-    <link rel="icon" type="image/x-icon" href="/img/icon/favicon0.ico">
+    <link rel="icon" type="image/x-icon" href="/img/icon/favicon.ico">
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
