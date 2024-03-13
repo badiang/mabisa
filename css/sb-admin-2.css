@@ -274,12 +274,12 @@ button,
   -webkit-appearance: button;
 }
 
-button:not(:disabled),
-[type="button"]:not(:disabled),
-[type="reset"]:not(:disabled),
+/* button:not(:disabled), */
+/* [type="button"]:not(:disabled), */
+/* [type="reset"]:not(:disabled),
 [type="submit"]:not(:disabled) {
-  cursor: pointer;
-}
+  cursor: pointer; */
+/* } */
 
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,

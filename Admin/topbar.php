@@ -773,7 +773,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+                    <h5 class="modal-title" id="exampleModalLabel"><strong>Change Password</strong></h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <!-- <span aria-hidden="true">×</span> -->
                     </button>
@@ -848,8 +848,8 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <h5 class="modal-title" id="exampleModalLabel"><strong>Change Email</strong></h5>
+                    <!-- <button class="close" type="button" data-dismiss="modal" aria-label="Close"> -->
                         <!-- <span aria-hidden="true">×</span> -->
                     </button>
                 </div>
@@ -891,8 +891,8 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Change Username</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <h5 class="modal-title" id="exampleModalLabel"><strong>Change Username</strong></h5>
+                    <!-- <button class="close" type="button" data-dismiss="modal" aria-label="Close"> -->
                         <!-- <span aria-hidden="true">×</span> -->
                     </button>
                 </div>

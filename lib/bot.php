@@ -9,9 +9,9 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+                <h5 class="modal-title" id="exampleModalLabel"><strong>Change</strong> <strong>Password</strong></h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
+                        <!-- <span aria-hidden="true">×</span> -->
                     </button>
                 </div>
                 <div class="modal-body">
@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
                     <a class="btn btn-primary" onclick="confirm_password()">Confirm</a>
                 </div>
             </div>
@@ -46,9 +46,9 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel"><strong>Ready to Leave?</strong></h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
+                        <!-- <span aria-hidden="true">×</span> -->
                     </button>
                 </div>
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
