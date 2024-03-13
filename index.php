@@ -9,11 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>MABISA | ALORAN</title>
-    <link rel="icon" href="img/icon/favicon.png"/>
-
     <title>MABISA | Aloran</title>
-    <link rel="icon" type="image/x-icon" href="/img/icon/favicon.ico">
+    <link rel="icon" href="img/icon/favicon.png"/>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
