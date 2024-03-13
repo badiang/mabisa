@@ -31,7 +31,7 @@
 
 <!-- <body class="bg-gradient-primary"> -->
 <!-- <body class="" style="background-color: background: rgb(184,210,59);background: linear-gradient(342deg, rgba(184,210,59,1) 0%, rgba(234,34,34,1) 53%, rgba(0,108,255,1) 100%);"> -->
-<body class="" style="background-image: url('img/logo/dilg.png');
+<body class="" style="background-color: f0f4f9;
             background-size: auto 100%; /* Adjust according to your needs */
             background-repeat: no-repeat;
             background-position: center; /* Center the background image */
@@ -52,7 +52,7 @@
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="p-5" style="color: black">
+                                <div class="p-5" style="color: white">
                                     <h1><b>Vision</b></h1>
                                     <h4 class="text-justify">A strongly determined and highly trusted Department committed  to capacitate and nurture local government units, public order and safety institutions to sustain peaceful, progressive, and resillient communities where people live happily.</h4>
                                 </div>
@@ -70,7 +70,7 @@
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="p-5" style="color: black;">
+                                <div class="p-5" style="color: white;">
                                     <h1><b>Mission</b></h1>
                                     <h4 class="text-justify"> The Department shall promote peace and order, ensure public safety, strenghten capability of Local Government Units through active peoples participation and professionalized corps and civil servants.</h4>
                                 </div>
@@ -91,7 +91,7 @@
                                     <!-- <div class="text-center bg-primary"> -->
                                     <div class="text-center">
                                         <!-- <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1> -->
-                                        <img src="img/logo/logo.png" width="200" height="200">
+                                        <img src="img/logo/index.png" width="250" height="75">
                                     </div>
                                     <form class="user mt-4" action="actions/login.php" method="post">
                                         <div class="form-group">
