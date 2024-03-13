@@ -86,7 +86,7 @@
                                     <br>
                                     <form class="user mt-4" action="actions/login.php" method="post">
                                         <div class="form-group">
-                                            <label for="username"><b>Login:</b></label>
+                                            <label for="username"><b>Username:</b></label>
                                             <input type="text" class="form-control form-control-user"
                                                 id="username" name="username" 
                                                 placeholder="Enter Username...">

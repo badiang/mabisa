@@ -248,14 +248,25 @@
 
     $query2->execute();
 
+
     while ($row2 = $query2->fetch(PDO::FETCH_ASSOC)) {
         $points[] = $row2['points'];
         $brgy[] = $row2['barangay_name'];
     }
-    $maxPoints = max($points);
-    $maxPointsIndex = array_search($maxPoints, $points);
-    $maxPointsRounded = ceil($maxPoints / 1000) * 1000;
- ?>
+
+    // Check if $points array is empty
+    if (!empty($points)) {
+        $maxPoints = max($points);
+        $maxPointsIndex = array_search($maxPoints, $points);
+        $maxPointsRounded = ceil($maxPoints / 1000) * 1000;
+    } else {
+        // Set default values if $points array is empty
+        $maxPoints = 0;
+        $maxPointsIndex = null;
+        $maxPointsRounded = 0;
+    }
+?>
+
 <script type="text/javascript">
     // Set new default font family and font color to mimic Bootstrap's default styling
 Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
