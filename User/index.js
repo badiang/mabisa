@@ -1,10 +1,10 @@
 function confirm_password() {
 	// alert('goods');
-	ok = 1;
-	current_password = $('#current_password').val();
-	current_password2 = $('#current_password2').val();
-	new_password = $('#new_password').val();
-// 	confirm_password = $('#confirm_password').val();
+	var ok = 1;
+	var current_password = $('#current_password2').val();
+	var current_password2 = $('#current_password2').val();
+	var new_password = $('#new_password').val();
+	var confirm_password = $('#confirm_password').val();
 
 	if (current_password != current_password2) {
         $('#alert_password').html('<span style="color: red;">Incorrect Current Password.</span>');

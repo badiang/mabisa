@@ -9,8 +9,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>MABISA | USTP</title>
+<<<<<<< HEAD
+    <title>MABISA | ALORAN</title>
+    <link rel="icon" href="img/icon/favicon.png"/>
+=======
+    <title>MABISA | Aloran</title>
     <link rel="icon" type="image/x-icon" href="/img/icon/favicon.ico">
+>>>>>>> 017a19a93179287ab05592b16177af31c98e255c
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -39,7 +44,7 @@
 
 <!-- <body class="bg-gradient-primary"> -->
 <!-- <body class="" style="background-color: background: rgb(184,210,59);background: linear-gradient(342deg, rgba(184,210,59,1) 0%, rgba(234,34,34,1) 53%, rgba(0,108,255,1) 100%);"> -->
-<body class="" style="background-image: url('img/bg/bg2.jpg');
+<body class="" style="background-color: #f0f4f9;
             background-size: cover; /* Adjust according to your needs */
             background-repeat: no-repeat;
             background-position: center; /* Center the background image */
@@ -53,7 +58,7 @@
         <!-- <div class="row"> -->
 
             <div class="col-xl-7 col-lg-12 col-md-9">
-                <div class="card o-hidden border-0 shadow-lg my-5" style="border-radius: 5%; background-color:#330033">
+                <div class="card o-hidden border-0 shadow-lg my-5" style="border-radius: 5%; background-color:#4e73df">
                     <div class="card-body p-0">
                         <div class="row">
                             <div class="col-lg-6 mv_hide">
@@ -125,7 +130,7 @@
                         </div>
                     </div>
                 </div>
-                <div style="background-color: black; height: 10px;width: 100%;border-radius: 50%;opacity: 0.5;"></div>
+            
             </div>
 
         </div>
