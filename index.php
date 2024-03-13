@@ -9,7 +9,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-<<<<<<< HEAD
     <title>MABISA | ALORAN</title>
     <link rel="icon" href="img/icon/favicon.png"/>
 =======
