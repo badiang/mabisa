@@ -125,7 +125,7 @@
                         </div>
                     </div>
                 </div>
-                <div style="background-color: black; height: 10px;width: 100%;border-radius: 50%;opacity: 0.5;"></div>
+            
             </div>
 
         </div>
