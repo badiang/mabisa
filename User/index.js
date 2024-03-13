@@ -29,14 +29,10 @@ function confirm_password() {
 		    	confirm_password: confirm_password,
 		      	change: 1
 		    },
-		    success:function(result){
-		    	alert('Successfully Change Password');
-		    	window.location.reload();
-		      	// $('#alert_password').html('<span style="color: green">Successfully Change Password</span>');
-		      	// $('#new_password').val('');
-				// $('#confirm_password').val('');
-		    }
+			success: function(result) {
+				$('#alert_password').html('<span style="color: green;">Password Successfully changed.</span>');
+			}
 		});
-    }
-	
+	}
 }
+	
