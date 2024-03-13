@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>MABISA | USTP</title>
+    <title>MABISA | Aloran</title>
     <link rel="icon" type="image/x-icon" href="/img/icon/favicon.ico">
 
     <!-- Custom fonts for this template-->
