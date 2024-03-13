@@ -81,7 +81,7 @@
                                     <br>
                                     <br>
                                     <br>
-                                        <img src="img/logo/index3.png" width="250" height="75">
+                                        <img src="img/logo/index.png" width="250" height="75">
                                     </div>
                                     <br>
                                     <form class="user mt-4" action="actions/login.php" method="post">
