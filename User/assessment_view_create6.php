@@ -216,7 +216,7 @@
                             </div>
                         </div>
                         <div class="card-body" id="viewLocation">
-                        <p style="text-align: right; padding-right: 25px;">Legends&nbsp;&nbsp;&nbsp;&nbsp;
+                        <p style="text-align: center;">Legends :&nbsp;&nbsp;&nbsp;&nbsp;
                                     <span class="btn btn-sm btn-danger btn-circle">
                                         <i class="">&times;</i>
                                     </span>
@@ -239,9 +239,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 6.1.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 250px">Attachments</th>
+                                            <th class="text-center" style="width: 150px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -305,9 +305,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 6.1.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 250px">Attachments</th>
+                                            <th class="text-center" style="width: 150px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -370,9 +370,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 6.1.3</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 250px">Attachments</th>
+                                            <th class="text-center" style="width: 150px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -435,9 +435,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 6.1.4</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 250px">Attachments</th>
+                                            <th class="text-center" style="width: 150px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -507,9 +507,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 6.2.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 250px">Attachments</th>
+                                            <th class="text-center" style="width: 150px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -864,9 +864,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 6.3.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 250px">Attachments</th>
+                                            <th class="text-center" style="width: 150px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>

@@ -173,25 +173,26 @@
                                     </tfoot>
                                     <?php } ?>
                                     <tbody>
-                                    <?php 
-                                    $num = 1;
+                                        <?php 
+                                        $num = 1;
 
-                                    $query = $dbconn->prepare("SELECT a.keyctr,a.id,a.year,a.date_time,a.status,c.region_name,d.province_name,e.city_name,f.barangay_name FROM assessment as a  inner join region as c on a.region_code=c.region_code inner join province as d on a.province_code=d.province_code inner join city as e on a.city_code=e.city_code inner join barangay as f on a.barangay_code=f.barangay_code");
-                                    $query->execute();
-                                    while($row = $query->fetch(PDO::FETCH_ASSOC)) {
-                                        $date = DateTime::createFromFormat('Y-m-d H:i:s', $row['date_time']);
-                                        $formattedDate = $date->format('F j, Y g:i A');
-                                        $g_id = $row['id'];
-                                        $g_year = $row['year'];
+                                        $query = $dbconn->prepare("SELECT a.keyctr,a.id,a.year,a.date_time,a.status,c.region_name,d.province_name,e.city_name,f.barangay_name FROM assessment as a  inner join region as c on a.region_code=c.region_code inner join province as d on a.province_code=d.province_code inner join city as e on a.city_code=e.city_code inner join barangay as f on a.barangay_code=f.barangay_code");
+                                        $query->execute();
+                                        while($row = $query->fetch(PDO::FETCH_ASSOC)) {
+                                            $date = DateTime::createFromFormat('Y-m-d H:i:s', $row['date_time']);
+                                            $formattedDate = $date->format('F j, Y g:i A');
+                                            $g_id = $row['id'];
+                                            $g_year = $row['year'];
 
-                                        // Count completed assessments for the current entry
-                                        $stmt = $dbconn->prepare("SELECT COUNT(*) FROM area_assessment_points WHERE user_id=? AND year_=?");
-                                        $stmt->bindParam(1, $g_id);
-                                        $stmt->bindParam(2, $g_year);
-                                        $stmt->execute();
-                                        $count = $stmt->fetchColumn();
+                                            $count_complete = 0;
+                                            $stmt = $dbconn->prepare("SELECT COUNT(*) FROM area_assessment_points where user_id=? and year_=?");
+                                            $stmt->bindParam(1, $g_id);
+                                            $stmt->bindParam(2, $g_year);
+                                            $stmt->execute();
+                                            echo $count = $stmt->fetchColumn();
 
-                                        ?>
+                                            $count_complete = $count_complete+$count;
+                                       ?>
                                         <tr>
                                             <td><?php echo $num ?></td>
                                             <td><?php echo $row['region_name'] ?></td>
@@ -199,31 +200,29 @@
                                             <td><?php echo $row['city_name'] ?></td>
                                             <td><?php echo $row['barangay_name'] ?></td>
                                             <td><?php echo $row['year'] ?></td>
-                                            <?php 
-                                            if ($count == 29) {?>
+                                            <?php if ($count_complete == 29) {?>
                                                 <td class="bg-success text-white">Completed</td>
-                                            <?php } elseif ($count > 0) {?>
+                                            <?php }else if($count_complete > 0){?>
                                                 <td class="bg-info text-white">On Progress</td>
-                                            <?php } else {?>
+                                            <?php }else{?>
                                                 <td>Not Completed</td>
                                             <?php }?>
-
                                             <td><?php echo $formattedDate; ?></td>
-                                            <td class="text-center">
-                                                <a href="view_other_barangay_file.php?tab=<?php echo $row['keyctr'].'/1' ?>" target="_blank" class="btn btn-sm btn-info">View</a>
+                                            <td>
+                                                <a href="view_other_barangay_file.php?tab=<?php echo $row['keyctr'].'/1' ?>" target="_blank" class="btn btn-sm btn-info">view</a>
+                                              <!-- <a href="#" class="btn btn-sm btn-danger btn-circle" onclick="delete_user('<?php echo $row['id'] ?>')">
+                                                  <i class="fas fa-trash"></i>
+                                              </a> -->
                                             </td>
-
                                         </tr>
-                                        <?php $num++;
-                                        } ?>
-
-                                        <?php if ($num == 1) { // If no results found ?>
-                                            <tr>
-                                                <td colspan="9">No Results Found..</td>
-                                            </tr>
-                                        <?php } ?>
+                                        <?php $num++;} ?>
                                     </tbody>
-
+                                    <?php }else{ ?>
+                                        <tbody>
+                                            <tr>
+                                                <td>No Results Found..</td>
+                                            </tr>
+                                        </tbody>
                                     <?php } ?>
                                 </table>
                             </div>
@@ -249,11 +248,7 @@
 <?php include '../lib/bot.php' ?>
 <script src="assessment.js"></script>
 <script type="text/javascript">
-    $(document).ready(function() {
-        $('#list_of_barangay_assessment').DataTable({
-            searching: false
-        });
-    });
+    $('#list_of_barangay_assessment').DataTable();
 </script>
 </body>
 
