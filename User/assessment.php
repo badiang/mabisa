@@ -23,6 +23,9 @@
             $stmt->execute();
         }
     }
+
+
+
     
     
  ?>
@@ -156,7 +159,7 @@
                                             <th>Year</th>
                                             <th>Status</th>
                                             <th>Transaction Date & Time</th>
-                                            <th>Action</th>
+                                            <th class="text-center"style="width: 100px;">Action</th>
                                         </tr>
                                     </thead>
                                     <?php if ($count > 10) { ?>
@@ -170,21 +173,29 @@
                                             <th>Year</th>
                                             <th>Status</th>
                                             <th>Transaction Date & Time</th>
-                                            <th>Action</th>
+                                            <th class="text-center"style="width: 100px;">Action</th>
+                                    
                                         </tr>
                                     </tfoot>
                                     <?php } ?>
                                     <tbody>
                                         <?php 
                                         $num = 1;
-                                        // $query = $dbconn->prepare("SELECT * FROM pos.received_from where area_code=? and cmp_code=? order by brand_name");
                                         $query = $dbconn->prepare("SELECT a.keyctr,a.id,a.year,a.date_time,a.status,c.region_name,d.province_name,e.city_name,f.barangay_name FROM assessment as a  inner join region as c on a.region_code=c.region_code inner join province as d on a.province_code=d.province_code inner join city as e on a.city_code=e.city_code inner join barangay as f on a.barangay_code=f.barangay_code where a.id='$id'");
-                                        // $query->bindParam(1, $area_code);
-                                        // $query->bindParam(2, $cmp_code);
                                         $query->execute();
                                         while($row = $query->fetch(PDO::FETCH_ASSOC)) {
                                             $date = DateTime::createFromFormat('Y-m-d H:i:s', $row['date_time']);
                                             $formattedDate = $date->format('F j, Y g:i A');
+                                            $g_year = $row['year'];
+                                            //count complete
+                                            $count_complete = 0;
+                                            $stmt = $dbconn->prepare("SELECT COUNT(*) FROM area_assessment_points where user_id=? and year_=?");
+                                            $stmt->bindParam(1, $id);
+                                            $stmt->bindParam(2, $g_year);
+                                            $stmt->execute();
+                                            $count = $stmt->fetchColumn();
+
+                                            $count_complete = $count_complete+$count;
                                        ?>
                                         <tr>
                                             <td><?php echo $num ?></td>
@@ -193,19 +204,21 @@
                                             <td><?php echo $row['city_name'] ?></td>
                                             <td><?php echo $row['barangay_name'] ?></td>
                                             <td><?php echo $row['year'] ?></td>
-                                            <?php if ($row['status'] == 0) {?>
-                                                <td>Not Completed</td>
-                                            <?php }else{?>
+                                            <?php if ($count_complete == 29) {?>
                                                 <td class="bg-success text-white">Completed</td>
+                                            <?php }else if($count_complete > 0){?>
+                                                <td class="bg-info text-white">On Progress</td>
+                                            <?php }else{?>
+                                                <td>Not Completed</td>
                                             <?php }?>
                                             <td><?php echo $formattedDate; ?></td>
-                                            <td>
-                                                <a href="assessment_view.php?tab=<?php echo $row['keyctr'] ?>" class="btn btn-sm btn-info">view</a>
-                                                <a href="#" class="btn btn-sm btn-danger" onclick="delete_assessment('<?php echo $row['keyctr'] ?>')">delete</a>
-                                              <!-- <a href="#" class="btn btn-sm btn-danger btn-circle" onclick="delete_user('<?php echo $row['id'] ?>')">
-                                                  <i class="fas fa-trash"></i>
-                                              </a> -->
+                                            <td class="text-center">
+                                                <div class="btn-group" role="group" aria-label="Assessment Actions">
+                                                    <a href="assessment_view.php?tab=<?php echo $row['keyctr'] ?>" class="btn btn-sm btn-info">View</a>
+                                                    <a href="#" class="btn btn-sm btn-danger" onclick="delete_assessment('<?php echo $row['keyctr'] ?>')">Delete</a>
+                                                </div>
                                             </td>
+
                                         </tr>
                                         <?php $num++;} ?>
                                     </tbody>

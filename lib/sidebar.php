@@ -3,7 +3,7 @@
     <!-- <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: background: rgb(184,210,59);background: linear-gradient(342deg, rgba(184,210,59,1) 0%, rgba(234,34,34,1) 53%, rgba(0,108,255,1) 100%);"> -->
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center mt-4" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center mt-4" href="index.php">
                 <!-- <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div> -->
@@ -40,11 +40,11 @@
                     </div>
                 </div>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="comment_review.php">
                     <i class="fas fa-file-alt"></i>
                     <span>Comment Review</span></a>
-            </li>
+            </li> -->
             <!-- <li class="nav-item">
                 <a class="nav-link" href="self_assessment.php">
                     <i class="fas fa-file"></i>

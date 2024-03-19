@@ -922,3 +922,68 @@ function btn_app63(a) {
         alert('Remarks is needed before clicking Approved or Disapproved');
     }
 }
+
+
+function btn_submit_comment(area,under_area,comment_numb,comment,year,user_id){
+    if (comment == '') {
+        $('#alert'+area+under_area+comment_numb).html('<div class="text-danger">Comment is empty</div>');
+    }else{
+        $('#alert'+area+under_area+comment_numb).html('<div class="text-danger"></div>');
+        // alert(comment_numb);
+        $.ajax({
+            type: "POST",
+            url: "actions/addComments.php",
+            async: false,
+            data: {
+                area: area,
+                under_area: under_area,
+                comment_numb: comment_numb,
+                comment: comment,
+                year: year,
+                user_id: user_id,
+                update: 1
+            },
+            success:function(result){
+                // alert(result);
+                if(result == 0){
+                   $('#alert'+area+under_area+comment_numb).html('<div class="text-success" id="a'+area+under_area+comment_numb+'">Comment is Successfully added</div>');
+                   setTimeout(function() {
+                        // window.location.reload();
+                        $('#a'+area+under_area+comment_numb).hide();
+                    }, 2000);
+                }else{
+                    $('#alert'+area+under_area+comment_numb).html('<div class="text-warning">System error: Submit comment failed</div>');;
+                }
+            }
+        });
+    }
+    
+}
+
+function btn_submit_approved(area,under_area,approved_numb,approve,year,user_id){
+    $.ajax({
+        type: "POST",
+        url: "actions/approved_disapproved.php",
+        async: false,
+        data: {
+            area: area,
+            under_area: under_area,
+            approved_numb: approved_numb,
+            approve: approve,
+            year: year,
+            user_id: user_id,
+            submit: 1
+        },
+        success:function(result){
+            // alert(result);
+            if(result == 1){
+               alert('Successfully Approved');
+               window.location.reload();
+            }else{
+                alert('Successfully Disapproved');
+               window.location.reload();
+            }
+        }
+    });
+    
+}

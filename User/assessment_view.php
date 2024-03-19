@@ -44,7 +44,7 @@
             $query1->bindParam(2, $year);
             $query1->execute();
             $result1 = $query1->fetch(PDO::FETCH_ASSOC);
-            echo $result1['count11'];
+            // echo $result1['count11'];
             if ($result1['count11'] > 0) {
 
                 $query_temp11 = $dbconn->prepare("SELECT points FROM core11 where id=? and year=?");

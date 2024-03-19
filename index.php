@@ -14,9 +14,7 @@
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -31,14 +29,28 @@
         }
 
         .image-container img {
-            margin: 0 10px; /* Adjust the margin as needed */
+            margin: 0 2px; /* Adjust the margin as needed */
+        }
+
+        /* Make text smaller */
+        h2, h5, label, .form-control {
+            font-size: 0.8em !important;
+        }
+
+        /* Reduce padding */
+        .p-5 {
+            padding: 1rem !important;
+        }
+
+        /* Adjust button size */
+        .btn {
+            padding: 0.25rem 0.5rem !important;
+            font-size: 0.8em !important;
         }
         
     </style>
 </head>
 
-<!-- <body class="bg-gradient-primary"> -->
-<!-- <body class="" style="background-color: background: rgb(184,210,59);background: linear-gradient(342deg, rgba(184,210,59,1) 0%, rgba(234,34,34,1) 53%, rgba(0,108,255,1) 100%);"> -->
 <body class="" style="background-color: #f0f4f9;
             background-size: cover; /* Adjust according to your needs */
             background-repeat: no-repeat;
@@ -46,44 +58,41 @@
             margin: 0;">
 
     <!-- <div class="container"> -->
-    <div class="container-fluid">
+    <div class="container-fluid d-flex justify-content-center align-items-center" style="min-height: 100vh;">
 
         <!-- Outer Row -->
         <div class="row justify-content-center">
         <!-- <div class="row"> -->
 
-            <div class="col-xl-7 col-lg-12 col-md-9">
-                <div class="card o-hidden border-0 shadow-lg my-5" style="border-radius: 5%; background-color:#4e73df">
+            <div class="col-xl-6 col-lg-8 col-md-8">
+                <div class="card o-hidden border-0 shadow-lg my-10" style="border-radius: 2%; background-color:#4e73df">
                     <div class="card-body p-0">
                         <div class="row">
                             <div class="col-lg-6 mv_hide">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="p-5" style="color: white">
-                                            <h2><b>Vision</b></h2>
-                                            <h5 class="text-justify">A strongly determined and highly trusted Department committed  to capacitate and nurture local government units, public order and safety institutions to sustain peaceful, progressive, and resillient communities where people live happily.</h5>
-                                        </div>
+                                <br>
+                                <br>
+                                <div class="col-lg-12 text-center" style="padding-right: 0px;"> <!-- Center the content and add padding -->
+                                    <div class="p-5" style="color: white">
+                                    <h2> <b style="font-size: 30px;">Vision</b></h2>
+                                        <h5 class="text-justify">A strongly determined and highly trusted Department committed to capacitate and nurture local government units, public order and safety institutions to sustain peaceful, progressive, and resilient communities where people live happily.</h5>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="p-5" style="color: white;">
-                                            <h2><b>Mission</b></h2>
-                                            <h5 class="text-justify"> The Department shall promote peace and order, ensure public safety, strenghten capability of Local Government Units through active peoples participation and professionalized corps and civil servants.</h5>
-                                        </div>
+                                <div class="col-lg-12 text-center" style="padding-right: 0px;"> <!-- Center the content and add padding -->
+                                    <div class="p-5" style="color: white;">
+                                        <h2><b style="font-size: 30px; ">Mission</b></h2>
+                                        <h5 class="text-justify">The Department shall promote peace and order, ensure public safety, strengthen capability of Local Government Units through active people's participation and professionalized corps and civil servants.</h5>
                                     </div>
                                 </div>
+
                             </div>
-                            <!-- <div class="col-lg-6" style="background-color: background: rgb(184,210,59);background: linear-gradient(342deg, rgba(184,210,59,1) 0%, rgba(234,34,34,1) 53%, rgba(0,108,255,1) 100%);opacity: 0.9;"> -->
                             <div class="col-lg-6" style="background-color: #ffffff">
                                 <div class="p-5">
                                     <div class="text-center">
                                     <br>
-                                    <br>
-                                    <br>
-                                        <img src="img/logo/index.png" width="250" height="75">
+                                    
+                                        <img src="img/logo/index.png" width="200" height="60">
                                     </div>
-                                    <br>
+                                    
                                     <form class="user mt-4" action="actions/login.php" method="post">
                                         <div class="form-group">
                                             <label for="username"><b>Username:</b></label>
@@ -106,20 +115,12 @@
                                         <button type="submit" name="login" id="login" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </button>
-                                        <!-- <a href="index.html" class="btn btn-google btn-user btn-block">
-                                            <i class="fab fa-google fa-fw"></i> Login with Google
-                                        </a>
-                                        <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                            <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
-                                        </a> -->
                                     </form>
-                                    <!-- <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
-                                    </div> -->
-                                    <!-- <div class="text-center">
-                                        <a class="small" href="signup/">Create an Account!</a>
-                                    </div> -->
-                                    <small>Note: This website is for the LGU of ALORAN only.</small>
+                                    <div class="text-center">
+                                        <small style="font-size: 10px;">Note: This website is for the LGU of ALORAN only.</small> <!-- Centered text -->
+                                    </div>
+                                    <br>
+                               
                                 </div>
                             </div>
                         </div>
@@ -132,16 +133,4 @@
 
     </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
-
-</body>
-
-</html>
+    <!-- Bootstrap core

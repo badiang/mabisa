@@ -40,6 +40,63 @@
             $year = $result['year'];
             $_SESSION['view_year'] = $year;
             //$status = $result['status'];
+
+            $query21 = $dbconn->prepare("SELECT remarks,area_points,
+                comment1,approved1,
+                comment2,approved2,
+                comment3,approved3,
+                comment4,approved4,
+                comment5,approved5
+                FROM area_assessment_points where user_id=? and year_=? and area_number=2 and under_area=1");
+            $query21->bindParam(1, $id);
+            $query21->bindParam(2, $year);
+            $query21->execute();
+            $result21 = $query21->fetch(PDO::FETCH_ASSOC);
+            $remarks21 = $result21['remarks'];
+            $area_points21 = $result21['area_points'];
+            $comment211 = $result21['comment1'];
+            $approved211 = $result21['approved1'];
+            $comment212 = $result21['comment2'];
+            $approved212 = $result21['approved2'];
+            $comment213 = $result21['comment3'];
+            $approved213 = $result21['approved3'];
+            $comment214 = $result21['comment4'];
+            $approved214 = $result21['approved4'];
+            $comment215 = $result21['comment5'];
+            $approved215 = $result21['approved5'];
+
+            $query22 = $dbconn->prepare("SELECT remarks,area_points,
+                comment1,approved1,
+                comment2,approved2,
+                comment3,approved3
+                FROM area_assessment_points where user_id=? and year_=? and area_number=2 and under_area=2");
+            $query22->bindParam(1, $id);
+            $query22->bindParam(2, $year);
+            $query22->execute();
+            $result22 = $query22->fetch(PDO::FETCH_ASSOC);
+            $remarks22 = $result22['remarks'];
+            $area_points22 = $result22['area_points'];
+            $comment221 = $result22['comment1'];
+            $approved221 = $result22['approved1'];
+            $comment222 = $result22['comment2'];
+            $approved222 = $result22['approved2'];
+            $comment223 = $result22['comment3'];
+            $approved223 = $result22['approved3'];
+
+            $query23 = $dbconn->prepare("SELECT remarks,area_points,
+                comment1,approved1,
+                comment2,approved2
+                FROM area_assessment_points where user_id=? and year_=? and area_number=2 and under_area=3");
+            $query23->bindParam(1, $id);
+            $query23->bindParam(2, $year);
+            $query23->execute();
+            $result23 = $query23->fetch(PDO::FETCH_ASSOC);
+            $remarks23 = $result23['remarks'];
+            $area_points23 = $result23['area_points'];
+            $comment231 = $result23['comment1'];
+            $approved231 = $result23['approved1'];
+            $comment232 = $result23['comment2'];
+            $approved232 = $result23['approved2'];
         }else{
 ?>
             <script type="text/javascript">
@@ -159,10 +216,17 @@
                         <p style="text-align: right; padding-right: 25px;">Legends&nbsp;&nbsp;&nbsp;&nbsp;
                                     <span class="btn btn-sm btn-danger btn-circle">
                                         <i class="">&times;</i>
-                                    </span>&nbsp;&nbsp;No&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <span class="btn btn-sm btn-success btn-circle">
-                                        <i class="fas fa-check"></i>
-                                    </span>&nbsp;&nbsp;Yes
+                                    </span>
+                                    &nbsp;&nbsp;Empty
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <img src="../img/icon/On Process.png" width="30">
+                                    &nbsp;&nbsp;On Process
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <img src="../img/icon/Approved.png" width="30">
+                                    &nbsp;&nbsp;Approved
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <img src="../img/icon/Disapproved.png" width="30">
+                                    &nbsp;&nbsp;Disapproved
                                 </p>
                             <div class="row bg-info">
                                 <div class="col-lg-12 text-center text-white"><b>2.1 Functionality of the Barangay Disaster Risk Reduction and Management Commitee (BDRRMC)</b></div>
@@ -173,6 +237,7 @@
                                         <tr>
                                             <th class="text-center">Reports 2.1.1</th>
                                             <th class="text-center">Attachments</th>
+                                            <th class="text-center">Actions</th>
                                             <th class="text-center">Status</th>
                                         </tr>
                                     </thead>
@@ -193,15 +258,43 @@
                                                 <?php } ?>
                                                 
                                             </td>
+                                            <td>
+                                                <button class="btn btn-sm btn-primary btn-sm btn-comment" data-toggle="modal" data-target="#commentModal211" onclick="generateFileLink()">
+                                                    View Comment
+                                                </button>
+                                                <div class="modal fade" id="commentModal211" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="commentModalLabel" style="font-weight: bold;">View Comment</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                  <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                            <div class="form-group mt-3">
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment211 ?></label>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
                                             <td class="text-center">
-                                                <?php if (file_exists($filePath.$filename211)) { ?>
-                                                    <span class="btn btn-sm btn-success btn-circle">
-                                                        <i class="fas fa-check"></i>
-                                                    </span>
+                                                <?php if (!empty($approved211)){ ?>
+                                                    <?php if ($approved211 == 1){ ?>
+                                                        <img src="../img/icon/Approved.png" width="30">
+                                                    <?php }else{ ?>
+                                                        <img src="../img/icon/Disapproved.png" width="30">
+                                                    <?php } ?>
                                                 <?php }else{ ?>
-                                                    <span class="btn btn-sm btn-danger btn-circle">
-                                                        <i class="">&times;</i>
-                                                    </span>
+                                                    <?php if (file_exists($filePath.$filename211)) { ?>
+                                                        <img src="../img/icon/On Process.png" width="30">
+                                                    <?php }else{ ?>
+                                                        <span class="btn btn-sm btn-danger btn-circle">
+                                                            <i class="">&times;</i>
+                                                        </span>
+                                                    <?php } ?>
                                                 <?php } ?>
                                             </td>
                                         </tr>
@@ -210,6 +303,7 @@
                                         <tr>
                                             <th class="text-center">Reports 2.1.2</th>
                                             <th class="text-center">Attachments</th>
+                                            <th class="text-center">Actions</th>
                                             <th class="text-center">Status</th>
                                         </tr>
                                     </thead>
@@ -227,15 +321,43 @@
                                                     <button class="btn btn-sm btn-success" onclick="upload_212()">Upload File</button>
                                                 <?php } ?>
                                             </td>
+                                            <td>
+                                                <button class="btn btn-sm btn-primary btn-sm btn-comment" data-toggle="modal" data-target="#commentModal212" onclick="generateFileLink()">
+                                                    View Comment
+                                                </button>
+                                                <div class="modal fade" id="commentModal212" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="commentModalLabel" style="font-weight: bold;">View Comment</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                  <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                            <div class="form-group mt-3">
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment212 ?></label>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
                                             <td class="text-center">
-                                                <?php if (file_exists($filePath.$filename212)) { ?>
-                                                    <span class="btn btn-sm btn-success btn-circle">
-                                                        <i class="fas fa-check"></i>
-                                                    </span>
+                                                <?php if (!empty($approved212)){ ?>
+                                                    <?php if ($approved212 == 1){ ?>
+                                                        <img src="../img/icon/Approved.png" width="30">
+                                                    <?php }else{ ?>
+                                                        <img src="../img/icon/Disapproved.png" width="30">
+                                                    <?php } ?>
                                                 <?php }else{ ?>
-                                                    <span class="btn btn-sm btn-danger btn-circle">
-                                                        <i class="">&times;</i>
-                                                    </span>
+                                                    <?php if (file_exists($filePath.$filename212)) { ?>
+                                                        <img src="../img/icon/On Process.png" width="30">
+                                                    <?php }else{ ?>
+                                                        <span class="btn btn-sm btn-danger btn-circle">
+                                                            <i class="">&times;</i>
+                                                        </span>
+                                                    <?php } ?>
                                                 <?php } ?>
                                             </td>
                                         </tr>
@@ -244,6 +366,7 @@
                                         <tr>
                                             <th class="text-center">Reports 2.1.3</th>
                                             <th class="text-center">Attachments</th>
+                                            <th class="text-center">Actions</th>
                                             <th class="text-center">Status</th>
                                         </tr>
                                     </thead>
@@ -261,15 +384,43 @@
                                                     <button class="btn btn-sm btn-success" onclick="upload_213()">Upload File</button>
                                                 <?php } ?>
                                             </td>
+                                            <td>
+                                                <button class="btn btn-sm btn-primary btn-sm btn-comment" data-toggle="modal" data-target="#commentModal213" onclick="generateFileLink()">
+                                                    View Comment
+                                                </button>
+                                                <div class="modal fade" id="commentModal213" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="commentModalLabel" style="font-weight: bold;">View Comment</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                  <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                            <div class="form-group mt-3">
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment213 ?></label>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
                                             <td class="text-center">
-                                                <?php if (file_exists($filePath.$filename213)) { ?>
-                                                    <span class="btn btn-sm btn-success btn-circle">
-                                                        <i class="fas fa-check"></i>
-                                                    </span>
+                                                <?php if (!empty($approved213)){ ?>
+                                                    <?php if ($approved213 == 1){ ?>
+                                                        <img src="../img/icon/Approved.png" width="30">
+                                                    <?php }else{ ?>
+                                                        <img src="../img/icon/Disapproved.png" width="30">
+                                                    <?php } ?>
                                                 <?php }else{ ?>
-                                                    <span class="btn btn-sm btn-danger btn-circle">
-                                                        <i class="">&times;</i>
-                                                    </span>
+                                                    <?php if (file_exists($filePath.$filename213)) { ?>
+                                                        <img src="../img/icon/On Process.png" width="30">
+                                                    <?php }else{ ?>
+                                                        <span class="btn btn-sm btn-danger btn-circle">
+                                                            <i class="">&times;</i>
+                                                        </span>
+                                                    <?php } ?>
                                                 <?php } ?>
                                             </td>
                                         </tr>
@@ -278,6 +429,7 @@
                                         <tr>
                                             <th class="text-center">Reports 2.1.4</th>
                                             <th class="text-center">Attachments</th>
+                                            <th class="text-center">Actions</th>
                                             <th class="text-center">Status</th>
                                         </tr>
                                     </thead>
@@ -295,15 +447,43 @@
                                                     <button class="btn btn-sm btn-success" onclick="upload_214()">Upload File</button>
                                                 <?php } ?>
                                             </td>
+                                            <td>
+                                                <button class="btn btn-sm btn-primary btn-sm btn-comment" data-toggle="modal" data-target="#commentModal214" onclick="generateFileLink()">
+                                                    View Comment
+                                                </button>
+                                                <div class="modal fade" id="commentModal214" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="commentModalLabel" style="font-weight: bold;">View Comment</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                  <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                            <div class="form-group mt-3">
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment214 ?></label>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
                                             <td class="text-center">
-                                                <?php if (file_exists($filePath.$filename214)) { ?>
-                                                    <span class="btn btn-sm btn-success btn-circle">
-                                                        <i class="fas fa-check"></i>
-                                                    </span>
+                                                <?php if (!empty($approved214)){ ?>
+                                                    <?php if ($approved214 == 1){ ?>
+                                                        <img src="../img/icon/Approved.png" width="30">
+                                                    <?php }else{ ?>
+                                                        <img src="../img/icon/Disapproved.png" width="30">
+                                                    <?php } ?>
                                                 <?php }else{ ?>
-                                                    <span class="btn btn-sm btn-danger btn-circle">
-                                                        <i class="">&times;</i>
-                                                    </span>
+                                                    <?php if (file_exists($filePath.$filename214)) { ?>
+                                                        <img src="../img/icon/On Process.png" width="30">
+                                                    <?php }else{ ?>
+                                                        <span class="btn btn-sm btn-danger btn-circle">
+                                                            <i class="">&times;</i>
+                                                        </span>
+                                                    <?php } ?>
                                                 <?php } ?>
                                             </td>
                                         </tr>
@@ -320,15 +500,43 @@
                                                     <button class="btn btn-sm btn-success" onclick="upload_215()">Upload File</button>
                                                 <?php } ?>
                                             </td>
+                                            <td>
+                                                <button class="btn btn-sm btn-primary btn-sm btn-comment" data-toggle="modal" data-target="#commentModal215" onclick="generateFileLink()">
+                                                    View Comment
+                                                </button>
+                                                <div class="modal fade" id="commentModal215" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="commentModalLabel" style="font-weight: bold;">View Comment</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                  <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                            <div class="form-group mt-3">
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment215 ?></label>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
                                             <td class="text-center">
-                                                <?php if (file_exists($filePath.$filename215)) { ?>
-                                                    <span class="btn btn-sm btn-success btn-circle">
-                                                        <i class="fas fa-check"></i>
-                                                    </span>
+                                                <?php if (!empty($approved215)){ ?>
+                                                    <?php if ($approved215 == 1){ ?>
+                                                        <img src="../img/icon/Approved.png" width="30">
+                                                    <?php }else{ ?>
+                                                        <img src="../img/icon/Disapproved.png" width="30">
+                                                    <?php } ?>
                                                 <?php }else{ ?>
-                                                    <span class="btn btn-sm btn-danger btn-circle">
-                                                        <i class="">&times;</i>
-                                                    </span>
+                                                    <?php if (file_exists($filePath.$filename215)) { ?>
+                                                        <img src="../img/icon/On Process.png" width="30">
+                                                    <?php }else{ ?>
+                                                        <span class="btn btn-sm btn-danger btn-circle">
+                                                            <i class="">&times;</i>
+                                                        </span>
+                                                    <?php } ?>
                                                 <?php } ?>
                                             </td>
                                         </tr>
@@ -344,6 +552,7 @@
                                         <tr>
                                             <th class="text-center">Reports 2.2.1</th>
                                             <th class="text-center">Attachments</th>
+                                            <th class="text-center">Actions</th>
                                             <th class="text-center">Status</th>
                                         </tr>
                                     </thead>
@@ -363,15 +572,43 @@
                                                 <?php } ?>
                                                 
                                             </td>
+                                            <td>
+                                                <button class="btn btn-sm btn-primary btn-sm btn-comment" data-toggle="modal" data-target="#commentModal221" onclick="generateFileLink()">
+                                                    View Comment
+                                                </button>
+                                                <div class="modal fade" id="commentModal221" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="commentModalLabel" style="font-weight: bold;">View Comment</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                  <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                            <div class="form-group mt-3">
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment221 ?></label>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
                                             <td class="text-center">
-                                                <?php if (file_exists($filePath.$filename216)) { ?>
-                                                    <span class="btn btn-sm btn-success btn-circle">
-                                                        <i class="fas fa-check"></i>
-                                                    </span>
+                                                <?php if (!empty($approved221)){ ?>
+                                                    <?php if ($approved221 == 1){ ?>
+                                                        <img src="../img/icon/Approved.png" width="30">
+                                                    <?php }else{ ?>
+                                                        <img src="../img/icon/Disapproved.png" width="30">
+                                                    <?php } ?>
                                                 <?php }else{ ?>
-                                                    <span class="btn btn-sm btn-danger btn-circle">
-                                                        <i class="">&times;</i>
-                                                    </span>
+                                                    <?php if (file_exists($filePath.$filename216)) { ?>
+                                                        <img src="../img/icon/On Process.png" width="30">
+                                                    <?php }else{ ?>
+                                                        <span class="btn btn-sm btn-danger btn-circle">
+                                                            <i class="">&times;</i>
+                                                        </span>
+                                                    <?php } ?>
                                                 <?php } ?>
                                             </td>
                                         </tr>
@@ -380,6 +617,7 @@
                                         <tr>
                                             <th class="text-center">Reports 2.2.2</th>
                                             <th class="text-center">Attachments</th>
+                                            <th class="text-center">Actions</th>
                                             <th class="text-center">Status</th>
                                         </tr>
                                     </thead>
@@ -397,15 +635,43 @@
                                                     <button class="btn btn-sm btn-success" onclick="upload_217()">Upload File</button>
                                                 <?php } ?>
                                             </td>
+                                            <td>
+                                                <button class="btn btn-sm btn-primary btn-sm btn-comment" data-toggle="modal" data-target="#commentModal222" onclick="generateFileLink()">
+                                                    View Comment
+                                                </button>
+                                                <div class="modal fade" id="commentModal222" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="commentModalLabel" style="font-weight: bold;">View Comment</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                  <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                            <div class="form-group mt-3">
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment222 ?></label>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
                                             <td class="text-center">
-                                                <?php if (file_exists($filePath.$filename217)) { ?>
-                                                    <span class="btn btn-sm btn-success btn-circle">
-                                                        <i class="fas fa-check"></i>
-                                                    </span>
+                                                <?php if (!empty($approved222)){ ?>
+                                                    <?php if ($approved222 == 1){ ?>
+                                                        <img src="../img/icon/Approved.png" width="30">
+                                                    <?php }else{ ?>
+                                                        <img src="../img/icon/Disapproved.png" width="30">
+                                                    <?php } ?>
                                                 <?php }else{ ?>
-                                                    <span class="btn btn-sm btn-danger btn-circle">
-                                                        <i class="">&times;</i>
-                                                    </span>
+                                                    <?php if (file_exists($filePath.$filename217)) { ?>
+                                                        <img src="../img/icon/On Process.png" width="30">
+                                                    <?php }else{ ?>
+                                                        <span class="btn btn-sm btn-danger btn-circle">
+                                                            <i class="">&times;</i>
+                                                        </span>
+                                                    <?php } ?>
                                                 <?php } ?>
                                             </td>
                                         </tr>
@@ -414,6 +680,7 @@
                                         <tr>
                                             <th class="text-center">Reports 2.2.3</th>
                                             <th class="text-center">Attachments</th>
+                                            <th class="text-center">Actions</th>
                                             <th class="text-center">Status</th>
                                         </tr>
                                     </thead>
@@ -431,15 +698,43 @@
                                                     <button class="btn btn-sm btn-success" onclick="upload_218()">Upload File</button>
                                                 <?php } ?>
                                             </td>
+                                            <td>
+                                                <button class="btn btn-sm btn-primary btn-sm btn-comment" data-toggle="modal" data-target="#commentModal223" onclick="generateFileLink()">
+                                                    View Comment
+                                                </button>
+                                                <div class="modal fade" id="commentModal223" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="commentModalLabel" style="font-weight: bold;">View Comment</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                  <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                            <div class="form-group mt-3">
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment223 ?></label>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
                                             <td class="text-center">
-                                                <?php if (file_exists($filePath.$filename218)) { ?>
-                                                    <span class="btn btn-sm btn-success btn-circle">
-                                                        <i class="fas fa-check"></i>
-                                                    </span>
+                                                <?php if (!empty($approved223)){ ?>
+                                                    <?php if ($approved223 == 1){ ?>
+                                                        <img src="../img/icon/Approved.png" width="30">
+                                                    <?php }else{ ?>
+                                                        <img src="../img/icon/Disapproved.png" width="30">
+                                                    <?php } ?>
                                                 <?php }else{ ?>
-                                                    <span class="btn btn-sm btn-danger btn-circle">
-                                                        <i class="">&times;</i>
-                                                    </span>
+                                                    <?php if (file_exists($filePath.$filename218)) { ?>
+                                                        <img src="../img/icon/On Process.png" width="30">
+                                                    <?php }else{ ?>
+                                                        <span class="btn btn-sm btn-danger btn-circle">
+                                                            <i class="">&times;</i>
+                                                        </span>
+                                                    <?php } ?>
                                                 <?php } ?>
                                             </td>
                                         </tr>
@@ -456,6 +751,7 @@
                                         <tr>
                                             <th class="text-center">Reports 2.3.1</th>
                                             <th class="text-center">Attachments</th>
+                                            <th class="text-center">Actions</th>
                                             <th class="text-center">Status</th>
                                         </tr>
                                     </thead>
@@ -475,15 +771,43 @@
                                                 <?php } ?>
                                                 
                                             </td>
+                                            <td>
+                                                <button class="btn btn-sm btn-primary btn-sm btn-comment" data-toggle="modal" data-target="#commentModal231" onclick="generateFileLink()">
+                                                    View Comment
+                                                </button>
+                                                <div class="modal fade" id="commentModal231" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="commentModalLabel" style="font-weight: bold;">View Comment</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                  <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                            <div class="form-group mt-3">
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment231 ?></label>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
                                             <td class="text-center">
-                                                <?php if (file_exists($filePath.$filename219)) { ?>
-                                                    <span class="btn btn-sm btn-success btn-circle">
-                                                        <i class="fas fa-check"></i>
-                                                    </span>
+                                                <?php if (!empty($approved231)){ ?>
+                                                    <?php if ($approved231 == 1){ ?>
+                                                        <img src="../img/icon/Approved.png" width="30">
+                                                    <?php }else{ ?>
+                                                        <img src="../img/icon/Disapproved.png" width="30">
+                                                    <?php } ?>
                                                 <?php }else{ ?>
-                                                    <span class="btn btn-sm btn-danger btn-circle">
-                                                        <i class="">&times;</i>
-                                                    </span>
+                                                    <?php if (file_exists($filePath.$filename219)) { ?>
+                                                        <img src="../img/icon/On Process.png" width="30">
+                                                    <?php }else{ ?>
+                                                        <span class="btn btn-sm btn-danger btn-circle">
+                                                            <i class="">&times;</i>
+                                                        </span>
+                                                    <?php } ?>
                                                 <?php } ?>
                                             </td>
                                         </tr>
@@ -492,6 +816,7 @@
                                         <tr>
                                             <th class="text-center">Reports 2.3.2</th>
                                             <th class="text-center">Attachments</th>
+                                            <th class="text-center">Actions</th>
                                             <th class="text-center">Status</th>
                                         </tr>
                                     </thead>
@@ -509,15 +834,43 @@
                                                     <button class="btn btn-sm btn-success" onclick="upload_220()">Upload File</button>
                                                 <?php } ?>
                                             </td>
+                                            <td>
+                                                <button class="btn btn-sm btn-primary btn-sm btn-comment" data-toggle="modal" data-target="#commentModal232" onclick="generateFileLink()">
+                                                    View Comment
+                                                </button>
+                                                <div class="modal fade" id="commentModal232" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="commentModalLabel" style="font-weight: bold;">View Comment</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                  <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                            <div class="form-group mt-3">
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment232 ?></label>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
                                             <td class="text-center">
-                                                <?php if (file_exists($filePath.$filename220)) { ?>
-                                                    <span class="btn btn-sm btn-success btn-circle">
-                                                        <i class="fas fa-check"></i>
-                                                    </span>
+                                                <?php if (!empty($approved232)){ ?>
+                                                    <?php if ($approved232 == 1){ ?>
+                                                        <img src="../img/icon/Approved.png" width="30">
+                                                    <?php }else{ ?>
+                                                        <img src="../img/icon/Disapproved.png" width="30">
+                                                    <?php } ?>
                                                 <?php }else{ ?>
-                                                    <span class="btn btn-sm btn-danger btn-circle">
-                                                        <i class="">&times;</i>
-                                                    </span>
+                                                    <?php if (file_exists($filePath.$filename220)) { ?>
+                                                        <img src="../img/icon/On Process.png" width="30">
+                                                    <?php }else{ ?>
+                                                        <span class="btn btn-sm btn-danger btn-circle">
+                                                            <i class="">&times;</i>
+                                                        </span>
+                                                    <?php } ?>
                                                 <?php } ?>
                                             </td>
                                         </tr>

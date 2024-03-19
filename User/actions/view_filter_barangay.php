@@ -79,6 +79,18 @@
                                         while($row = $query->fetch(PDO::FETCH_ASSOC)) {
                                             $date = DateTime::createFromFormat('Y-m-d H:i:s', $row['date_time']);
                                             $formattedDate = $date->format('F j, Y g:i A');
+
+                                            $g_id = $row['id'];
+                                            $g_year = $row['year'];
+
+                                            $count_complete = 0;
+                                            $stmt = $dbconn->prepare("SELECT COUNT(*) FROM area_assessment_points where user_id=? and year_=?");
+                                            $stmt->bindParam(1, $id);
+                                            $stmt->bindParam(2, $g_year);
+                                            $stmt->execute();
+                                            echo $count = $stmt->fetchColumn();
+
+                                            $count_complete = $coun_complete+$count;
                                        ?>
                                         <tr>
                                             <td><?php echo $num ?></td>
@@ -87,11 +99,13 @@
                                             <td><?php echo $row['city_name'] ?></td>
                                             <td><?php echo $row['barangay_name'] ?></td>
                                             <td><?php echo $row['year'] ?></td>
-                                            <?if ($row['status'] == 0) {?>
-                                                <td>Not Completed</td>
-                                            <?}else{?>
+                                            <?php if ($count_complete == 29) {?>
                                                 <td class="bg-success text-white">Completed</td>
-                                            <?}?>
+                                            <?php }else if($count_complete > 0){?>
+                                                <td class="bg-info text-white">On Progress</td>
+                                            <?php }else{?>
+                                                <td>Not Completed</td>
+                                            <?php }?>
                                             <td><?php echo $formattedDate; ?></td>
                                             <td>
                                                 <a href="view_other_barangay_file.php?tab=<?php echo $row['keyctr'].'/1' ?>" target="_blank" class="btn btn-sm btn-info">view</a>

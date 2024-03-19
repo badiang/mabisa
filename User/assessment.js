@@ -272,5 +272,13 @@ function view_filter() {
 		      	$('#list_of_barangay_assessment').html(result);
 		    }
 		});
-	}
+		
+		type="text/javascript">
+    $(document).ready(function() {
+        $('#list_of_barangay_assessment').DataTable({
+            searching: false
+        });
+    });
+	
+}
 }
