@@ -5,7 +5,7 @@
 	// $password = "";
 
 	$host = "localhost";
-	$dbname = "mabisa_no_data";
+	$dbname = "mabisa";
 	$username = "root";
 	$password = "";
 
