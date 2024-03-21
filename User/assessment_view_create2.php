@@ -27,76 +27,85 @@
         $stmt->execute();
         $count = $stmt->fetchColumn();
 
-        if ($count >= 1) {
-            $query = $dbconn->prepare("SELECT a.keyctr,a.id,a.year,a.date_time,a.status,c.region_name,d.province_name,e.city_name,f.barangay_name FROM assessment as a  inner join region as c on a.region_code=c.region_code inner join province as d on a.province_code=d.province_code inner join city as e on a.city_code=e.city_code inner join barangay as f on a.barangay_code=f.barangay_code where a.keyctr=?");
-            $query->bindParam(1, $key);
-            $query->execute();
-            $result = $query->fetch(PDO::FETCH_ASSOC);
+    if ($count >= 1) {
+        $query = $dbconn->prepare("SELECT a.keyctr,a.id,a.year,a.date_time,a.status,c.region_name,d.province_name,e.city_name,f.barangay_name FROM assessment as a  inner join region as c on a.region_code=c.region_code inner join province as d on a.province_code=d.province_code inner join city as e on a.city_code=e.city_code inner join barangay as f on a.barangay_code=f.barangay_code where a.keyctr=?");
+        $query->bindParam(1, $key);
+        $query->execute();
+        $result = $query->fetch(PDO::FETCH_ASSOC);
 
-            $region_name = $result['region_name'];
-            $province_name = $result['province_name'];
-            $city_name = $result['city_name'];
-            $barangay_name = $result['barangay_name'];
-            $year = $result['year'];
-            $_SESSION['view_year'] = $year;
-            //$status = $result['status'];
+        $region_name = $result['region_name'];
+        $province_name = $result['province_name'];
+        $city_name = $result['city_name'];
+        $barangay_name = $result['barangay_name'];
+        $year = $result['year'];
+        $_SESSION['view_year'] = $year;
+        //$status = $result['status'];
 
-            $query21 = $dbconn->prepare("SELECT remarks,area_points,
-                comment1,approved1,
-                comment2,approved2,
-                comment3,approved3,
-                comment4,approved4,
-                comment5,approved5
-                FROM area_assessment_points where user_id=? and year_=? and area_number=2 and under_area=1");
-            $query21->bindParam(1, $id);
-            $query21->bindParam(2, $year);
-            $query21->execute();
-            $result21 = $query21->fetch(PDO::FETCH_ASSOC);
-            $remarks21 = $result21['remarks'];
-            $area_points21 = $result21['area_points'];
-            $comment211 = $result21['comment1'];
-            $approved211 = $result21['approved1'];
-            $comment212 = $result21['comment2'];
-            $approved212 = $result21['approved2'];
-            $comment213 = $result21['comment3'];
-            $approved213 = $result21['approved3'];
-            $comment214 = $result21['comment4'];
-            $approved214 = $result21['approved4'];
-            $comment215 = $result21['comment5'];
-            $approved215 = $result21['approved5'];
+        $query21 = $dbconn->prepare("SELECT remarks,area_points,
+            comment1,approved1,
+            comment2,approved2,
+            comment3,approved3,
+            comment4,approved4,
+            comment5,approved5
+            FROM area_assessment_points where user_id=? and year_=? and area_number=2 and under_area=1");
+        $query21->bindParam(1, $id);
+        $query21->bindParam(2, $year);
+        $query21->execute();
+        $result21 = $query21->fetch(PDO::FETCH_ASSOC);
+    
+    if ($result21 !== false) {
+        $remarks21 = $result21['remarks'];
+        $area_points21 = $result21['area_points'];
+        $comment211 = $result21['comment1'];
+        $approved211 = $result21['approved1'];
+        $comment212 = $result21['comment2'];
+        $approved212 = $result21['approved2'];
+        $comment213 = $result21['comment3'];
+        $approved213 = $result21['approved3'];
+        $comment214 = $result21['comment4'];
+        $approved214 = $result21['approved4'];
+        $comment215 = $result21['comment5'];
+        $approved215 = $result21['approved5'];
+    }
 
-            $query22 = $dbconn->prepare("SELECT remarks,area_points,
-                comment1,approved1,
-                comment2,approved2,
-                comment3,approved3
-                FROM area_assessment_points where user_id=? and year_=? and area_number=2 and under_area=2");
-            $query22->bindParam(1, $id);
-            $query22->bindParam(2, $year);
-            $query22->execute();
-            $result22 = $query22->fetch(PDO::FETCH_ASSOC);
-            $remarks22 = $result22['remarks'];
-            $area_points22 = $result22['area_points'];
-            $comment221 = $result22['comment1'];
-            $approved221 = $result22['approved1'];
-            $comment222 = $result22['comment2'];
-            $approved222 = $result22['approved2'];
-            $comment223 = $result22['comment3'];
-            $approved223 = $result22['approved3'];
+        $query22 = $dbconn->prepare("SELECT remarks,area_points,
+            comment1,approved1,
+            comment2,approved2,
+            comment3,approved3
+            FROM area_assessment_points where user_id=? and year_=? and area_number=2 and under_area=2");
+        $query22->bindParam(1, $id);
+        $query22->bindParam(2, $year);
+        $query22->execute();
+        $result22 = $query22->fetch(PDO::FETCH_ASSOC);
 
-            $query23 = $dbconn->prepare("SELECT remarks,area_points,
-                comment1,approved1,
-                comment2,approved2
-                FROM area_assessment_points where user_id=? and year_=? and area_number=2 and under_area=3");
-            $query23->bindParam(1, $id);
-            $query23->bindParam(2, $year);
-            $query23->execute();
-            $result23 = $query23->fetch(PDO::FETCH_ASSOC);
-            $remarks23 = $result23['remarks'];
-            $area_points23 = $result23['area_points'];
-            $comment231 = $result23['comment1'];
-            $approved231 = $result23['approved1'];
-            $comment232 = $result23['comment2'];
-            $approved232 = $result23['approved2'];
+    if ($result22 !== false) {
+        $remarks22 = $result22['remarks'];
+        $area_points22 = $result22['area_points'];
+        $comment221 = $result22['comment1'];
+        $approved221 = $result22['approved1'];
+        $comment222 = $result22['comment2'];
+        $approved222 = $result22['approved2'];
+        $comment223 = $result22['comment3'];
+        $approved223 = $result22['approved3'];
+    }
+
+        $query23 = $dbconn->prepare("SELECT remarks,area_points,
+            comment1,approved1,
+            comment2,approved2
+            FROM area_assessment_points where user_id=? and year_=? and area_number=2 and under_area=3");
+        $query23->bindParam(1, $id);
+        $query23->bindParam(2, $year);
+        $query23->execute();
+        $result23 = $query23->fetch(PDO::FETCH_ASSOC);
+
+    if ($result23 !== false) {
+        $remarks23 = $result23['remarks'];
+        $area_points23 = $result23['area_points'];
+        $comment231 = $result23['comment1'];
+        $approved231 = $result23['approved1'];
+        $comment232 = $result23['comment2'];
+        $approved232 = $result23['approved2'];
+    }
         }else{
 ?>
             <script type="text/javascript">
@@ -273,7 +282,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment211 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment221) ? $comment221 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -336,7 +345,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment212 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment212) ? $comment212 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -399,7 +408,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment213 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment213) ? $comment213 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -462,7 +471,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment214 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment214) ? $comment214 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -515,7 +524,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment215 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment215) ? $comment215 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -586,7 +595,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment221 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment221) ? $comment221 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -649,7 +658,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment222 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment222) ? $comment222 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -712,7 +721,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment223 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment223) ? $comment223 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -784,7 +793,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment231 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment231) ? $comment231 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -847,7 +856,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment232 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment232) ? $comment232 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>

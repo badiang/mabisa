@@ -48,10 +48,13 @@
             $query51->bindParam(2, $year);
             $query51->execute();
             $result51 = $query51->fetch(PDO::FETCH_ASSOC);
+
+        if ($result51 !== false) {
             $remarks51 = $result51['remarks'];
             $area_points51 = $result51['area_points'];
             $comment511 = $result51['comment1'];
             $approved511 = $result51['approved1'];
+        }
 
             $query52 = $dbconn->prepare("SELECT remarks,area_points,
                 comment1,approved1,
@@ -61,12 +64,15 @@
             $query52->bindParam(2, $year);
             $query52->execute();
             $result52 = $query52->fetch(PDO::FETCH_ASSOC);
+        
+        if ($result52 !== false) {
             $remarks52 = $result52['remarks'];
             $area_points52 = $result52['area_points'];
             $comment521 = $result52['comment1'];
             $approved521 = $result52['approved1'];
             $comment522 = $result52['comment2'];
             $approved522 = $result52['approved2'];
+        }
 
             $query53 = $dbconn->prepare("SELECT remarks,area_points,
                 comment1,approved1 
@@ -75,10 +81,13 @@
             $query53->bindParam(2, $year);
             $query53->execute();
             $result53 = $query53->fetch(PDO::FETCH_ASSOC);
+        
+        if ($result53 !== false) {
             $remarks53 = $result53['remarks'];
             $area_points53 = $result53['area_points'];
             $comment531 = $result53['comment1'];
             $approved531 = $result53['approved1'];
+        }
         }else{
 ?>
             <script type="text/javascript">
@@ -255,7 +264,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment511 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment511) ? $comment511 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -327,7 +336,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment521 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment521) ? $comment521 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -392,7 +401,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment522 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment522) ? $comment522 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -464,7 +473,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment531 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment531) ? $comment531: '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
