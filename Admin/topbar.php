@@ -192,8 +192,8 @@
                                     Alerts Center
                                 </h6>
                                 <?php 
-                                    $sql_noti_show = $dbconn->prepare("SELECT b.keyctr,a.year,c.barangay_name,a.id FROM core11 as a inner join assessment as b on b.id=a.id inner join barangay as c on b.barangay_code=c.barangay_code where a.noti_me=1 ");
-                                    $sql_noti_show->execute();
+                                    $sql_noti_show = $dbconn->prepare("SELECT b.keyctr,a.year,c.barangay_name,a.id FROM core11 as a inner join assessment as b on b.id=a.id inner join barangay as c on b.barangay_code=c.barangay_code where a.noti_me=1 LIMIT 5");
+                                    $sql_noti_show->execute();                                    
                                     while($row_noti_show = $sql_noti_show->fetch(PDO::FETCH_ASSOC)){ 
                                 ?>
                                     <a class="dropdown-item d-flex align-items-center" href="view_other_barangay_file.php?tab=<?php echo $row_noti_show['keyctr'] ?>/1&code=<?php echo $row_noti_show['id'] ?>&yr=<?php echo $row_noti_show['year'] ?>&xn=1">
@@ -725,9 +725,8 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <!-- <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span> -->
                                 <span class="mr-2 d-none d-lg-inline small" style="color: black;"><b><?php echo $_SESSION['username'] ?></b></span>
-                                <img class="img-profile rounded-circle"
-                                    src="../img/undraw_profile.svg">
-                            </a>
+                                    <img id="profilePicture" class="img-profile rounded-circle" src="../img/default_profile.png">
+                                </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
@@ -744,16 +743,20 @@
                                     Activity Log
                                 </a> -->
                                 <!-- <div class="dropdown-divider"></div> -->
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#profileModal">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Change Profile Picture
+                                </a>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#email">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    <i class="fas fa-envelope fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Email
                                 </a>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#username">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    <i class="fas fa-address-card fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Change Username
                                 </a>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#passwordModal2">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    <i class="fas fa-lock fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Change Password
                                 </a>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
@@ -766,6 +769,44 @@
                     </ul>
 
                 </nav>
+<!-- Modal -->
+<div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="profileModalLabel">Upload Profile Picture</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="uploadForm" action="admin/actions/upload.php" method="post" enctype="multipart/form-data">
+                    <!-- Label for old/new profile picture -->
+                    <div class="form-group text-center mb-3">
+                        <span id="pictureStatusLabel">Your current profile picture</span>
+                    </div>
+                    <!-- Profile Picture Preview -->
+                    <div class="form-group text-center">
+                        <img id="profilePreview" class="img-fluid rounded-circle mb-3" src="../img/default_profile.png" alt="Profile Preview" style="max-width: 150px; max-height: 150px;">
+                    </div>
+                    <!-- File Input and Upload Button -->
+                    <div class="form-row align-items-center">
+                        <div class="col">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="fileToUpload" name="fileToUpload" onchange="previewProfilePicture(this);">
+                                <label class="custom-file-label" for="fileToUpload">Choose file</label>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary">Upload</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <!-- Logout Modal-->
     <div class="modal fade" id="passwordModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -931,3 +972,59 @@
 
         }
     </script>
+<script>
+// Function to preview profile picture and update file name
+function previewProfilePicture(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            $('#profilePreview').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+
+        // Update file name label
+        var fileName = input.files[0].name;
+        $(input).next('.custom-file-label').html(fileName);
+
+        // Update picture status label
+        $('#pictureStatusLabel').text('Your new profile picture');
+    }
+}
+</script>
+<script>
+    // Function to check if the user has scrolled to the bottom of the modal
+    function isScrolledToBottom() {
+        var modal = document.getElementById('yourModalId'); // Replace 'yourModalId' with the actual ID of your modal
+        return modal.scrollTop + modal.clientHeight >= modal.scrollHeight;
+    }
+
+    // Function to load more notifications
+    function loadMoreNotifications() {
+        var modal = document.getElementById('yourModalId'); // Replace 'yourModalId' with the actual ID of your modal
+        var currentCount = modal.getElementsByClassName('dropdown-item').length;
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == XMLHttpRequest.DONE) {
+                if (xhr.status == 200) {
+                    // Append new notifications to the modal
+                    var response = xhr.responseText;
+                    modal.innerHTML += response;
+                } else {
+                    console.log('Error loading more notifications');
+                }
+            }
+        };
+        xhr.open('GET', 'load_more_notifications.php?offset=' + currentCount, true); // Adjust the URL as per your server-side script
+        xhr.send();
+    }
+
+    // Event listener to check scrolling and load more notifications
+    var modal = document.getElementById('yourModalId'); // Replace 'yourModalId' with the actual ID of your modal
+    modal.addEventListener('scroll', function() {
+        if (isScrolledToBottom()) {
+            loadMoreNotifications();
+        }
+    });
+</script>
