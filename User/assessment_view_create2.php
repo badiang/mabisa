@@ -27,85 +27,84 @@
         $stmt->execute();
         $count = $stmt->fetchColumn();
 
-    if ($count >= 1) {
-        $query = $dbconn->prepare("SELECT a.keyctr,a.id,a.year,a.date_time,a.status,c.region_name,d.province_name,e.city_name,f.barangay_name FROM assessment as a  inner join region as c on a.region_code=c.region_code inner join province as d on a.province_code=d.province_code inner join city as e on a.city_code=e.city_code inner join barangay as f on a.barangay_code=f.barangay_code where a.keyctr=?");
-        $query->bindParam(1, $key);
-        $query->execute();
-        $result = $query->fetch(PDO::FETCH_ASSOC);
+        if ($count >= 1) {
+            $query = $dbconn->prepare("SELECT a.keyctr,a.id,a.year,a.date_time,a.status,c.region_name,d.province_name,e.city_name,f.barangay_name FROM assessment as a  inner join region as c on a.region_code=c.region_code inner join province as d on a.province_code=d.province_code inner join city as e on a.city_code=e.city_code inner join barangay as f on a.barangay_code=f.barangay_code where a.keyctr=?");
+            $query->bindParam(1, $key);
+            $query->execute();
+            $result = $query->fetch(PDO::FETCH_ASSOC);
 
-        $region_name = $result['region_name'];
-        $province_name = $result['province_name'];
-        $city_name = $result['city_name'];
-        $barangay_name = $result['barangay_name'];
-        $year = $result['year'];
-        $_SESSION['view_year'] = $year;
-        //$status = $result['status'];
+            $region_name = $result['region_name'];
+            $province_name = $result['province_name'];
+            $city_name = $result['city_name'];
+            $barangay_name = $result['barangay_name'];
+            $year = $result['year'];
+            $_SESSION['view_year'] = $year;
+            //$status = $result['status'];
 
-        $query21 = $dbconn->prepare("SELECT remarks,area_points,
-            comment1,approved1,
-            comment2,approved2,
-            comment3,approved3,
-            comment4,approved4,
-            comment5,approved5
-            FROM area_assessment_points where user_id=? and year_=? and area_number=2 and under_area=1");
-        $query21->bindParam(1, $id);
-        $query21->bindParam(2, $year);
-        $query21->execute();
-        $result21 = $query21->fetch(PDO::FETCH_ASSOC);
+            $query21 = $dbconn->prepare("SELECT remarks,area_points,
+                comment1,approved1,
+                comment2,approved2,
+                comment3,approved3,
+                comment4,approved4,
+                comment5,approved5
+                FROM area_assessment_points where user_id=? and year_=? and area_number=2 and under_area=1");
+            $query21->bindParam(1, $id);
+            $query21->bindParam(2, $year);
+            $query21->execute();
+            $result21 = $query21->fetch(PDO::FETCH_ASSOC);
+
+        if ($result21 !== false) {
+            $remarks21 = $result21['remarks'];
+            $area_points21 = $result21['area_points'];
+            $comment211 = $result21['comment1'];
+            $approved211 = $result21['approved1'];
+            $comment212 = $result21['comment2'];
+            $approved212 = $result21['approved2'];
+            $comment213 = $result21['comment3'];
+            $approved213 = $result21['approved3'];
+            $comment214 = $result21['comment4'];
+            $approved214 = $result21['approved4'];
+            $comment215 = $result21['comment5'];
+            $approved215 = $result21['approved5'];
+        }
+            $query22 = $dbconn->prepare("SELECT remarks,area_points,
+                comment1,approved1,
+                comment2,approved2,
+                comment3,approved3
+                FROM area_assessment_points where user_id=? and year_=? and area_number=2 and under_area=2");
+            $query22->bindParam(1, $id);
+            $query22->bindParam(2, $year);
+            $query22->execute();
+            $result22 = $query22->fetch(PDO::FETCH_ASSOC);
+        
+        if ($result22 !== false) {
+            $remarks22 = $result22['remarks'];
+            $area_points22 = $result22['area_points'];
+            $comment221 = $result22['comment1'];
+            $approved221 = $result22['approved1'];
+            $comment222 = $result22['comment2'];
+            $approved222 = $result22['approved2'];
+            $comment223 = $result22['comment3'];
+            $approved223 = $result22['approved3'];
+        }
+
+            $query23 = $dbconn->prepare("SELECT remarks,area_points,
+                comment1,approved1,
+                comment2,approved2
+                FROM area_assessment_points where user_id=? and year_=? and area_number=2 and under_area=3");
+            $query23->bindParam(1, $id);
+            $query23->bindParam(2, $year);
+            $query23->execute();
+            $result23 = $query23->fetch(PDO::FETCH_ASSOC);
     
-    if ($result21 !== false) {
-        $remarks21 = $result21['remarks'];
-        $area_points21 = $result21['area_points'];
-        $comment211 = $result21['comment1'];
-        $approved211 = $result21['approved1'];
-        $comment212 = $result21['comment2'];
-        $approved212 = $result21['approved2'];
-        $comment213 = $result21['comment3'];
-        $approved213 = $result21['approved3'];
-        $comment214 = $result21['comment4'];
-        $approved214 = $result21['approved4'];
-        $comment215 = $result21['comment5'];
-        $approved215 = $result21['approved5'];
-    }
-
-        $query22 = $dbconn->prepare("SELECT remarks,area_points,
-            comment1,approved1,
-            comment2,approved2,
-            comment3,approved3
-            FROM area_assessment_points where user_id=? and year_=? and area_number=2 and under_area=2");
-        $query22->bindParam(1, $id);
-        $query22->bindParam(2, $year);
-        $query22->execute();
-        $result22 = $query22->fetch(PDO::FETCH_ASSOC);
-
-    if ($result22 !== false) {
-        $remarks22 = $result22['remarks'];
-        $area_points22 = $result22['area_points'];
-        $comment221 = $result22['comment1'];
-        $approved221 = $result22['approved1'];
-        $comment222 = $result22['comment2'];
-        $approved222 = $result22['approved2'];
-        $comment223 = $result22['comment3'];
-        $approved223 = $result22['approved3'];
-    }
-
-        $query23 = $dbconn->prepare("SELECT remarks,area_points,
-            comment1,approved1,
-            comment2,approved2
-            FROM area_assessment_points where user_id=? and year_=? and area_number=2 and under_area=3");
-        $query23->bindParam(1, $id);
-        $query23->bindParam(2, $year);
-        $query23->execute();
-        $result23 = $query23->fetch(PDO::FETCH_ASSOC);
-
-    if ($result23 !== false) {
-        $remarks23 = $result23['remarks'];
-        $area_points23 = $result23['area_points'];
-        $comment231 = $result23['comment1'];
-        $approved231 = $result23['approved1'];
-        $comment232 = $result23['comment2'];
-        $approved232 = $result23['approved2'];
-    }
+        if ($result23 !== false) {
+            $remarks23 = $result23['remarks'];
+            $area_points23 = $result23['area_points'];
+            $comment231 = $result23['comment1'];
+            $approved231 = $result23['approved1'];
+            $comment232 = $result23['comment2'];
+            $approved232 = $result23['approved2'];
+        }
         }else{
 ?>
             <script type="text/javascript">
@@ -134,34 +133,12 @@
 </head>
 
 <body id="page-top">
-
-    <!-- Page Wrapper -->
     <div id="wrapper">
-
-        <!-- Sidebar -->
         <?php include '../lib/sidebar.php' ?>
-        <!-- End of Sidebar -->
-
-        <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
-
-            <!-- Main Content -->
             <div id="content">
-
-                <!-- Topbar -->
                 <?php include '../lib/topbar.php' ?>
-                <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
                 <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <!-- <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-                        For more information about DataTables, please visit the <a target="_blank"
-                            href="https://datatables.net">official DataTables documentation</a>.</p> -->
-
-                    <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-body">
                             <div class="row">
@@ -199,18 +176,6 @@
                                         <div class="col-lg-9"><?php echo $year ?></div>
                                     </div>
                                 </div>
-                                <!-- <div class="col-lg-12">
-                                    <div class="row">
-                                        <div class="col-lg-2"><b>Status</b></div>
-                                        <div class="col-lg-9">
-                                            <?if ($status == 0) {?>
-                                                <span class="btn-sm btn btn-primary">In Progress</span>
-                                            <?}else{?>
-                                                <span><?php echo $status ?></span>
-                                            <?}?>
-                                        </div>
-                                    </div>
-                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -222,7 +187,7 @@
                             </div>
                         </div>
                         <div class="card-body" id="viewLocation">
-                        <p style="text-align: center;">Legends :&nbsp;&nbsp;&nbsp;&nbsp;
+                        <p style="text-align: right; padding-right: 25px;">Legends&nbsp;&nbsp;&nbsp;&nbsp;
                                     <span class="btn btn-sm btn-danger btn-circle">
                                         <i class="">&times;</i>
                                     </span>
@@ -243,7 +208,7 @@
                             <div class="table-responsive mt-4 container" id="">
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
-                                        <tr>
+                                    <tr>
                                             <th class="text-center">Reports 2.1.1</th>
                                             <th class="text-center" style="width: 250px">Attachments</th>
                                             <th class="text-center" style="width: 150px">Actions</th>
@@ -261,7 +226,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename211)) { ?>
-                                                    <a href="<?php echo $filePath.$filename211 ?>" target="_blank"><?php echo $filename211 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename211 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename211 ?>" target="_blank"><?php echo $filename211 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename211 ?>',2,1,1)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_211()">Upload File</button>
                                                 <?php } ?>
@@ -282,7 +247,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment221) ? $comment221 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment211) ? $comment211 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -309,7 +274,7 @@
                                         </tr>
                                     </tbody>
                                     <thead class="table-primary">
-                                        <tr>
+                                    <tr>
                                             <th class="text-center">Reports 2.1.2</th>
                                             <th class="text-center" style="width: 250px">Attachments</th>
                                             <th class="text-center" style="width: 150px">Actions</th>
@@ -325,7 +290,7 @@
                                             <td class="text-center">
                                                 <input type="file" class="form-control" onchange="uploadFile212()" name="file_report_212" id="file_report_212" accept=".pdf" hidden>
                                                 <?php if (file_exists($filePath.$filename212)) { ?>
-                                                    <a href="<?php echo $filePath.$filename212 ?>" target="_blank"><?php echo $filename212 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename212 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename212 ?>" target="_blank"><?php echo $filename212 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename212 ?>',2,1,2)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_212()">Upload File</button>
                                                 <?php } ?>
@@ -345,7 +310,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment212) ? $comment212 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment212) ? $comment212 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -372,7 +337,7 @@
                                         </tr>
                                     </tbody>
                                     <thead class="table-primary">
-                                        <tr>
+                                    <tr>
                                             <th class="text-center">Reports 2.1.3</th>
                                             <th class="text-center" style="width: 250px">Attachments</th>
                                             <th class="text-center" style="width: 150px">Actions</th>
@@ -388,7 +353,7 @@
                                             <td class="text-center">
                                                 <input type="file" class="form-control" onchange="uploadFile213()" name="file_report_213" id="file_report_213" accept=".pdf" hidden>
                                                 <?php if (file_exists($filePath.$filename213)) { ?>
-                                                    <a href="<?php echo $filePath.$filename213 ?>" target="_blank"><?php echo $filename213 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename213 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename213 ?>" target="_blank"><?php echo $filename213 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename213 ?>',2,1,3)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_213()">Upload File</button>
                                                 <?php } ?>
@@ -408,7 +373,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment213) ? $comment213 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment213) ? $comment213 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -435,7 +400,7 @@
                                         </tr>
                                     </tbody>
                                     <thead class="table-primary">
-                                        <tr>
+                                    <tr>
                                             <th class="text-center">Reports 2.1.4</th>
                                             <th class="text-center" style="width: 250px">Attachments</th>
                                             <th class="text-center" style="width: 150px">Actions</th>
@@ -451,7 +416,7 @@
                                             <td class="text-center">
                                                 <input type="file" class="form-control" onchange="uploadFile214()" name="file_report_214" id="file_report_214" accept=".pdf" hidden>
                                                 <?php if (file_exists($filePath.$filename214)) { ?>
-                                                    <a href="<?php echo $filePath.$filename214 ?>" target="_blank"><?php echo $filename214 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename214 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename214 ?>" target="_blank"><?php echo $filename214 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename214 ?>',2,1,4)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_214()">Upload File</button>
                                                 <?php } ?>
@@ -471,7 +436,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment214) ? $comment214 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment214) ? $comment214 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -504,7 +469,7 @@
                                             <td class="text-center">
                                                 <input type="file" class="form-control" onchange="uploadFile215()" name="file_report_215" id="file_report_215" accept=".pdf" hidden>
                                                 <?php if (file_exists($filePath.$filename215)) { ?>
-                                                    <a href="<?php echo $filePath.$filename215 ?>" target="_blank"><?php echo $filename215 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename215 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename215 ?>" target="_blank"><?php echo $filename215 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename215 ?>',2,1,5)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_215()">Upload File</button>
                                                 <?php } ?>
@@ -524,7 +489,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment215) ? $comment215 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment215) ? $comment215 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -559,10 +524,11 @@
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
                                         <tr>
-                                            <th class="text-center">Reports 2.2.1</th>
+                                        <th class="text-center">Reports 2.2.1</th>
                                             <th class="text-center" style="width: 250px">Attachments</th>
                                             <th class="text-center" style="width: 150px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
@@ -574,7 +540,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename216)) { ?>
-                                                    <a href="<?php echo $filePath.$filename216 ?>" target="_blank"><?php echo $filename216 ?></a>&nbsp;&nbsp;<span onclick="delete_file2('<?php echo $filePath.$filename216 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename216 ?>" target="_blank"><?php echo $filename216 ?></a>&nbsp;&nbsp;<span onclick="delete_file2('<?php echo $filePath.$filename216 ?>',2,2,1)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_216()">Upload File</button>
                                                 <?php } ?>
@@ -595,7 +561,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment221) ? $comment221 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment221) ? $comment221 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -622,7 +588,7 @@
                                         </tr>
                                     </tbody>
                                     <thead class="table-primary">
-                                        <tr>
+                                    <tr>
                                             <th class="text-center">Reports 2.2.2</th>
                                             <th class="text-center" style="width: 250px">Attachments</th>
                                             <th class="text-center" style="width: 150px">Actions</th>
@@ -638,7 +604,7 @@
                                             <td class="text-center">
                                                 <input type="file" class="form-control" onchange="uploadFile217()" name="file_report_217" id="file_report_217" accept=".pdf" hidden>
                                                 <?php if (file_exists($filePath.$filename217)) { ?>
-                                                    <a href="<?php echo $filePath.$filename217 ?>" target="_blank"><?php echo $filename217 ?></a>&nbsp;&nbsp;<span onclick="delete_file2('<?php echo $filePath.$filename217 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename217 ?>" target="_blank"><?php echo $filename217 ?></a>&nbsp;&nbsp;<span onclick="delete_file2('<?php echo $filePath.$filename217 ?>',2,2,2)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_217()">Upload File</button>
                                                 <?php } ?>
@@ -658,7 +624,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment222) ? $comment222 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment222) ? $comment222 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -685,7 +651,7 @@
                                         </tr>
                                     </tbody>
                                     <thead class="table-primary">
-                                        <tr>
+                                    <tr>
                                             <th class="text-center">Reports 2.2.3</th>
                                             <th class="text-center" style="width: 250px">Attachments</th>
                                             <th class="text-center" style="width: 150px">Actions</th>
@@ -701,7 +667,7 @@
                                             <td class="text-center">
                                                 <input type="file" class="form-control" onchange="uploadFile218()" name="file_report_218" id="file_report_218" accept=".pdf" hidden>
                                                 <?php if (file_exists($filePath.$filename218)) { ?>
-                                                    <a href="<?php echo $filePath.$filename218 ?>" target="_blank"><?php echo $filename218 ?></a>&nbsp;&nbsp;<span onclick="delete_file2('<?php echo $filePath.$filename218 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename218 ?>" target="_blank"><?php echo $filename218 ?></a>&nbsp;&nbsp;<span onclick="delete_file2('<?php echo $filePath.$filename218 ?>',2,2,3)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_218()">Upload File</button>
                                                 <?php } ?>
@@ -721,7 +687,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment223) ? $comment223 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment223) ? $comment223 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -748,6 +714,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                            </div>
                         </div>
                         <div class="row bg-info">
                                 <div class="col-lg-12 text-center text-white"><b>2.3 Extend of Preparedness For Effective Response And Recovery</b></div>
@@ -755,7 +722,7 @@
                             <div class="table-responsive mt-4 container" id="">
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
-                                        <tr>
+                                    <tr>
                                             <th class="text-center">Reports 2.3.1</th>
                                             <th class="text-center" style="width: 250px">Attachments</th>
                                             <th class="text-center" style="width: 150px">Actions</th>
@@ -772,7 +739,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename219)) { ?>
-                                                    <a href="<?php echo $filePath.$filename219 ?>" target="_blank"><?php echo $filename219 ?></a>&nbsp;&nbsp;<span onclick="delete_file3('<?php echo $filePath.$filename219 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename219 ?>" target="_blank"><?php echo $filename219 ?></a>&nbsp;&nbsp;<span onclick="delete_file3('<?php echo $filePath.$filename219 ?>',2,3,1)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_219()">Upload File</button>
                                                 <?php } ?>
@@ -793,7 +760,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment231) ? $comment231 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment231) ? $comment231 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -820,7 +787,7 @@
                                         </tr>
                                     </tbody>
                                     <thead class="table-primary">
-                                        <tr>
+                                    <tr>
                                             <th class="text-center">Reports 2.3.2</th>
                                             <th class="text-center" style="width: 250px">Attachments</th>
                                             <th class="text-center" style="width: 150px">Actions</th>
@@ -836,7 +803,7 @@
                                             <td class="text-center">
                                                 <input type="file" class="form-control" onchange="uploadFile220()" name="file_report_220" id="file_report_220" accept=".pdf" hidden>
                                                 <?php if (file_exists($filePath.$filename220)) { ?>
-                                                    <a href="<?php echo $filePath.$filename220 ?>" target="_blank"><?php echo $filename220 ?></a>&nbsp;&nbsp;<span onclick="delete_file3('<?php echo $filePath.$filename220 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename220 ?>" target="_blank"><?php echo $filename220 ?></a>&nbsp;&nbsp;<span onclick="delete_file3('<?php echo $filePath.$filename220 ?>',2,3,2)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_220()">Upload File</button>
                                                 <?php } ?>
@@ -856,7 +823,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment232) ? $comment232 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment232) ? $comment232 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>

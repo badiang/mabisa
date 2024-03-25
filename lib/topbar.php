@@ -1,5 +1,12 @@
 
 <?php 
+
+    $sql_prof_pic = $dbconn->prepare("SELECT profile_pic FROM account where id='$id' ");
+    $sql_prof_pic->execute();
+    $row_prof_pic = $sql_prof_pic->fetch(PDO::FETCH_ASSOC);
+    $prof_pic = $row_prof_pic['profile_pic'];
+
+
     $sql_noti = $dbconn->prepare("SELECT count(*) as count FROM area_assessment_points where user_id=? and noti_me=1 ");
     $sql_noti->bindParam(1, $id);
     $sql_noti->execute();
@@ -125,31 +132,31 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <!-- <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span> -->
                                 <span class="mr-2 d-none d-lg-inline text-white small"><?php echo $_SESSION['username'] ?></span>
-                                <img class="img-profile rounded-circle"
-                                    src="../img/undraw_profile.svg">
+                                <?php 
+                                if (!empty($prof_pic)) {
+                                    $upload_path = '../actions/profile/'.$prof_pic;
+                                    if (file_exists($upload_path)) {
+                                        // Display the uploaded image
+                                        echo '<img id="profilePicture" class="img-profile rounded-circle" src="' . $upload_path . '" alt="Uploaded Image">';
+                                    } else {
+                                        // Display the default image
+                                        echo '<img id="profilePicture" class="img-profile rounded-circle" src="../img/undraw_profile.svg">';
+                                    }
+                                }else{
+                                    echo '<img id="profilePicture" class="img-profile rounded-circle" src="../img/undraw_profile.svg">';
+                                }
+                                    
+                                 ?>
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <!-- <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#profileModal">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
+                                    Change Profile Picture
                                 </a>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#passwordModal">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div> -->
-                                <!-- <a class="dropdown-item" href="#" data-toggle="modal" data-target="#emailModal">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Change Email
-                                </a> -->
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#passwordModal2">
-                                    <i class="fas fa-lock fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Change Password
                                 </a>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
@@ -162,3 +169,76 @@
                     </ul>
 
                 </nav>
+
+<div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="profileModalLabel">Upload Profile Picture</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="uploadForm" action="../actions/upload_profile_pic.php" method="post" enctype="multipart/form-data">
+                    <!-- Label for old/new profile picture -->
+                    <div class="form-group text-center mb-3">
+                        <span id="pictureStatusLabel">Your current profile picture</span>
+                    </div>
+                    <!-- Profile Picture Preview -->
+                    <div class="form-group text-center">
+                        <?php 
+                        if (!empty($prof_pic)) {
+                            $upload_path = '../actions/profile/'.$prof_pic;
+                            if (file_exists($upload_path)) {
+                                // Display the uploaded image
+                                echo '<img id="profilePreview" class="img-fluid rounded-circle mb-3" src="' . $upload_path . '" alt="Uploaded Image" style="max-width: 150px; max-height: 150px;">';
+                            } else {
+                                // Display the default image
+                                echo '<img id="profilePreview" class="img-fluid rounded-circle mb-3" src="../img/undraw_profile.svg" alt="Profile Preview" style="max-width: 150px; max-height: 150px;">';
+                            }
+                        }else{
+                            echo '<img id="profilePreview" class="img-fluid rounded-circle mb-3" src="../img/undraw_profile.svg" alt="Profile Preview" style="max-width: 150px; max-height: 150px;">';
+                        }
+                            
+                         ?>
+                    </div>
+                    <!-- File Input and Upload Button -->
+                    <div class="form-row align-items-center">
+                        <div class="col">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="fileToUpload" name="fileToUpload" onchange="previewProfilePicture(this);">
+                                <label class="custom-file-label" for="fileToUpload">Choose file</label>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary">Upload</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Function to preview profile picture and update file name
+function previewProfilePicture(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            $('#profilePreview').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+
+        // Update file name label
+        var fileName = input.files[0].name;
+        $(input).next('.custom-file-label').html(fileName);
+
+        // Update picture status label
+        $('#pictureStatusLabel').text('Your new profile picture');
+    }
+}
+</script>

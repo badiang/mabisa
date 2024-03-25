@@ -874,8 +874,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 1.1.1</th>
-                    <th class="text-center" style="width: 250px;">Actions</th>
-                    <th class="text-center" style="width: 10px;">Status</th>
+                    <th class="text-center">Actions</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -883,7 +883,7 @@ For more information about DataTables, please visit the <a target="_blank"
             		<td>BFDP Monitoring Form A of the DILG dated March 25, 2023</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal" onclick="generateFileLink()">
-                            View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -895,7 +895,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -948,7 +948,7 @@ For more information about DataTables, please visit the <a target="_blank"
 		            <td>Photo Documentation of the BFDP board displaying the following Documents:</td>
 		            <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal112" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal112" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -960,7 +960,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -1022,7 +1022,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td style="margin-left: 40px;">Barangay Financial Report</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal113" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal113" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -1034,7 +1034,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -1087,7 +1087,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td style="margin-left: 40px;">Barangay Budget</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal114" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal114" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -1099,7 +1099,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -1152,7 +1152,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td style="margin-left: 40px;">Summary of Income and Expenditures;</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal115" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal115" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -1164,7 +1164,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -1217,7 +1217,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td style="margin-left: 40px;">20% Component of the IRA Utilization;</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal116" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal116" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -1229,7 +1229,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -1282,7 +1282,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td style="margin-left: 40px;">Annual Procurement Plan or Procurement List</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal117" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal117" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -1294,7 +1294,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -1356,7 +1356,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td style="margin-left: 40px;">List of Notices of Award (4<sup>th</sup> quarter of CY. 2023)</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal118" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal118" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -1368,7 +1368,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -1430,7 +1430,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td style="margin-left: 40px;">Itemized Monthly Collections and Disbursements (Oct-Dec CY 2023)</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal119" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal119" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -1442,7 +1442,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -1504,7 +1504,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Barangay Financial Report on Statement of Receipt and Expenditure (Annex 7)</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal1110" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal1110" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -1516,7 +1516,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -1588,8 +1588,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 1.2.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -1597,7 +1597,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Barangay Budget Preparation Form 2 of 2022 and 2023</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal121" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal121" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -1609,7 +1609,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -1671,8 +1671,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 1.3.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -1680,7 +1680,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Approved Barangay Appropriation Ordinance</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal131" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal131" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -1692,7 +1692,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -1754,8 +1754,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 1.4.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -1763,7 +1763,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Approved Barangay Appropriation Ordinance</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal141" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal141" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -1775,7 +1775,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -1837,8 +1837,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 1.5.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -1846,7 +1846,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Photo document of the Barangay CitCha (name of the Barangay should be visible)</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal151" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal151" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -1858,7 +1858,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -1920,8 +1920,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 1.6.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -1929,7 +1929,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>MOVs for 1.6.1.1 a.) Copy of the written agreement; and</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal161" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal161" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -1941,7 +1941,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -1994,7 +1994,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>MOVs for 1.6.1.1 b.) Proof of deposit reflecting the Account No./ Name of Barangay SK (1 deposit slip for annual, 2 deposit slips for semestral, 4 deposit slips for quarterly)</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal162" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal162" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -2006,7 +2006,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -2059,7 +2059,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>MOVs for 1.6.1.2 a.) 12 Monthly deposit slips reflecting the Account No. / Name of Barangay SK</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal163" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal163" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -2071,7 +2071,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -2124,7 +2124,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>MOVs for 1.6.1.3 a.) Proof of transfer of the 10% SK fund to the trust fund of the Barangay such as deposit slip or Official Receipt or correspanding legal form/document issued by the municipal treasurer if the Barangay opted that the corresponding SK fund be kept as trust fund in the custody of the C/M treasurer.</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal164" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal164" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -2136,7 +2136,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -2193,8 +2193,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 1.6.2</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -2202,7 +2202,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>MOVs for 1.6.2 Certification from the C/MLGOO on current number of SK officials</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal165" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal165" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -2214,7 +2214,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -2267,7 +2267,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>MOVs for 1.6.2 Approved Annual Barangay Youth Investment Program (ABYIP) for 2023</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal166" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal166" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -2279,7 +2279,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -2341,8 +2341,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 1.7.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -2350,7 +2350,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Post Activity Report on the conduct of the wnd semester Barangay assembly duly signed/approved by the Punong Barangay (Annex D of DILG MC No.2022-131)</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal171" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal171" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -2362,7 +2362,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -2432,8 +2432,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 2.1.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -2441,7 +2441,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Executive Order or similar issuance creating the BDRRMC compliant to composition requirements covering CY 2023.</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal211" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal211" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -2453,7 +2453,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -2506,8 +2506,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 2.1.2</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -2515,7 +2515,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Approved BDRRM Plan CY 2023</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal212" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal212" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -2527,7 +2527,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -2580,8 +2580,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 2.1.3</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -2589,7 +2589,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Enacted Appropriation Ordinance</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal213" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal213" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -2601,7 +2601,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -2654,8 +2654,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 2.1.4</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -2663,7 +2663,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Accomplishment Report</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal214" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal214" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -2675,7 +2675,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -2728,7 +2728,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Annual Report on the utilization of the LDRRMF</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal215" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal215" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -2740,7 +2740,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -2800,8 +2800,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 2.2.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -2809,7 +2809,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Post-Activity Report of activities such as Climate and Disaster Risk Assessment, Participatory Disaster Risk Assessment, BDRRM Planning, etc.</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal221" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal221" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -2821,7 +2821,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -2874,8 +2874,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 2.2.2</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -2883,7 +2883,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Photo documentation of the certified Barangay Risk/Hazzard Map</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal222" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal222" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -2895,7 +2895,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -2948,8 +2948,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 2.2.3</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -2957,7 +2957,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Photo documentation of EWS for the top two (2) hazards in the Barangay</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal223" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal223" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -2969,7 +2969,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -3022,8 +3022,7 @@ For more information about DataTables, please visit the <a target="_blank"
         </table>
     </div>
 </div>
-<div class="card-body" id="viewLocation">
-    <div class="row bg-info">
+<div class="row bg-info">
         <div class="col-lg-12 text-center text-white"><b>2.3 Extend of Preparedness For Effective Response And Recovery</b></div>
     </div>
     <div class="table-responsive mt-4 mb-4 container" id="">
@@ -3031,8 +3030,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 2.3.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -3040,7 +3039,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Photo Documentation of the permanent/alternate evacuation center</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal231" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal231" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -3052,7 +3051,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -3105,8 +3104,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 2.3.2</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -3114,7 +3113,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Photo Documentation of disaster supplies equipment</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal232" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal232" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -3126,7 +3125,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -3195,8 +3194,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 3.1.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -3204,7 +3203,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Executive Order or similar issuance creating the BADAC with its composition and appropriate committees (Committees on Operations and on Advocacy)</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal311" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal311" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -3216,7 +3215,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -3269,8 +3268,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 3.1.2</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -3278,7 +3277,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>EO or similar issuance establishing the Rehabilitation Referral Desk</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal312" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal312" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -3290,7 +3289,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -3343,8 +3342,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 3.1.3</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -3352,7 +3351,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Approved Barangay Appropriation Ordinance</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal313" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal313" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -3364,7 +3363,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -3417,8 +3416,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 3.1.4</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -3426,7 +3425,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Approved BADAC Plan of Action</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal314" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal314" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -3438,7 +3437,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -3491,8 +3490,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 3.1.5</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -3500,7 +3499,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Transmittal of CIR (stamp received) to CADAC/MADAC and Local PNP Unit</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal315" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal315" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -3512,7 +3511,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -3565,8 +3564,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 3.1.6</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -3574,7 +3573,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Annual BADAC Accomplishment and Fund Utilization Report submitted not later than the 20th day of January (stamp received) to the CADAC/MADAC</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal316" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal316" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -3586,7 +3585,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -3646,8 +3645,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 3.2.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -3655,7 +3654,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Executive Order or similar issuance indicating correct membership on accordance to the EO 366 s. of 1996</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal321" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal321" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -3667,7 +3666,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -3720,8 +3719,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 3.2.2</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -3729,7 +3728,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Approved BPOPS Plan</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal322" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal322" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -3741,7 +3740,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -3794,8 +3793,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 3.2.3</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -3803,7 +3802,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Accomplishment Report (in any format) Submitted to the C/M POC on the prescribed schedules (stamp received)</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal323" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal323" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -3815,7 +3814,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -3875,8 +3874,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 3.3.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -3884,7 +3883,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Appointment of the Lupong Tagapamayapa</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal331" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal331" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -3896,7 +3895,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -3949,8 +3948,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 3.3.2</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -3958,7 +3957,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>For Barangay of cities: 2 photo with caption of the computer database with searchable information</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal332" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal332" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -3970,7 +3969,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -4023,7 +4022,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>For Barangay of municipalities : 1 photo, with caption on the manual and digital file</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal333" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal333" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -4035,7 +4034,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -4088,8 +4087,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 3.3.3</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -4097,7 +4096,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Copies of minutes of meetings with attendance sheets (at least 3 minutes covering meetings conducted in 2023)</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal334" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal334" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -4109,7 +4108,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -4162,8 +4161,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 3.3.4</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -4171,7 +4170,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Certified true copy of any proof of training such as Certificate of Completion and/or Participation (at least 1)</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal335" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal335" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -4183,7 +4182,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -4243,8 +4242,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 3.4.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -4252,7 +4251,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>EO or similar issuance on the organization of the Barangay Tanod covering 2023</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal341" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal341" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -4264,7 +4263,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -4317,8 +4316,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 3.4.2</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -4326,7 +4325,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Certified true copy of any proof of training such as Certificate of Completion and/or Participation (at least 1)</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal342" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal342" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -4338,7 +4337,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -4398,8 +4397,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 3.5.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -4407,7 +4406,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>EO or similar issuance on the organization of BHERTs</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal351" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal351" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -4419,7 +4418,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -4472,8 +4471,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 3.5.2</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -4481,7 +4480,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Photo documentation of poster and/or tarpulin</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal352" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal352" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -4493,7 +4492,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -4553,8 +4552,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 3.6.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -4562,7 +4561,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Monthly BarCo Reports for October-December 2023</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal361" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal361" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -4574,7 +4573,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -4644,8 +4643,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 4.1.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -4653,7 +4652,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Executive Order or similar issuance on the establishment of the Barangay VAW Desk and designated VAW Desk Officer</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal411" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal411" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -4665,7 +4664,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -4718,8 +4717,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 4.1.2</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -4727,7 +4726,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Certified true copy of any proof of training such as Certificate of Completion and/or Participation (at least 1)</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal412" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal412" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -4739,7 +4738,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -4792,8 +4791,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 4.1.3</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -4801,7 +4800,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Approved 2023 Barangay Gender and Development (GAD) Plan and Budget</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal413" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal413" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -4813,7 +4812,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -4866,8 +4865,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 4.1.4</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -4875,7 +4874,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Monthly Accomplishment Reports for CY 2023 (October-December 2023)</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal414" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal414" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -4887,7 +4886,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -4940,8 +4939,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 4.1.5</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -4949,7 +4948,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Updated database on VAW cases reported to the Barangay</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal415" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal415" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -4961,7 +4960,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -5014,8 +5013,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 4.1.6</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -5023,7 +5022,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>CY 2023 GAD Accomplishment Report</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal416" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal416" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -5035,7 +5034,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -5095,8 +5094,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 4.2.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -5104,7 +5103,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Photo documentation of the BHS/C</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal421" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal421" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -5116,7 +5115,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -5169,8 +5168,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 4.2.2</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -5178,7 +5177,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>EO or similar issuance on the appointment of BHW</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal422" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal422" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -5190,7 +5189,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -5243,8 +5242,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 4.2.3</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -5252,7 +5251,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>EO or similar issuance on the appointment of BNS</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal423" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal423" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -5264,7 +5263,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -5317,8 +5316,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 4.2.4</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -5326,7 +5325,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Photo documentations of the operations of the BHS/C</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal424" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal424" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -5338,7 +5337,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -5391,7 +5390,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Barangay Issuances on the provision of health services</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal425" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal425" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -5403,7 +5402,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -5463,8 +5462,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 4.3.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -5472,7 +5471,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>EO or similar issuance organizing the BDC with its composition compliant to Section 107 of RA 7160</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal431" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal431" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -5484,7 +5483,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -5537,8 +5536,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 4.3.2</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -5546,7 +5545,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Minutes (at least 2) of the public hearing/Barangay assemblies with attendance sheet</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal432" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal432" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -5558,7 +5557,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -5611,8 +5610,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 4.3.3</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -5620,7 +5619,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Barangay Development Plan with BDC and SB Resolutions adopting such</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal433" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal433" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -5632,7 +5631,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -5685,8 +5684,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 4.3.4</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -5694,7 +5693,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>CY 2023 Accomplishment Report of the BDP</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal434" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal434" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -5706,7 +5705,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -5766,8 +5765,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 4.4.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -5775,7 +5774,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>EO or similar issuance designating a Kasambahay Desk and a KDO</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal441" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal441" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -5787,7 +5786,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -5840,8 +5839,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 4.4.2</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -5849,7 +5848,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Updated Kasambahay Report Form 2 (Kasambahay Masterlist) as of December 2023</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal442" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal442" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -5861,7 +5860,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -5921,8 +5920,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 4.5.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -5930,7 +5929,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Executive Order or similar Issuance on the extablishment Barangay Council for Protection of Children (BCPC)</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal451" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal451" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -5942,7 +5941,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -5995,8 +5994,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 4.5.2</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -6004,7 +6003,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Certified true copy of any proof of training such as Certificate of Completion and/or Participation (at least 1)</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal452" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal452" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -6016,7 +6015,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -6069,8 +6068,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 4.5.3</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -6078,7 +6077,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Approved BCPC Annual Work and FInancial Plan (AWFP)</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal453" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal453" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -6090,7 +6089,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -6143,8 +6142,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 4.5.4</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -6152,7 +6151,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Updated database on children</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal454" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal454" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -6164,7 +6163,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -6217,8 +6216,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 4.5.5</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -6226,7 +6225,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Updated Localized Flow Chart of Referral System</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal455" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal455" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -6238,7 +6237,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -6291,8 +6290,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 4.5.6</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -6300,7 +6299,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>CY 2023 Approved Accomplishment Report on BCPC Plan</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal456" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal456" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -6312,7 +6311,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -6372,8 +6371,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 4.6.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -6381,7 +6380,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>EO or similar issuance organizing the Barangay GAD Focal Point System</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal461" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal461" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -6393,7 +6392,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -6453,8 +6452,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 4.7.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -6462,7 +6461,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Accomplished RBI Form A of two semesters of CY 2023</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal471" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal471" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -6474,7 +6473,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -6544,8 +6543,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 5.1.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -6553,7 +6552,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Enacted Barangay Tax Ordinance</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal511" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal511" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -6565,7 +6564,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -6625,8 +6624,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 5.2.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -6634,7 +6633,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Enacted Barangay Ordinance relative to Barangay Clearance Fees on business permit and locational clearance for building permit, in accordance with MC No. 2019-177</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal521" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal521" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -6646,7 +6645,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -6699,8 +6698,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 5.2.2</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -6708,7 +6707,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Approved resolution authorizing the Municipal Treasurer to collect fees for Barangay Clearance for Business permit and locational clearance purpose</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal522" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal522" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -6720,7 +6719,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -6780,8 +6779,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 5.3.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -6789,7 +6788,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Photo documentation of the Citizens' Charter on the issuance of Barangay Clearance only (name of the Barangay should be visible)</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal531" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal531" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -6801,7 +6800,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -6871,8 +6870,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 6.1.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -6880,7 +6879,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>EO or similar issuance on the organization of the BESWMC</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal611" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal611" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -6892,7 +6891,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -6945,8 +6944,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 6.1.2</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -6954,7 +6953,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Approved Solid Waste Management Program/Plan with corresponding fund allocation</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal612" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal612" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -6966,7 +6965,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -7019,8 +7018,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 6.1.3</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -7028,7 +7027,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Certified true copy of any proof of training such as Certificate of Completion and/or Participation (at least 1)</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal613" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal613" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -7040,7 +7039,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -7093,8 +7092,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 6.1.4</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -7102,7 +7101,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Monthly Accomplishment Reports for 2023</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal614" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal614" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -7114,7 +7113,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -7174,8 +7173,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 6.2.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -7183,7 +7182,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td><b>For MRF operated by the Barangay:</b> Photo documentation of the MRF/MRF Records of the Barangay</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal621" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal621" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -7195,7 +7194,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -7250,7 +7249,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td><b>For MRS:</b> MOA with junkshop;</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal622" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal622" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -7262,7 +7261,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -7317,7 +7316,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td><b>For MRS:</b> Mechanis, to process biodegradable wastes;</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal623" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal623" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -7329,7 +7328,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -7384,7 +7383,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td><b>For MRS:</b> MOA with service provider for collection/treatment of special, hazardous, and infectious waste</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal624" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal624" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -7396,7 +7395,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -7451,7 +7450,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td><b>For Clustered MRFs:</b> MOA with the host Barangay (applicable for barangay-clustered MRFs)</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal625" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal625" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -7463,7 +7462,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -7518,7 +7517,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td><b>For Clustered MRFs:</b> MOA or LGU document Indicating coverage of Municipal MRF (applicable for barangay-clustered to the Central MRF of Municipality)</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal626" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal626" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -7530,7 +7529,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 
@@ -7591,8 +7590,8 @@ For more information about DataTables, please visit the <a target="_blank"
             <thead class="table-primary">
                 <tr>
                     <th class="text-center">Reports 6.3.1</th>
-                    <th class="text-center"style="width: 250px;">Attachments</th>
-                    <th class="text-center"style="width: 10px;">Status</th>
+                    <th class="text-center">Attachments</th>
+                    <th class="text-center">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -7600,7 +7599,7 @@ For more information about DataTables, please visit the <a target="_blank"
                     <td>Ordinance or similar issuance on segregation of wastes at-source</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-primary btn-comment" data-toggle="modal" data-target="#commentModal631" onclick="generateFileLink()">
-                        View Attachment
+                            Comment
                         </button>
                         <div class="modal fade" id="commentModal631" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -7612,7 +7611,7 @@ For more information about DataTables, please visit the <a target="_blank"
 								        </button>
                                     </div>
                                     <div class="modal-body">
-                                    <label for="comment">Attached File:</label>
+                                    <label for="comment">Uploaded File:</label>
                                         <div class="card">
                                             <div class="card-body">
                                                 <?php 

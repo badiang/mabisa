@@ -205,15 +205,15 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <?php include '../lib/top.php' ?>
+
 </head>
+
 <body id="page-top">
-
-    <!-- Page Wrapper -->
     <div id="wrapper">
-
-        <!-- Sidebar -->
         <?php include '../lib/sidebar.php' ?>
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
@@ -256,6 +256,18 @@
                                         <div class="col-lg-9"><?php echo $year ?></div>
                                     </div>
                                 </div>
+                                <!-- <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-2"><b>Status</b></div>
+                                        <div class="col-lg-9">
+                                            <?php if ($status == 0) {?>
+                                                <span class="btn-sm btn btn-primary">In Progress</span>
+                                            <?php }else{?>
+                                                <span><?php echo $status ?></span>
+                                            <?php }?>
+                                        </div>
+                                    </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -267,7 +279,7 @@
                             </div>
                         </div>
                         <div class="card-body" id="viewLocation">
-                        <p style="text-align: center;">Legends :&nbsp;&nbsp;&nbsp;&nbsp;
+                        <p style="text-align: right; padding-right: 25px;">Legends&nbsp;&nbsp;&nbsp;&nbsp;
                                     <span class="btn btn-sm btn-danger btn-circle">
                                         <i class="">&times;</i>
                                     </span>
@@ -288,12 +300,12 @@
                             <div class="table-responsive mt-4 container" id="">
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
-                                        <tr>
-                                            <th class="text-center">Reports 1.1.1</th>
-                                            <th class="text-center" style="width: 250px">Attachments</th>
-                                            <th class="text-center" style="width: 150px">Actions</th>
-                                            <th class="text-center" style="width: 50px">Status</th>
-                                        </tr>
+                                    <tr>
+                                        <th class="text-center">Reports 1.1.1</th>
+                                        <th class="text-center" style="width: 250px">Attachments</th>
+                                        <th class="text-center" style="width: 150px">Actions</th>
+                                        <th class="text-center" style="width: 50px">Status</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
@@ -307,7 +319,7 @@
                                                 
 
                                                 <?php if (file_exists($filePath.$filename1)) { ?>
-                                                    <a href="<?php echo $filePath.$filename1 ?>" target="_blank"><?php echo $filename1 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename1 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename1 ?>" target="_blank"><?php echo $filename1 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename1 ?>',1,1,1)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_1()">Upload File</button>
                                                 <?php } ?>
@@ -327,7 +339,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment1) ? $comment1 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment1) ? $comment1 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -360,7 +372,7 @@
                                             <td class="text-center">
                                                 <input type="file" class="form-control" onchange="uploadFile2()" name="file_report_2" id="file_report_2" accept=".pdf" hidden>
                                                 <?php if (file_exists($filePath.$filename2)) { ?>
-                                                    <a href="<?php echo $filePath.$filename2 ?>" target="_blank"><?php echo $filename2 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename2 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename2 ?>" target="_blank"><?php echo $filename2 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename2 ?>',1,1,2)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_2()">Upload File</button>
                                                 <?php } ?>
@@ -372,7 +384,7 @@
                                                 <div class="modal fade" id="commentModal112" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
-                                                            <div class="modal-header">
+                                                        <div class="modal-header" calss=" text-center">
                                                                 <h5 class="modal-title" id="commentModalLabel" style="font-weight: bold;">View Comment</h5>
                                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                   <span aria-hidden="true">&times;</span>
@@ -380,7 +392,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment2) ? $comment2 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment2) ? $comment2 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -423,7 +435,7 @@
                                             <td class="text-center">
                                                 <input type="file" class="form-control" onchange="uploadFile3()" name="file_report_3" id="file_report_3" accept=".pdf" hidden>
                                                 <?php if (file_exists($filePath.$filename3)) { ?>
-                                                    <a href="<?php echo $filePath.$filename3 ?>" target="_blank"><?php echo $filename3 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename3 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename3 ?>" target="_blank"><?php echo $filename3 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename3 ?>',1,1,3)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_3()">Upload File</button>
                                                 <?php } ?>
@@ -476,7 +488,7 @@
                                             <td class="text-center">
                                                 <input type="file" class="form-control" onchange="uploadFile4()" name="file_report_4" id="file_report_4" accept=".pdf" hidden>
                                                 <?php if (file_exists($filePath.$filename4)) { ?>
-                                                    <a href="<?php echo $filePath.$filename4 ?>" target="_blank"><?php echo $filename4 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename4 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename4 ?>" target="_blank"><?php echo $filename4 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename4 ?>',1,1,4)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_4()">Upload File</button>
                                                 <?php } ?>
@@ -496,7 +508,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment4) ? $comment4 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment4) ? $comment4 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -529,7 +541,7 @@
                                             <td class="text-center">
                                                 <input type="file" class="form-control" onchange="uploadFile5()" name="file_report_5" id="file_report_5" accept=".pdf" hidden>
                                                 <?php if (file_exists($filePath.$filename5)) { ?>
-                                                    <a href="<?php echo $filePath.$filename5 ?>" target="_blank"><?php echo $filename5 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename5 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename5 ?>" target="_blank"><?php echo $filename5 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename5 ?>',1,1,5)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_5()">Upload File</button>
                                                 <?php } ?>
@@ -549,7 +561,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment5) ? $comment5 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment5) ? $comment5 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -582,7 +594,7 @@
                                             <td class="text-center">
                                                 <input type="file" class="form-control" onchange="uploadFile6()" name="file_report_6" id="file_report_6" accept=".pdf" hidden>
                                                 <?php if (file_exists($filePath.$filename6)) { ?>
-                                                    <a href="<?php echo $filePath.$filename6 ?>" target="_blank"><?php echo $filename6 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename6 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename6 ?>" target="_blank"><?php echo $filename6 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename6 ?>',1,1,6)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_6()">Upload File</button>
                                                 <?php } ?>
@@ -602,7 +614,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment6) ? $comment6 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment6) ? $comment6 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -635,7 +647,7 @@
                                             <td class="text-center">
                                                 <input type="file" class="form-control" onchange="uploadFile7()" name="file_report_7" id="file_report_7" accept=".pdf" hidden>
                                                 <?php if (file_exists($filePath.$filename7)) { ?>
-                                                    <a href="<?php echo $filePath.$filename7 ?>" target="_blank"><?php echo $filename7 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename7 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename7 ?>" target="_blank"><?php echo $filename7 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename7 ?>',1,1,7)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_7()">Upload File</button>
                                                 <?php } ?>
@@ -655,7 +667,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment7) ? $comment7 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment7) ? $comment7 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -698,7 +710,7 @@
                                             <td class="text-center">
                                                 <input type="file" class="form-control" onchange="uploadFile8()" name="file_report_8" id="file_report_8" accept=".pdf" hidden>
                                                 <?php if (file_exists($filePath.$filename8)) { ?>
-                                                    <a href="<?php echo $filePath.$filename8 ?>" target="_blank"><?php echo $filename8 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename8 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename8 ?>" target="_blank"><?php echo $filename8 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename8 ?>',1,1,8)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_8()">Upload File</button>
                                                 <?php } ?>
@@ -718,7 +730,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment8) ? $comment8 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment8) ? $comment8 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -761,7 +773,7 @@
                                             <td class="text-center">
                                                 <input type="file" class="form-control" onchange="uploadFile9()" name="file_report_9" id="file_report_9" accept=".pdf" hidden>
                                                 <?php if (file_exists($filePath.$filename9)) { ?>
-                                                    <a href="<?php echo $filePath.$filename9 ?>" target="_blank"><?php echo $filename9 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename9 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename9 ?>" target="_blank"><?php echo $filename9 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename9 ?>',1,1,9)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_9()">Upload File</button>
                                                 <?php } ?>
@@ -781,7 +793,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment9) ? $comment9 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment9) ? $comment9 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -810,9 +822,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 1.1.2</th>
-                                            <th class="text-center" style="width: 250px">Attachments</th>
-                                            <th class="text-center" style="width: 150px">Actions</th>
-                                            <th class="text-center" style="width: 50px">Status</th>
+                                            <th class="text-center">Attachments</th>
+                                            <th class="text-center">Actions</th>
+                                            <th class="text-center">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -825,7 +837,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename10)) { ?>
-                                                    <a href="<?php echo $filePath.$filename10 ?>" target="_blank"><?php echo $filename10 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename10 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename10 ?>" target="_blank"><?php echo $filename10 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename10 ?>',1,1,10)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_10()">Upload File</button>
                                                 <?php } ?>
@@ -846,7 +858,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment10) ? $comment10 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment10) ? $comment10 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -882,12 +894,12 @@
                             <div class="table-responsive mt-4 container" id="">
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
-                                        <tr>
-                                            <th class="text-center">Reports 1.2.1</th>
-                                            <th class="text-center" style="width: 250px">Attachments</th>
-                                            <th class="text-center" style="width: 150px">Actions</th>
-                                            <th class="text-center" style="width: 50px">Status</th>
-                                        </tr>
+                                    <tr>
+                                        <th class="text-center">Reports 1.2.1</th>
+                                        <th class="text-center" style="width: 250px">Attachments</th>
+                                        <th class="text-center" style="width: 150px">Actions</th>
+                                        <th class="text-center" style="width: 50px">Status</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
@@ -899,7 +911,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename11)) { ?>
-                                                    <a href="<?php echo $filePath.$filename11 ?>" target="_blank"><?php echo $filename11 ?></a>&nbsp;&nbsp;<span onclick="delete_file2('<?php echo $filePath.$filename11 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename11 ?>" target="_blank"><?php echo $filename11 ?></a>&nbsp;&nbsp;<span onclick="delete_file2('<?php echo $filePath.$filename11 ?>',1,2,1)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_11()">Upload File</button>
                                                 <?php } ?>
@@ -920,7 +932,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment121) ? $comment121 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment121) ? $comment121 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -956,7 +968,7 @@
                             <div class="table-responsive mt-4 container" id="">
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
-                                        <tr>
+                                    <tr>
                                             <th class="text-center">Reports 1.3.1</th>
                                             <th class="text-center" style="width: 250px">Attachments</th>
                                             <th class="text-center" style="width: 150px">Actions</th>
@@ -973,7 +985,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename12)) { ?>
-                                                    <a href="<?php echo $filePath.$filename12 ?>" target="_blank"><?php echo $filename12 ?></a>&nbsp;&nbsp;<span onclick="delete_file3('<?php echo $filePath.$filename12 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename12 ?>" target="_blank"><?php echo $filename12 ?></a>&nbsp;&nbsp;<span onclick="delete_file3('<?php echo $filePath.$filename12 ?>',1,3,1)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_12()">Upload File</button>
                                                 <?php } ?>
@@ -994,7 +1006,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment131) ? $comment131 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment131) ? $comment131 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1030,7 +1042,7 @@
                             <div class="table-responsive mt-4 container" id="">
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
-                                        <tr>
+                                    <tr>
                                             <th class="text-center">Reports 1.4.1</th>
                                             <th class="text-center" style="width: 250px">Attachments</th>
                                             <th class="text-center" style="width: 150px">Actions</th>
@@ -1047,7 +1059,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename13)) { ?>
-                                                    <a href="<?php echo $filePath.$filename13 ?>" target="_blank"><?php echo $filename13 ?></a>&nbsp;&nbsp;<span onclick="delete_file4('<?php echo $filePath.$filename13 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename13 ?>" target="_blank"><?php echo $filename13 ?></a>&nbsp;&nbsp;<span onclick="delete_file4('<?php echo $filePath.$filename13 ?>',1,4,1)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_13()">Upload File</button>
                                                 <?php } ?>
@@ -1068,7 +1080,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment141) ? $comment141 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment141) ? $comment141 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1104,12 +1116,12 @@
                             <div class="table-responsive mt-4 container" id="">
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
-                                        <tr>
-                                            <th class="text-center">Reports 1.5.1</th>
-                                            <th class="text-center" style="width: 250px">Attachments</th>
-                                            <th class="text-center" style="width: 150px">Actions</th>
-                                            <th class="text-center" style="width: 50px">Status</th>
-                                        </tr>
+                                    <tr>
+                                        <th class="text-center">Reports 1.5.1</th>
+                                        <th class="text-center" style="width: 250px">Attachments</th>
+                                        <th class="text-center" style="width: 150px">Actions</th>
+                                        <th class="text-center" style="width: 50px">Status</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
@@ -1121,7 +1133,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename14)) { ?>
-                                                    <a href="<?php echo $filePath.$filename14 ?>" target="_blank"><?php echo $filename14 ?></a>&nbsp;&nbsp;<span onclick="delete_file5('<?php echo $filePath.$filename14 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename14 ?>" target="_blank"><?php echo $filename14 ?></a>&nbsp;&nbsp;<span onclick="delete_file5('<?php echo $filePath.$filename14 ?>',1,5,1)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_14()">Upload File</button>
                                                 <?php } ?>
@@ -1142,7 +1154,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment151) ? $comment151 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment151) ? $comment151 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1178,12 +1190,12 @@
                             <div class="table-responsive mt-4 container" id="">
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
-                                        <tr>
-                                            <th class="text-center">Reports 1.6.1</th>
-                                            <th class="text-center" style="width: 250px">Attachments</th>
-                                            <th class="text-center" style="width: 150px">Actions</th>
-                                            <th class="text-center" style="width: 50px">Status</th>
-                                        </tr>
+                                    <tr>
+                                        <th class="text-center">Reports 1.6.1</th>
+                                        <th class="text-center" style="width: 250px">Attachments</th>
+                                        <th class="text-center" style="width: 150px">Actions</th>
+                                        <th class="text-center" style="width: 50px">Status</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
@@ -1195,7 +1207,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename15)) { ?>
-                                                    <a href="<?php echo $filePath.$filename15 ?>" target="_blank"><?php echo $filename15 ?></a>&nbsp;&nbsp;<span onclick="delete_file6('<?php echo $filePath.$filename15 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename15 ?>" target="_blank"><?php echo $filename15 ?></a>&nbsp;&nbsp;<span onclick="delete_file6('<?php echo $filePath.$filename15 ?>',1,6,1)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_15()">Upload File</button>
                                                 <?php } ?>
@@ -1216,7 +1228,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment161) ? $comment161 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment161) ? $comment161 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1250,7 +1262,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename16)) { ?>
-                                                    <a href="<?php echo $filePath.$filename16 ?>" target="_blank"><?php echo $filename16 ?></a>&nbsp;&nbsp;<span onclick="delete_file6('<?php echo $filePath.$filename16 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename16 ?>" target="_blank"><?php echo $filename16 ?></a>&nbsp;&nbsp;<span onclick="delete_file6('<?php echo $filePath.$filename16 ?>',1,6,2)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_16()">Upload File</button>
                                                 <?php } ?>
@@ -1271,7 +1283,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment162) ? $comment162 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment162) ? $comment162 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1305,7 +1317,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename17)) { ?>
-                                                    <a href="<?php echo $filePath.$filename17 ?>" target="_blank"><?php echo $filename17 ?></a>&nbsp;&nbsp;<span onclick="delete_file6('<?php echo $filePath.$filename17 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename17 ?>" target="_blank"><?php echo $filename17 ?></a>&nbsp;&nbsp;<span onclick="delete_file6('<?php echo $filePath.$filename17 ?>',1,6,3)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_17()">Upload File</button>
                                                 <?php } ?>
@@ -1326,7 +1338,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment163) ? $comment163 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment163) ? $comment163 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1360,7 +1372,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename18)) { ?>
-                                                    <a href="<?php echo $filePath.$filename18 ?>" target="_blank"><?php echo $filename18 ?></a>&nbsp;&nbsp;<span onclick="delete_file6('<?php echo $filePath.$filename18 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename18 ?>" target="_blank"><?php echo $filename18 ?></a>&nbsp;&nbsp;<span onclick="delete_file6('<?php echo $filePath.$filename18 ?>',1,6,4)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_18()">Upload File</button>
                                                 <?php } ?>
@@ -1381,7 +1393,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment164) ? $comment164 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment164) ? $comment164 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1412,7 +1424,7 @@
                             <div class="table-responsive mt-4 container" id="">
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
-                                        <tr>
+                                    <tr>
                                             <th class="text-center">Reports 1.6.2</th>
                                             <th class="text-center" style="width: 250px">Attachments</th>
                                             <th class="text-center" style="width: 150px">Actions</th>
@@ -1429,7 +1441,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename19)) { ?>
-                                                    <a href="<?php echo $filePath.$filename19 ?>" target="_blank"><?php echo $filename19 ?></a>&nbsp;&nbsp;<span onclick="delete_file6('<?php echo $filePath.$filename19 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename19 ?>" target="_blank"><?php echo $filename19 ?></a>&nbsp;&nbsp;<span onclick="delete_file6('<?php echo $filePath.$filename19 ?>',1,6,5)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_19()">Upload File</button>
                                                 <?php } ?>
@@ -1450,7 +1462,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment165) ? $comment165 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment165) ? $comment165 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1484,7 +1496,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename20)) { ?>
-                                                    <a href="<?php echo $filePath.$filename20 ?>" target="_blank"><?php echo $filename20 ?></a>&nbsp;&nbsp;<span onclick="delete_file6('<?php echo $filePath.$filename20 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename20 ?>" target="_blank"><?php echo $filename20 ?></a>&nbsp;&nbsp;<span onclick="delete_file6('<?php echo $filePath.$filename20 ?>',1,6,6)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_20()">Upload File</button>
                                                 <?php } ?>
@@ -1505,7 +1517,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment166) ? $comment166 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment166) ? $comment166 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1541,7 +1553,7 @@
                             <div class="table-responsive mt-4 container" id="">
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
-                                        <tr>
+                                    <tr>
                                             <th class="text-center">Reports 1.7.1</th>
                                             <th class="text-center" style="width: 250px">Attachments</th>
                                             <th class="text-center" style="width: 150px">Actions</th>
@@ -1558,7 +1570,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename21)) { ?>
-                                                    <a href="<?php echo $filePath.$filename21 ?>" target="_blank"><?php echo $filename21 ?></a>&nbsp;&nbsp;<span onclick="delete_file7('<?php echo $filePath.$filename21 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename21 ?>" target="_blank"><?php echo $filename21 ?></a>&nbsp;&nbsp;<span onclick="delete_file7('<?php echo $filePath.$filename21 ?>',1,7,1)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_21()">Upload File</button>
                                                 <?php } ?>
@@ -1579,7 +1591,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment171) ? $comment171 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment171) ? $comment171 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>

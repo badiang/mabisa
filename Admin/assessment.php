@@ -129,11 +129,13 @@
                             <div style="float: left;">
                                 <h6 class="m-0 font-weight-bold text-primary">List of Barangay Assessment Result</h6>
                             </div>
-                          
+                            <!-- <div style="float: right;">
+                                <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#addLocation">Add User</button>
+                            </div> -->
                         </div>
                         <div class="card-body" id="viewLocation">
                             <div class="table-responsive">
-                            <table class="table table-sm table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <?php 
                                       // $stmt = $dbconn->prepare("SELECT COUNT(*) FROM pos.received_from where area_code=? and cmp_code=? ");
                                       $stmt = $dbconn->prepare("SELECT COUNT(*) FROM assessment where id!='$id'");
@@ -143,7 +145,7 @@
                                       if ($count != 0) {
                                    ?>
                                     <thead>
-                                        <tr class="text-center">
+                                        <tr>
                                             <th>#</th>
                                             <th>Region</th>
                                             <th>Province</th>
@@ -152,12 +154,12 @@
                                             <th>Year</th>
                                             <th>Status</th>
                                             <th>Transaction Date & Time</th>
-                                            <th class="text-center"style="width: 100px;">Action</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <?php if ($count > 10) { ?>
                                     <tfoot>
-                                    <tr class="text-center">
+                                        <tr>
                                             <th>#</th>
                                             <th>Region</th>
                                             <th>Province</th>
@@ -166,14 +168,17 @@
                                             <th>Year</th>
                                             <th>Status</th>
                                             <th>Transaction Date & Time</th>
-                                            <th class="text-center"style="width: 100px;">Action</th>
+                                            <th>Action</th>
                                         </tr>
                                     </tfoot>
                                     <?php } ?>
                                     <tbody>
                                         <?php 
                                         $num = 1;
+                                        // $query = $dbconn->prepare("SELECT * FROM pos.received_from where area_code=? and cmp_code=? order by brand_name");
                                         $query = $dbconn->prepare("SELECT a.keyctr,a.id,a.year,a.date_time,c.region_name,d.province_name,e.city_name,f.barangay_name FROM assessment as a  inner join region as c on a.region_code=c.region_code inner join province as d on a.province_code=d.province_code inner join city as e on a.city_code=e.city_code inner join barangay as f on a.barangay_code=f.barangay_code inner join account as acc on a.id=acc.id where a.id!='$id'");
+                                        // $query->bindParam(1, $area_code);
+                                        // $query->bindParam(2, $cmp_code);
                                         $query->execute();
                                         while($row = $query->fetch(PDO::FETCH_ASSOC)) {
                                             $date = DateTime::createFromFormat('Y-m-d H:i:s', $row['date_time']);
@@ -187,7 +192,8 @@
                                             $stmt->bindParam(2, $g_year);
                                             $stmt->execute();
                                             $count = $stmt->fetchColumn();
-                                            $count_complete = $count_complete+$count;
+
+                                            $count_complete = $coun_complete+$count;
                                        ?>
                                         <tr>
                                             <td><?php echo $num ?></td>
@@ -204,10 +210,13 @@
                                                 <td>Not Started</td>
                                             <?php }?>
                                             <td><?php echo $formattedDate; ?></td>
-                                            <td class="text-center small">
-                                                <a href="view_other_barangay_file.php?tab=<?php echo $row['keyctr'].'/1' ?>" target="_blank" class="btn btn-sm btn-info">View</a>
+                                            <td>
+                                                <!-- <a href="#" class="btn btn-sm btn-info" onclick="view_ass('<?php echo $row['keyctr'] ?>')">view</a> -->
+                                                <a href="view_other_barangay_file.php?tab=<?php echo $row['keyctr'].'/1' ?>" target="_blank" class="btn btn-sm btn-info">view</a>
+                                              <!-- <a href="#" class="btn btn-sm btn-danger btn-circle" onclick="delete_user('<?php echo $row['id'] ?>')">
+                                                  <i class="fas fa-trash"></i>
+                                              </a> -->
                                             </td>
-
                                         </tr>
                                         <?php $num++;} ?>
                                     </tbody>

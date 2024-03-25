@@ -626,7 +626,7 @@
                             <div class="table-responsive" id="assessmenTable">
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-dark">
-                                        <tr>
+                                        <tr class="text-center">
                                             <th>#</th>
                                             <th>Areas</th>
                                             <th>Total Score</th>
@@ -649,7 +649,7 @@
                                                         <span class="text-warning">No</span>
                                                 <?php } ?>
                                             </td>
-                                            <td>
+                                            <td class="text-center">
                                                 <a href="assessment_view_create.php?tab=<?php echo $key.'/1' ?>" class="btn btn-sm btn-success" >Create</a>
                                             </td>
                                             <td class="text-center">
@@ -681,7 +681,7 @@
                                                         <span class="text-warning">No</span>
                                                 <?php } ?>
                                             </td>
-                                            <td>
+                                            <td class="text-center">
                                                 <a href="assessment_view_create2.php?tab=<?php echo $key.'/1' ?>" class="btn btn-sm btn-success" >Create</a>
                                             </td>
                                             <td class="text-center">
@@ -713,7 +713,7 @@
                                                         <span class="text-warning">No</span>
                                                 <?php } ?>
                                             </td>
-                                            <td>
+                                            <td class="text-center">
                                                 <a href="assessment_view_create3.php?tab=<?php echo $key.'/1' ?>" class="btn btn-sm btn-success" >Create</a>
                                             </td>
                                             <td class="text-center">
@@ -745,7 +745,7 @@
                                                         <span class="text-warning">No</span>
                                                 <?php } ?>
                                             </td>
-                                            <td>
+                                            <td class="text-center">
                                                 <a href="assessment_view_create4.php?tab=<?php echo $key.'/1' ?>" class="btn btn-sm btn-success" >Create</a>
                                             </td>
                                             <td class="text-center">
@@ -777,7 +777,7 @@
                                                         <span class="text-warning">No</span>
                                                 <?php } ?>
                                             </td>
-                                            <td>
+                                            <td class="text-center">
                                                 <a href="assessment_view_create5.php?tab=<?php echo $key.'/1' ?>" class="btn btn-sm btn-success" >Create</a>
                                             </td>
                                             <td class="text-center">
@@ -809,7 +809,7 @@
                                                         <span class="text-warning">No</span>
                                                 <?php } ?>
                                             </td>
-                                            <td>
+                                            <td class="text-center">
                                                 <a href="assessment_view_create6.php?tab=<?php echo $key.'/1' ?>" class="btn btn-sm btn-success" >Create</a>
                                             </td>
                                             <td class="text-center">

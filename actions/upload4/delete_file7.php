@@ -21,10 +21,13 @@
 
 if (isset($_POST["delete"])) {
     $val = '../'.$_POST['val'];
+    $area = $_POST['area'];
+    $under = $_POST['under'];
+    $numb = $_POST['numb'];
     if (file_exists($val)) {
         if (unlink($val)) {
             echo "File deleted successfully.";
-            deletePointsCore47($id,$year,$dbconn);
+            deletePointsCore47($id,$year,$dbconn,$area,$under,$numb);
         } else {
             echo "Failed to delete the file.";
         }

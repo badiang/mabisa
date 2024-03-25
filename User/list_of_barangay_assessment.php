@@ -173,7 +173,7 @@
                                     </tfoot>
                                     <?php } ?>
                                     <tbody>
-                                        <?php 
+                                        <!-- <?php 
                                         $num = 1;
 
                                         $query = $dbconn->prepare("SELECT a.keyctr,a.id,a.year,a.date_time,a.status,c.region_name,d.province_name,e.city_name,f.barangay_name FROM assessment as a  inner join region as c on a.region_code=c.region_code inner join province as d on a.province_code=d.province_code inner join city as e on a.city_code=e.city_code inner join barangay as f on a.barangay_code=f.barangay_code");
@@ -192,7 +192,7 @@
                                             echo $count = $stmt->fetchColumn();
 
                                             $count_complete = $count_complete+$count;
-                                       ?>
+                                       ?> -->
                                         <tr>
                                             <td><?php echo $num ?></td>
                                             <td><?php echo $row['region_name'] ?></td>

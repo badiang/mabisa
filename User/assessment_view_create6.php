@@ -27,88 +27,86 @@
         $stmt->execute();
         $count = $stmt->fetchColumn();
 
-    if ($count >= 1) {
-        $query = $dbconn->prepare("SELECT a.keyctr,a.id,a.year,a.date_time,a.status,c.region_name,d.province_name,e.city_name,f.barangay_name FROM assessment as a  inner join region as c on a.region_code=c.region_code inner join province as d on a.province_code=d.province_code inner join city as e on a.city_code=e.city_code inner join barangay as f on a.barangay_code=f.barangay_code where a.keyctr=?");
-        $query->bindParam(1, $key);
-        $query->execute();
-        $result = $query->fetch(PDO::FETCH_ASSOC);
+        if ($count >= 1) {
+            $query = $dbconn->prepare("SELECT a.keyctr,a.id,a.year,a.date_time,a.status,c.region_name,d.province_name,e.city_name,f.barangay_name FROM assessment as a  inner join region as c on a.region_code=c.region_code inner join province as d on a.province_code=d.province_code inner join city as e on a.city_code=e.city_code inner join barangay as f on a.barangay_code=f.barangay_code where a.keyctr=?");
+            $query->bindParam(1, $key);
+            $query->execute();
+            $result = $query->fetch(PDO::FETCH_ASSOC);
 
-        $region_name = $result['region_name'];
-        $province_name = $result['province_name'];
-        $city_name = $result['city_name'];
-        $barangay_name = $result['barangay_name'];
-        $year = $result['year'];
-        $_SESSION['view_year'] = $year;
-        //$status = $result['status'];
+            $region_name = $result['region_name'];
+            $province_name = $result['province_name'];
+            $city_name = $result['city_name'];
+            $barangay_name = $result['barangay_name'];
+            $year = $result['year'];
+            $_SESSION['view_year'] = $year;
+            //$status = $result['status'];
 
-        $query61 = $dbconn->prepare("SELECT remarks,area_points,
-            comment1,approved1,
-            comment2,approved2,
-            comment3,approved3,
-            comment4,approved4
-            FROM area_assessment_points where user_id=? and year_=? and area_number=6 and under_area=1");
-        $query61->bindParam(1, $id);
-        $query61->bindParam(2, $year);
-        $query61->execute();
-        $result61 = $query61->fetch(PDO::FETCH_ASSOC);
+            $query61 = $dbconn->prepare("SELECT remarks,area_points,
+                comment1,approved1,
+                comment2,approved2,
+                comment3,approved3,
+                comment4,approved4
+                FROM area_assessment_points where user_id=? and year_=? and area_number=6 and under_area=1");
+            $query61->bindParam(1, $id);
+            $query61->bindParam(2, $year);
+            $query61->execute();
+            $result61 = $query61->fetch(PDO::FETCH_ASSOC);
 
-    if ($result61 !== false) {
-        $remarks61 = $result61['remarks'];
-        $area_points61 = $result61['area_points'];
-        $comment611 = $result61['comment1'];
-        $approved611 = $result61['approved1'];
-        $comment612 = $result61['comment2'];
-        $approved612 = $result61['approved2'];
-        $comment613 = $result61['comment3'];
-        $approved613 = $result61['approved3'];
-        $comment614 = $result61['comment4'];
-        $approved614 = $result61['approved4'];
-    }
+            if ($result61 !== false) {
+            $remarks61 = $result61['remarks'];
+            $area_points61 = $result61['area_points'];
+            $comment611 = $result61['comment1'];
+            $approved611 = $result61['approved1'];
+            $comment612 = $result61['comment2'];
+            $approved612 = $result61['approved2'];
+            $comment613 = $result61['comment3'];
+            $approved613 = $result61['approved3'];
+            $comment614 = $result61['comment4'];
+            $approved614 = $result61['approved4'];
+            }
+            $query62 = $dbconn->prepare("SELECT remarks,area_points,
+                comment1,approved1,
+                comment2,approved2,
+                comment3,approved3,
+                comment4,approved4,
+                comment5,approved5,
+                comment6,approved6
+                FROM area_assessment_points where user_id=? and year_=? and area_number=6 and under_area=2");
+            $query62->bindParam(1, $id);
+            $query62->bindParam(2, $year);
+            $query62->execute();
+            $result62 = $query62->fetch(PDO::FETCH_ASSOC);
 
-        $query62 = $dbconn->prepare("SELECT remarks,area_points,
-            comment1,approved1,
-            comment2,approved2,
-            comment3,approved3,
-            comment4,approved4,
-            comment5,approved5,
-            comment6,approved6
-            FROM area_assessment_points where user_id=? and year_=? and area_number=6 and under_area=2");
-        $query62->bindParam(1, $id);
-        $query62->bindParam(2, $year);
-        $query62->execute();
-        $result62 = $query62->fetch(PDO::FETCH_ASSOC);
+            if ($result62 !== false) {
+            $remarks62 = $result62['remarks'];
+            $area_points62 = $result62['area_points'];
+            $comment621 = $result62['comment1'];
+            $approved621 = $result62['approved1'];
+            $comment622 = $result62['comment2'];
+            $approved622 = $result62['approved2'];
+            $comment623 = $result62['comment3'];
+            $approved623 = $result62['approved3'];
+            $comment624 = $result62['comment4'];
+            $approved624 = $result62['approved4'];
+            $comment625 = $result62['comment5'];
+            $approved625 = $result62['approved5'];
+            $comment626 = $result62['comment6'];
+            $approved626 = $result62['approved6'];
+            }
+            $query63 = $dbconn->prepare("SELECT remarks,area_points,
+                comment1,approved1 
+                FROM area_assessment_points where user_id=? and year_=? and area_number=6 and under_area=3");
+            $query63->bindParam(1, $id);
+            $query63->bindParam(2, $year);
+            $query63->execute();
+            $result63 = $query63->fetch(PDO::FETCH_ASSOC);
 
-    if ($result62 !== false) {
-        $remarks62 = $result62['remarks'];
-        $area_points62 = $result62['area_points'];
-        $comment621 = $result62['comment1'];
-        $approved621 = $result62['approved1'];
-        $comment622 = $result62['comment2'];
-        $approved622 = $result62['approved2'];
-        $comment623 = $result62['comment3'];
-        $approved623 = $result62['approved3'];
-        $comment624 = $result62['comment4'];
-        $approved624 = $result62['approved4'];
-        $comment625 = $result62['comment5'];
-        $approved625 = $result62['approved5'];
-        $comment626 = $result62['comment6'];
-        $approved626 = $result62['approved6'];
-    }
-
-        $query63 = $dbconn->prepare("SELECT remarks,area_points,
-            comment1,approved1 
-            FROM area_assessment_points where user_id=? and year_=? and area_number=6 and under_area=3");
-        $query63->bindParam(1, $id);
-        $query63->bindParam(2, $year);
-        $query63->execute();
-        $result63 = $query63->fetch(PDO::FETCH_ASSOC);
-
-    if ($result63 !== false) {
-        $remarks63 = $result63['remarks'];
-        $area_points63 = $result63['area_points'];
-        $comment631 = $result63['comment1'];
-        $approved631 = $result63['approved1'];
-    }
+            if ($result63 !== false) {
+            $remarks63 = $result63['remarks'];
+            $area_points63 = $result63['area_points'];
+            $comment631 = $result63['comment1'];
+            $approved631 = $result63['approved1'];
+        }
         }else{
 ?>
             <script type="text/javascript">
@@ -225,7 +223,7 @@
                             </div>
                         </div>
                         <div class="card-body" id="viewLocation">
-                        <p style="text-align: center;">Legends :&nbsp;&nbsp;&nbsp;&nbsp;
+                        <p style="text-align: right; padding-right: 25px;">Legends&nbsp;&nbsp;&nbsp;&nbsp;
                                     <span class="btn btn-sm btn-danger btn-circle">
                                         <i class="">&times;</i>
                                     </span>
@@ -247,7 +245,7 @@
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
                                         <tr>
-                                            <th class="text-center">Reports 6.1.1</th>
+                                        <th class="text-center">Reports 6.1.1</th>
                                             <th class="text-center" style="width: 250px">Attachments</th>
                                             <th class="text-center" style="width: 150px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
@@ -264,7 +262,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename611)) { ?>
-                                                    <a href="<?php echo $filePath.$filename611 ?>" target="_blank"><?php echo $filename611 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename611 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename611 ?>" target="_blank"><?php echo $filename611 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename611 ?>',6,1,1)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_611()">Upload File</button>
                                                 <?php } ?>
@@ -285,7 +283,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment611) ? $comment611 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment611) ? $comment611 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -313,7 +311,7 @@
                                     </tbody>
                                     <thead class="table-primary">
                                         <tr>
-                                            <th class="text-center">Reports 6.1.2</th>
+                                        <th class="text-center">Reports 6.1.2</th>
                                             <th class="text-center" style="width: 250px">Attachments</th>
                                             <th class="text-center" style="width: 150px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
@@ -329,7 +327,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename612)) { ?>
-                                                    <a href="<?php echo $filePath.$filename612 ?>" target="_blank"><?php echo $filename612 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename612 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename612 ?>" target="_blank"><?php echo $filename612 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename612 ?>',6,1,2)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_612()">Upload File</button>
                                                 <?php } ?>
@@ -350,7 +348,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment612) ? $comment612 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment612) ? $comment612 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -378,7 +376,7 @@
                                     </tbody>
                                     <thead class="table-primary">
                                         <tr>
-                                            <th class="text-center">Reports 6.1.3</th>
+                                        <th class="text-center">Reports 6.1.3</th>
                                             <th class="text-center" style="width: 250px">Attachments</th>
                                             <th class="text-center" style="width: 150px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
@@ -394,7 +392,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename613)) { ?>
-                                                    <a href="<?php echo $filePath.$filename613 ?>" target="_blank"><?php echo $filename613 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename613 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename613 ?>" target="_blank"><?php echo $filename613 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename613 ?>',6,1,3)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_613()">Upload File</button>
                                                 <?php } ?>
@@ -415,7 +413,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment613) ? $comment613 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment613) ? $comment613 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -443,7 +441,7 @@
                                     </tbody>
                                     <thead class="table-primary">
                                         <tr>
-                                            <th class="text-center">Reports 6.1.4</th>
+                                        <th class="text-center">Reports 6.1.4</th>
                                             <th class="text-center" style="width: 250px">Attachments</th>
                                             <th class="text-center" style="width: 150px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
@@ -459,7 +457,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename614)) { ?>
-                                                    <a href="<?php echo $filePath.$filename614 ?>" target="_blank"><?php echo $filename614 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename614 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename614 ?>" target="_blank"><?php echo $filename614 ?></a>&nbsp;&nbsp;<span onclick="delete_file1('<?php echo $filePath.$filename614 ?>',6,1,4)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_614()">Upload File</button>
                                                 <?php } ?>
@@ -480,7 +478,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment614) ? $comment614: '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment614) ? $comment614: '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -515,7 +513,7 @@
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
                                         <tr>
-                                            <th class="text-center">Reports 6.2.1</th>
+                                        <th class="text-center">Reports 6.2.1</th>
                                             <th class="text-center" style="width: 250px">Attachments</th>
                                             <th class="text-center" style="width: 150px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
@@ -531,7 +529,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename615)) { ?>
-                                                    <a href="<?php echo $filePath.$filename615 ?>" target="_blank"><?php echo $filename615 ?></a>&nbsp;&nbsp;<span onclick="delete_file2('<?php echo $filePath.$filename615 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename615 ?>" target="_blank"><?php echo $filename615 ?></a>&nbsp;&nbsp;<span onclick="delete_file2('<?php echo $filePath.$filename615 ?>',6,2,1)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_615()">Upload File</button>
                                                 <?php } ?>
@@ -552,7 +550,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment621) ? $comment621: '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment621) ? $comment621: '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -588,7 +586,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename616)) { ?>
-                                                    <a href="<?php echo $filePath.$filename616 ?>" target="_blank"><?php echo $filename616 ?></a>&nbsp;&nbsp;<span onclick="delete_file2('<?php echo $filePath.$filename616 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename616 ?>" target="_blank"><?php echo $filename616 ?></a>&nbsp;&nbsp;<span onclick="delete_file2('<?php echo $filePath.$filename616 ?>',6,2,2)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_616()">Upload File</button>
                                                 <?php } ?>
@@ -609,7 +607,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment622) ? $comment622 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment622) ? $comment622 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -645,7 +643,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename617)) { ?>
-                                                    <a href="<?php echo $filePath.$filename617 ?>" target="_blank"><?php echo $filename617 ?></a>&nbsp;&nbsp;<span onclick="delete_file2('<?php echo $filePath.$filename617 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename617 ?>" target="_blank"><?php echo $filename617 ?></a>&nbsp;&nbsp;<span onclick="delete_file2('<?php echo $filePath.$filename617 ?>',6,2,3)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_617()">Upload File</button>
                                                 <?php } ?>
@@ -666,7 +664,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment623) ? $comment623 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment623) ? $comment623 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -702,7 +700,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename618)) { ?>
-                                                    <a href="<?php echo $filePath.$filename618 ?>" target="_blank"><?php echo $filename618 ?></a>&nbsp;&nbsp;<span onclick="delete_file2('<?php echo $filePath.$filename618 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename618 ?>" target="_blank"><?php echo $filename618 ?></a>&nbsp;&nbsp;<span onclick="delete_file2('<?php echo $filePath.$filename618 ?>',6,2,4)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_618()">Upload File</button>
                                                 <?php } ?>
@@ -723,7 +721,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment624) ? $comment624: '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment624) ? $comment624: '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -759,7 +757,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename619)) { ?>
-                                                    <a href="<?php echo $filePath.$filename619 ?>" target="_blank"><?php echo $filename619 ?></a>&nbsp;&nbsp;<span onclick="delete_file2('<?php echo $filePath.$filename619 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename619 ?>" target="_blank"><?php echo $filename619 ?></a>&nbsp;&nbsp;<span onclick="delete_file2('<?php echo $filePath.$filename619 ?>',6,2,5)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_619()">Upload File</button>
                                                 <?php } ?>
@@ -780,7 +778,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment625) ? $comment625 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment625) ? $comment625 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -816,7 +814,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename620)) { ?>
-                                                    <a href="<?php echo $filePath.$filename620 ?>" target="_blank"><?php echo $filename620 ?></a>&nbsp;&nbsp;<span onclick="delete_file2('<?php echo $filePath.$filename620 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename620 ?>" target="_blank"><?php echo $filename620 ?></a>&nbsp;&nbsp;<span onclick="delete_file2('<?php echo $filePath.$filename620 ?>',6,2,6)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_620()">Upload File</button>
                                                 <?php } ?>
@@ -837,7 +835,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment626) ? $comment626 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment626) ? $comment626 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -872,7 +870,7 @@
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
                                         <tr>
-                                            <th class="text-center">Reports 6.3.1</th>
+                                        <th class="text-center">Reports 6.3.1</th>
                                             <th class="text-center" style="width: 250px">Attachments</th>
                                             <th class="text-center" style="width: 150px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
@@ -888,7 +886,7 @@
                                                 ?>
 
                                                 <?php if (file_exists($filePath.$filename621)) { ?>
-                                                    <a href="<?php echo $filePath.$filename621 ?>" target="_blank"><?php echo $filename621 ?></a>&nbsp;&nbsp;<span onclick="delete_file3('<?php echo $filePath.$filename621 ?>')" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
+                                                    <a href="<?php echo $filePath.$filename621 ?>" target="_blank"><?php echo $filename621 ?></a>&nbsp;&nbsp;<span onclick="delete_file3('<?php echo $filePath.$filename621 ?>',6,3,1)" style="cursor: pointer;color: red;"><i class="fas fa-trash"></i></span>
                                                 <?php }else{ ?>
                                                     <button class="btn btn-sm btn-success" onclick="upload_621()">Upload File</button>
                                                 <?php } ?>
@@ -909,7 +907,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset($comment631) ? $comment631 : '' ?></label>
+                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment631) ? $comment631 : '' ?></label>
                                                             </div>
                                                             </div>
                                                         </div>

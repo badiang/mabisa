@@ -381,7 +381,7 @@ function uploadFile220() {
     });
 }
 
-function delete_file(val) {
+function delete_file(val,area,under,numb) {
     // alert(val);
     $.ajax({
         type: "POST",
@@ -389,6 +389,9 @@ function delete_file(val) {
         async: false,
         data: {
             val: val,
+            area: area,
+            under: under,
+            numb: numb,
             delete: 1
         },
         success:function(result){
@@ -397,7 +400,7 @@ function delete_file(val) {
         }
     });
 }
-function delete_file1(val) {
+function delete_file1(val,area,under,numb) {
     // alert(val);
     $.ajax({
         type: "POST",
@@ -405,6 +408,9 @@ function delete_file1(val) {
         async: false,
         data: {
             val: val,
+            area: area,
+            under: under,
+            numb: numb,
             delete: 1
         },
         success:function(result){
@@ -413,7 +419,7 @@ function delete_file1(val) {
         }
     });
 }
-function delete_file2(val) {
+function delete_file2(val,area,under,numb) {
     // alert(val);
     $.ajax({
         type: "POST",
@@ -421,6 +427,9 @@ function delete_file2(val) {
         async: false,
         data: {
             val: val,
+            area: area,
+            under: under,
+            numb: numb,
             delete: 1
         },
         success:function(result){
@@ -429,7 +438,7 @@ function delete_file2(val) {
         }
     });
 }
-function delete_file3(val) {
+function delete_file3(val,area,under,numb) {
     // alert(val);
     $.ajax({
         type: "POST",
@@ -437,6 +446,9 @@ function delete_file3(val) {
         async: false,
         data: {
             val: val,
+            area: area,
+            under: under,
+            numb: numb,
             delete: 1
         },
         success:function(result){
