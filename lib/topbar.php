@@ -80,46 +80,49 @@
                                     Alerts Center
                                 </h6>
                                 <?php 
-                                    $sql_noti_show = $dbconn->prepare("SELECT * FROM area_assessment_points where user_id=? and noti_me=1 ");
+                                    $sql_noti_show = $dbconn->prepare("SELECT * FROM area_assessment_points WHERE user_id=? AND noti_me=1 LIMIT 3");
                                     $sql_noti_show->bindParam(1, $id);
                                     $sql_noti_show->execute();
-                                    while($row_noti_show = $sql_noti_show->fetch(PDO::FETCH_ASSOC)){ 
-
+                                    $notificationCount = 0; 
+                                    while($row_noti_show = $sql_noti_show->fetch(PDO::FETCH_ASSOC)) { 
                                         $timestamp = strtotime($row_noti_show['date_']);
                                         $formattedDate = date("F j, Y", $timestamp);
                                         $yr = date("Y",strtotime($row_noti_show['date_']));
-                                ?>
-                                    <?php if ($row_noti_show['approved'] == 2): ?>
-                                        <!-- <a class="dropdown-item d-flex align-items-center" href="assessment_view_create.php?tab=<?php echo $row_noti_show['keyctr'] ?>/1"> -->
-                                        <a class="dropdown-item d-flex align-items-center" href="comment_review.php?alert=1&yr=<?php echo $yr ?>">
-                                            <div class="mr-3">
-                                                <div class="icon-circle bg-warning">
-                                                    <i class="fas fa-exclamation-triangle text-white"></i>
+                                        if ($row_noti_show['approved'] == 2) {
+                                            ?>
+                                            <a class="dropdown-item d-flex align-items-center" href="comment_review.php?alert=1&yr=<?php echo $yr ?>">
+                                                <div class="mr-3">
+                                                    <div class="icon-circle bg-warning">
+                                                        <i class="fas fa-exclamation-triangle text-white"></i>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div>
-                                                <div class="small text-gray-500"><?php echo $formattedDate ?></div>
-                                                <span class="font-weight-bold"><?php echo $row_noti_show['area_number'].'.'.$row_noti_show['under_area'] ?> has been disapproved by the admin.</span>                                      
-                                            </div>
-                                        </a>
-                                    <?php endif ?>
+                                                <div>
+                                                    <div class="small text-gray-500"><?php echo $formattedDate ?></div>
+                                                    <span class="font-weight-bold"><?php echo $row_noti_show['area_number'].'.'.$row_noti_show['under_area'] ?> has been disapproved by the admin.</span>                                      
+                                                </div>
+                                            </a>
+                                            <?php
+                                        } elseif ($row_noti_show['approved'] == 1) {
+                                            ?>
+                                            <a class="dropdown-item d-flex align-items-center" href="comment_review.php?alert=1&yr=<?php echo $yr ?>">
+                                                <div class="mr-3">
+                                                    <div class="icon-circle bg-success">
+                                                        <i class="fas fa-check text-white"></i>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="small text-gray-500"><?php echo $formattedDate ?></div>
+                                                    <span class="font-weight-bold"><?php echo $row_noti_show['area_number'].'.'.$row_noti_show['under_area'] ?> has been approved by the admin.</span> 
+                                                </div>
+                                            </a>
+                                            <?php
+                                        }
+                                        $notificationCount++;
+                                    }
 
-                                    <?php if ($row_noti_show['approved'] == 1): ?>
-                                        <!-- <a class="dropdown-item d-flex align-items-center" href="assessment_view_create.php?tab=<?php echo $row_noti_show['keyctr'] ?>/1"> -->
-                                        <a class="dropdown-item d-flex align-items-center" href="comment_review.php?alert=1&yr=<?php echo $yr ?>">
-                                            <div class="mr-3">
-                                                <div class="icon-circle bg-success">
-                                                    <i class="fas fa-donate text-white"></i>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div class="small text-gray-500"><?php echo $formattedDate ?></div>
-                                                <span class="font-weight-bold"><?php echo $row_noti_show['area_number'].'.'.$row_noti_show['under_area'] ?> has been approved by the admin.</span> 
-                                            </div>
-                                        </a>
-                                    <?php endif ?>
-                                    
-                                <?php } ?>
+                                ?>
+                                <span id="display_noti"></span>
+                                <span id="seeMoreLink"><button class="dropdown-item text-center small text-gray-500" onclick="seeMoreLink(event)" style="cursor: pointer;">See More</button></span>
                                 <!-- <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a> -->
                             </div>
                         </li>

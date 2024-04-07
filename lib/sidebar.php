@@ -40,11 +40,11 @@
                     </div>
                 </div>
             </li>
-            <!-- <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link" href="comment_review.php">
                     <i class="fas fa-file-alt"></i>
                     <span>Comment Review</span></a>
-            </li> -->
+            </li>
             <!-- <li class="nav-item">
                 <a class="nav-link" href="self_assessment.php">
                     <i class="fas fa-file"></i>

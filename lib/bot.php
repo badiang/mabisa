@@ -81,3 +81,60 @@
     <script src="../vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
     <script src="../js/demo/datatables-demo.js"></script>
+
+<script type="text/javascript">
+
+    function seeMoreLink(event) {
+        event.stopPropagation();
+        $('#display_noti').show();
+        $.ajax({
+            url: '../actions/notifications.php',
+            type: 'GET',
+            data: {
+                seemore: 1
+            },
+            success: function(response) {
+                $('#display_noti').html(response);
+                $('#seeMoreLink').html('<button id="seeMoreLink" class="dropdown-item text-center small text-gray-500" onclick="seeLessLink(event)">See Less</button>');
+            },
+            error: function(xhr, status, error) {
+                console.error('Error loading notifications:', error);
+                // Handle error
+                loadingMore = false;
+            }
+        });
+    }
+    function seeLessLink(event) {
+        event.stopPropagation();
+        $('#display_noti').hide();
+        $('#seeMoreLink').html('<button id="seeMoreLink" class="dropdown-item text-center small text-gray-500" onclick="seeMoreLink(event)">See More</button>');
+    }
+
+    function seeMoreLink2(event) {
+        event.stopPropagation();
+        $('#display_noti2').show();
+        $.ajax({
+            url: '../actions/notifications2.php',
+            type: 'GET',
+            data: {
+                seemore: 1
+            },
+            success: function(response) {
+                $('#display_noti2').html(response);
+                $('#seeMoreLink2').html('<button id="seeMoreLink2" class="dropdown-item text-center small text-gray-500" onclick="seeLessLink2(event)">See Less</button>');
+            },
+            error: function(xhr, status, error) {
+                console.error('Error loading notifications2:', error);
+                // Handle error
+                loadingMore = false;
+            }
+        });
+    }
+    function seeLessLink2(event) {
+        event.stopPropagation();
+        $('#display_noti2').hide();
+        $('#seeMoreLink2').html('<button id="seeMoreLink2" class="dropdown-item text-center small text-gray-500" onclick="seeMoreLink2(event)">See More</button>');
+    }
+
+
+</script>

@@ -60,9 +60,9 @@ if(isset($_FILES['fileToUpload'])){
             ?>
                 <script type="text/javascript" language="javascript">
                     alert('<?php echo $alert ?>');
-                    window.location = "<?php echo $_SERVER['HTTP_REFERER']; ?>";
+                    window.location = "<? echo $_SERVER['HTTP_REFERER']; ?>";
                 </script>
-            <?php
+            <?
             exit;    
         } else{
             $alert = 'Error uploading file.';
@@ -75,6 +75,6 @@ if(isset($_FILES['fileToUpload'])){
 }
 ?>
 <script type="text/javascript" language="javascript">
-    alert('<?php echo $alert;?>')
-    window.location = "<?php echo $_SERVER['HTTP_REFERER']; ?>"
+    alert('<? echo $alert;?>')
+    window.location = "<? echo $_SERVER['HTTP_REFERER']; ?>"
 </script>

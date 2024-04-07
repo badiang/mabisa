@@ -213,12 +213,34 @@
 </head>
 
 <body id="page-top">
+
+    <!-- Page Wrapper -->
     <div id="wrapper">
+
+        <!-- Sidebar -->
         <?php include '../lib/sidebar.php' ?>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
             <div id="content">
+
+                <!-- Topbar -->
                 <?php include '../lib/topbar.php' ?>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
                 <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <!-- <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
+                        For more information about DataTables, please visit the <a target="_blank"
+                            href="https://datatables.net">official DataTables documentation</a>.</p> -->
+
+                    <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-body">
                             <div class="row">
@@ -300,12 +322,12 @@
                             <div class="table-responsive mt-4 container" id="">
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
-                                    <tr>
+                                        <tr>
                                         <th class="text-center">Reports 1.1.1</th>
-                                        <th class="text-center" style="width: 250px">Attachments</th>
-                                        <th class="text-center" style="width: 150px">Actions</th>
-                                        <th class="text-center" style="width: 50px">Status</th>
-                                    </tr>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
@@ -339,7 +361,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment1) ? $comment1 : '' ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment1 ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -384,7 +406,7 @@
                                                 <div class="modal fade" id="commentModal112" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
-                                                        <div class="modal-header" calss=" text-center">
+                                                            <div class="modal-header">
                                                                 <h5 class="modal-title" id="commentModalLabel" style="font-weight: bold;">View Comment</h5>
                                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                   <span aria-hidden="true">&times;</span>
@@ -392,7 +414,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment2) ? $comment2 : '' ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment2 ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -455,7 +477,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment3) ? $comment3 : '' ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment3 ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -508,7 +530,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment4) ? $comment4 : '' ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment4 ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -561,7 +583,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment5) ? $comment5 : '' ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment5 ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -614,7 +636,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment6) ? $comment6 : '' ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment6 ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -667,7 +689,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment7) ? $comment7 : '' ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment7 ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -730,7 +752,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment8) ? $comment8 : '' ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment8 ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -793,7 +815,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment9) ? $comment9 : '' ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment9 ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -858,7 +880,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment10) ? $comment10 : '' ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment10 ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -894,12 +916,12 @@
                             <div class="table-responsive mt-4 container" id="">
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
-                                    <tr>
+                                        <tr>
                                         <th class="text-center">Reports 1.2.1</th>
-                                        <th class="text-center" style="width: 250px">Attachments</th>
-                                        <th class="text-center" style="width: 150px">Actions</th>
-                                        <th class="text-center" style="width: 50px">Status</th>
-                                    </tr>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
@@ -932,7 +954,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment121) ? $comment121 : '' ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment121 ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -968,10 +990,10 @@
                             <div class="table-responsive mt-4 container" id="">
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
-                                    <tr>
-                                            <th class="text-center">Reports 1.3.1</th>
-                                            <th class="text-center" style="width: 250px">Attachments</th>
-                                            <th class="text-center" style="width: 150px">Actions</th>
+                                        <tr>
+                                        <th class="text-center">Reports 1.3.1</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
@@ -1006,7 +1028,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment131) ? $comment131 : '' ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment131 ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1042,10 +1064,10 @@
                             <div class="table-responsive mt-4 container" id="">
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
-                                    <tr>
-                                            <th class="text-center">Reports 1.4.1</th>
-                                            <th class="text-center" style="width: 250px">Attachments</th>
-                                            <th class="text-center" style="width: 150px">Actions</th>
+                                        <tr>
+                                        <th class="text-center">Reports 1.4.1</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
@@ -1080,7 +1102,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment141) ? $comment141 : '' ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment141 ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1116,12 +1138,12 @@
                             <div class="table-responsive mt-4 container" id="">
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
-                                    <tr>
+                                        <tr>
                                         <th class="text-center">Reports 1.5.1</th>
-                                        <th class="text-center" style="width: 250px">Attachments</th>
-                                        <th class="text-center" style="width: 150px">Actions</th>
-                                        <th class="text-center" style="width: 50px">Status</th>
-                                    </tr>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
@@ -1154,7 +1176,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment151) ? $comment151 : '' ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment151 ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1190,12 +1212,12 @@
                             <div class="table-responsive mt-4 container" id="">
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
-                                    <tr>
+                                        <tr>
                                         <th class="text-center">Reports 1.6.1</th>
-                                        <th class="text-center" style="width: 250px">Attachments</th>
-                                        <th class="text-center" style="width: 150px">Actions</th>
-                                        <th class="text-center" style="width: 50px">Status</th>
-                                    </tr>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
@@ -1228,7 +1250,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment161) ? $comment161 : '' ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment161 ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1283,7 +1305,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment162) ? $comment162 : '' ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment162 ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1338,7 +1360,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment163) ? $comment163 : '' ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment163 ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1393,7 +1415,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment164) ? $comment164 : '' ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment164 ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1424,10 +1446,10 @@
                             <div class="table-responsive mt-4 container" id="">
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
-                                    <tr>
-                                            <th class="text-center">Reports 1.6.2</th>
-                                            <th class="text-center" style="width: 250px">Attachments</th>
-                                            <th class="text-center" style="width: 150px">Actions</th>
+                                        <tr>
+                                        <th class="text-center">Reports 1.6.2</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
@@ -1462,7 +1484,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment165) ? $comment165 : '' ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment165 ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1517,7 +1539,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment166) ? $comment166 : '' ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment166 ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1553,10 +1575,10 @@
                             <div class="table-responsive mt-4 container" id="">
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
-                                    <tr>
-                                            <th class="text-center">Reports 1.7.1</th>
-                                            <th class="text-center" style="width: 250px">Attachments</th>
-                                            <th class="text-center" style="width: 150px">Actions</th>
+                                        <tr>
+                                        <th class="text-center">Reports 1.7.1</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
@@ -1591,7 +1613,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                            <label for=""><b>Admin Remarks:</b> <?php echo isset($comment171) ? $comment171 : '' ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment171 ?></label>
                                                             </div>
                                                             </div>
                                                         </div>

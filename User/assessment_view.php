@@ -626,13 +626,13 @@
                             <div class="table-responsive" id="assessmenTable">
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-dark">
-                                        <tr class="text-center">
-                                            <th>#</th>
-                                            <th>Areas</th>
-                                            <th>Total Score</th>
-                                            <th>Admin Review</th>
-                                            <th>Actions</th>
-                                            <th>Status</th>
+                                        <tr>
+                                            <th class="text-center">#</th>
+                                            <th class="text-center">Areas</th>
+                                            <th class="text-center">Total Score</th>
+                                            <th class="text-center">Admin Review</th>
+                                            <th class="text-center">Actions</th>
+                                            <th class="text-center">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
