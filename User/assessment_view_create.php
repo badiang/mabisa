@@ -16,6 +16,20 @@
       die("ERROR: Unable to connect to database.");
     }
     $id = $_SESSION['id'];
+    
+    if (!empty($_GET['alert'])) {
+        $ar = $_GET['ar'];
+        if ($_GET['alert'] == 1) {
+            $stmt = $dbconn->prepare("UPDATE area_assessment_points set noti_me=false where user_id=? and area_number=?");
+            $stmt->bindParam(1, $id);
+            $stmt->bindParam(2, $ar);
+            $stmt->execute();
+        }
+        $currentYear = $_GET['yr'];
+    }else{
+        $currentYear = date('Y');
+        
+    }
 
     if (isset($_GET['tab'])) {
         $temp = explode("/", $_GET['tab']);
@@ -27,164 +41,167 @@
         $stmt->execute();
         $count = $stmt->fetchColumn();
 
-    if ($count >= 1) {
-        $query = $dbconn->prepare("SELECT a.keyctr,a.id,a.year,a.date_time,a.status,c.region_name,d.province_name,e.city_name,f.barangay_name FROM assessment as a  inner join region as c on a.region_code=c.region_code inner join province as d on a.province_code=d.province_code inner join city as e on a.city_code=e.city_code inner join barangay as f on a.barangay_code=f.barangay_code where a.keyctr=?");
-        $query->bindParam(1, $key);
-        $query->execute();
-        $result = $query->fetch(PDO::FETCH_ASSOC);
+        if ($count >= 1) {
+            $query = $dbconn->prepare("SELECT a.keyctr,a.id,a.year,a.date_time,a.status,c.region_name,d.province_name,e.city_name,f.barangay_name FROM assessment as a  inner join region as c on a.region_code=c.region_code inner join province as d on a.province_code=d.province_code inner join city as e on a.city_code=e.city_code inner join barangay as f on a.barangay_code=f.barangay_code where a.keyctr=?");
+            $query->bindParam(1, $key);
+            $query->execute();
+            $result = $query->fetch(PDO::FETCH_ASSOC);
 
-        $region_name = $result['region_name'];
-        $province_name = $result['province_name'];
-        $city_name = $result['city_name'];
-        $barangay_name = $result['barangay_name'];
-        $year = $result['year'];
-        $_SESSION['view_year'] = $year;
-       
-        $query1 = $dbconn->prepare("SELECT 
-            comment1,approved1,
-            comment2,approved2,
-            comment3,approved3,
-            comment4,approved4,
-            comment5,approved5,
-            comment6,approved6,
-            comment7,approved7,
-            comment8,approved8,
-            comment9,approved9,
-            comment10,approved10
-            FROM area_assessment_points where user_id=? and year_=? and area_number=1 and under_area=1");
-        $query1->bindParam(1, $id);
-        $query1->bindParam(2, $year);
-        $query1->execute();
-        $result1 = $query1->fetch(PDO::FETCH_ASSOC);
-    
-    if ($result1 !== false) {
-        $comment1 = $result1['comment1'];
-        $approved1 = $result1['approved1'];
-        $comment2 = $result1['comment2'];
-        $approved2 = $result1['approved2'];
-        $comment3 = $result1['comment3'];
-        $approved3 = $result1['approved3'];
-        $comment4 = $result1['comment4'];
-        $approved4 = $result1['approved4'];
-        $comment5 = $result1['comment5'];
-        $approved5 = $result1['approved5'];
-        $comment6 = $result1['comment6'];
-        $approved6 = $result1['approved6'];
-        $comment7 = $result1['comment7'];
-        $approved7 = $result1['approved7'];
-        $comment8 = $result1['comment8'];
-        $approved8 = $result1['approved8'];
-        $comment9 = $result1['comment9'];
-        $approved9 = $result1['approved9'];
-        $comment10 = $result1['comment10'];
-        $approved10 = $result1['approved10'];
-    }
+            $region_name = $result['region_name'];
+            $province_name = $result['province_name'];
+            $city_name = $result['city_name'];
+            $barangay_name = $result['barangay_name'];
+            $year = $result['year'];
+            $_SESSION['view_year'] = $year;
+            //$status = $result['status'];
 
-        $query12 = $dbconn->prepare("SELECT 
-        comment1, approved1, remarks, area_points
-            FROM area_assessment_points 
-            WHERE user_id=? AND year_=? AND area_number=1 AND under_area=2");
-        $query12->bindParam(1, $id);
-        $query12->bindParam(2, $year);
-        $query12->execute();
-        $result12 = $query12->fetch(PDO::FETCH_ASSOC);
+
+            $query1 = $dbconn->prepare("SELECT 
+                comment1,approved1,
+                comment2,approved2,
+                comment3,approved3,
+                comment4,approved4,
+                comment5,approved5,
+                comment6,approved6,
+                comment7,approved7,
+                comment8,approved8,
+                comment9,approved9,
+                comment10,approved10
+                FROM area_assessment_points where user_id=? and year_=? and area_number=1 and under_area=1");
+            $query1->bindParam(1, $id);
+            $query1->bindParam(2, $year);
+            $query1->execute();
+            $result1 = $query1->fetch(PDO::FETCH_ASSOC);
+            $result1 = $query1->fetch(PDO::FETCH_ASSOC);
     
-    if ($result12 !== false) {
-        $remarks12 = $result12['remarks'];
-        $area_points12 = $result12['area_points']; // This line should work now
-        $comment121 = $result12['comment1'];
-        $approved121 = $result12['approved1'];
-    }
+            if ($result1 !== false) {
+                $comment1 = $result1['comment1'];
+                $approved1 = $result1['approved1'];
+                $comment2 = $result1['comment2'];
+                $approved2 = $result1['approved2'];
+                $comment3 = $result1['comment3'];
+                $approved3 = $result1['approved3'];
+                $comment4 = $result1['comment4'];
+                $approved4 = $result1['approved4'];
+                $comment5 = $result1['comment5'];
+                $approved5 = $result1['approved5'];
+                $comment6 = $result1['comment6'];
+                $approved6 = $result1['approved6'];
+                $comment7 = $result1['comment7'];
+                $approved7 = $result1['approved7'];
+                $comment8 = $result1['comment8'];
+                $approved8 = $result1['approved8'];
+                $comment9 = $result1['comment9'];
+                $approved9 = $result1['approved9'];
+                $comment10 = $result1['comment10'];
+                $approved10 = $result1['approved10'];
+            }
         
-        $query13 = $dbconn->prepare("SELECT 
-        comment1, approved1, remarks, area_points
-            FROM area_assessment_points 
-            WHERE user_id=? AND year_=? AND area_number=1 AND under_area=3");
-        $query13->bindParam(1, $id);
-        $query13->bindParam(2, $year);
-        $query13->execute();
-        $result13 = $query13->fetch(PDO::FETCH_ASSOC);
-    
-    if ($result13 !== false) {
-        $remarks13 = $result13['remarks']; // This line should work now
-        $comment131 = $result13['comment1'];
-        $approved131 = $result13['approved1'];
-    }
+                $query12 = $dbconn->prepare("SELECT 
+                comment1, approved1, remarks, area_points
+                    FROM area_assessment_points 
+                    WHERE user_id=? AND year_=? AND area_number=1 AND under_area=2");
+                $query12->bindParam(1, $id);
+                $query12->bindParam(2, $year);
+                $query12->execute();
+                $result12 = $query12->fetch(PDO::FETCH_ASSOC);
+            
+            if ($result12 !== false) {
+                $remarks12 = $result12['remarks'];
+                $area_points12 = $result12['area_points']; // This line should work now
+                $comment121 = $result12['comment1'];
+                $approved121 = $result12['approved1'];
+            }
+                
+                $query13 = $dbconn->prepare("SELECT 
+                comment1, approved1, remarks, area_points
+                    FROM area_assessment_points 
+                    WHERE user_id=? AND year_=? AND area_number=1 AND under_area=3");
+                $query13->bindParam(1, $id);
+                $query13->bindParam(2, $year);
+                $query13->execute();
+                $result13 = $query13->fetch(PDO::FETCH_ASSOC);
+            
+            if ($result13 !== false) {
+                $remarks13 = $result13['remarks']; // This line should work now
+                $comment131 = $result13['comment1'];
+                $approved131 = $result13['approved1'];
+            }
+                
+                $query14 = $dbconn->prepare("SELECT 
+                    comment1,approved1, remarks, area_points
+                    FROM area_assessment_points where user_id=? and year_=? and area_number=1 and under_area=4");
+                $query14->bindParam(1, $id);
+                $query14->bindParam(2, $year);
+                $query14->execute();
+                $result14 = $query14->fetch(PDO::FETCH_ASSOC);
         
-        $query14 = $dbconn->prepare("SELECT 
-            comment1,approved1, remarks, area_points
-            FROM area_assessment_points where user_id=? and year_=? and area_number=1 and under_area=4");
-        $query14->bindParam(1, $id);
-        $query14->bindParam(2, $year);
-        $query14->execute();
-        $result14 = $query14->fetch(PDO::FETCH_ASSOC);
-
-    if ($result14 !== false) {
-        $remarks14 = $result14['remarks'];
-        $area_points14 = $result14['area_points'];
-        $comment141 = $result14['comment1'];
-        $approved141 = $result14['approved1'];
-    }
-
-        $query15 = $dbconn->prepare("SELECT 
-            comment1,approved1 , remarks, area_points
-            FROM area_assessment_points where user_id=? and year_=? and area_number=1 and under_area=5");
-        $query15->bindParam(1, $id);
-        $query15->bindParam(2, $year);
-        $query15->execute();
-        $result15 = $query15->fetch(PDO::FETCH_ASSOC);
-    
-    if ($result15 !== false) {
-        $remarks15 = $result15['remarks'];
-        $area_points15 = $result15['area_points'];
-        $comment151 = $result15['comment1'];
-        $approved151 = $result15['approved1'];
-    }
-
-        $query16 = $dbconn->prepare("SELECT 
-            comment1,approved1, remarks, area_points
-            comment2,approved2, remarks, area_points
-            comment3,approved3, remarks, area_points
-            comment4,approved4, remarks, area_points
-            comment5,approved5, remarks, area_points
-            comment6,approved6, remarks, area_points
-            FROM area_assessment_points where user_id=? and year_=? and area_number=1 and under_area=6");
-        $query16->bindParam(1, $id);
-        $query16->bindParam(2, $year);
-        $query16->execute();
-        $result16 = $query16->fetch(PDO::FETCH_ASSOC);
-
-    if ($result16 !== false) {
-        $remarks16 = $result16['remarks'];
-        $area_points16 = $result16['area_points'];
-        $comment161 = $result16['comment1'];
-        $approved161 = $result16['approved1'];
-        $comment162 = $result16['comment2'];
-        $approved162 = $result16['approved2'];
-        $comment163 = $result16['comment3'];
-        $approved163 = $result16['approved3'];
-        $comment164 = $result16['comment4'];
-        $approved164 = $result16['approved4'];
-        $comment165 = $result16['comment5'];
-        $approved165 = $result16['approved5'];
-        $comment166 = $result16['comment6'];
-        $approved166 = $result16['approved6'];
-    }
-
-        $query17 = $dbconn->prepare("SELECT 
-            comment1,approved1, remarks, area_points
-            FROM area_assessment_points where user_id=? and year_=? and area_number=1 and under_area=7");
-        $query17->bindParam(1, $id);
-        $query17->bindParam(2, $year);
-        $query17->execute();
-        $result17 = $query17->fetch(PDO::FETCH_ASSOC);
-
-    if ($result17 !== false) {
-        $remarks17 = $result17['remarks'];
-        $area_points17 = $result17['area_points'];
-        $comment171 = $result17['comment1'];
-        $approved171 = $result17['approved1'];
-    }
+            if ($result14 !== false) {
+                $remarks14 = $result14['remarks'];
+                $area_points14 = $result14['area_points'];
+                $comment141 = $result14['comment1'];
+                $approved141 = $result14['approved1'];
+            }
+        
+                $query15 = $dbconn->prepare("SELECT 
+                    comment1,approved1 , remarks, area_points
+                    FROM area_assessment_points where user_id=? and year_=? and area_number=1 and under_area=5");
+                $query15->bindParam(1, $id);
+                $query15->bindParam(2, $year);
+                $query15->execute();
+                $result15 = $query15->fetch(PDO::FETCH_ASSOC);
+            
+            if ($result15 !== false) {
+                $remarks15 = $result15['remarks'];
+                $area_points15 = $result15['area_points'];
+                $comment151 = $result15['comment1'];
+                $approved151 = $result15['approved1'];
+            }
+        
+                $query16 = $dbconn->prepare("SELECT 
+                    comment1,approved1, remarks, area_points
+                    comment2,approved2, remarks, area_points
+                    comment3,approved3, remarks, area_points
+                    comment4,approved4, remarks, area_points
+                    comment5,approved5, remarks, area_points
+                    comment6,approved6, remarks, area_points
+                    FROM area_assessment_points where user_id=? and year_=? and area_number=1 and under_area=6");
+                $query16->bindParam(1, $id);
+                $query16->bindParam(2, $year);
+                $query16->execute();
+                $result16 = $query16->fetch(PDO::FETCH_ASSOC);
+        
+            if ($result16 !== false) {
+                $remarks16 = $result16['remarks'];
+                $area_points16 = $result16['area_points'];
+                $comment161 = $result16['comment1'];
+                $approved161 = $result16['approved1'];
+                $comment162 = $result16['comment2'];
+                $approved162 = $result16['approved2'];
+                $comment163 = $result16['comment3'];
+                $approved163 = $result16['approved3'];
+                $comment164 = $result16['comment4'];
+                $approved164 = $result16['approved4'];
+                $comment165 = $result16['comment5'];
+                $approved165 = $result16['approved5'];
+                $comment166 = $result16['comment6'];
+                $approved166 = $result16['approved6'];
+            }
+        
+                $query17 = $dbconn->prepare("SELECT 
+                    comment1,approved1, remarks, area_points
+                    FROM area_assessment_points where user_id=? and year_=? and area_number=1 and under_area=7");
+                $query17->bindParam(1, $id);
+                $query17->bindParam(2, $year);
+                $query17->execute();
+                $result17 = $query17->fetch(PDO::FETCH_ASSOC);
+        
+            if ($result17 !== false) {
+                $remarks17 = $result17['remarks'];
+                $area_points17 = $result17['area_points'];
+                $comment171 = $result17['comment1'];
+                $approved171 = $result17['approved1'];
+            }
         }else{
 ?>
             <script type="text/javascript">
@@ -323,7 +340,7 @@
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
                                         <tr>
-                                        <th class="text-center">Reports 1.1.1</th>
+                                            <th class="text-center">Reports 1.1.1</th>
                                             <th class="text-center" style="width: 200px">Attachments</th>
                                             <th class="text-center" style="width: 140px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
@@ -844,9 +861,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 1.1.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -917,7 +934,7 @@
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
                                         <tr>
-                                        <th class="text-center">Reports 1.2.1</th>
+                                            <th class="text-center">Reports 1.2.1</th>
                                             <th class="text-center" style="width: 200px">Attachments</th>
                                             <th class="text-center" style="width: 140px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
@@ -991,7 +1008,7 @@
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
                                         <tr>
-                                        <th class="text-center">Reports 1.3.1</th>
+                                            <th class="text-center">Reports 1.3.1</th>
                                             <th class="text-center" style="width: 200px">Attachments</th>
                                             <th class="text-center" style="width: 140px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
@@ -1065,7 +1082,7 @@
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
                                         <tr>
-                                        <th class="text-center">Reports 1.4.1</th>
+                                            <th class="text-center">Reports 1.4.1</th>
                                             <th class="text-center" style="width: 200px">Attachments</th>
                                             <th class="text-center" style="width: 140px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
@@ -1139,7 +1156,7 @@
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
                                         <tr>
-                                        <th class="text-center">Reports 1.5.1</th>
+                                            <th class="text-center">Reports 1.5.1</th>
                                             <th class="text-center" style="width: 200px">Attachments</th>
                                             <th class="text-center" style="width: 140px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
@@ -1213,7 +1230,7 @@
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
                                         <tr>
-                                        <th class="text-center">Reports 1.6.1</th>
+                                            <th class="text-center">Reports 1.6.1</th>
                                             <th class="text-center" style="width: 200px">Attachments</th>
                                             <th class="text-center" style="width: 140px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
@@ -1447,7 +1464,7 @@
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
                                         <tr>
-                                        <th class="text-center">Reports 1.6.2</th>
+                                            <th class="text-center">Reports 1.6.2</th>
                                             <th class="text-center" style="width: 200px">Attachments</th>
                                             <th class="text-center" style="width: 140px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
@@ -1576,7 +1593,7 @@
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
                                         <tr>
-                                        <th class="text-center">Reports 1.7.1</th>
+                                            <th class="text-center">Reports 1.7.1</th>
                                             <th class="text-center" style="width: 200px">Attachments</th>
                                             <th class="text-center" style="width: 140px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>

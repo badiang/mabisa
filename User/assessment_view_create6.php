@@ -17,6 +17,20 @@
     }
     $id = $_SESSION['id'];
 
+    if (!empty($_GET['alert'])) {
+        $ar = $_GET['ar'];
+        if ($_GET['alert'] == 1) {
+            $stmt = $dbconn->prepare("UPDATE area_assessment_points set noti_me=false where user_id=? and area_number=?");
+            $stmt->bindParam(1, $id);
+            $stmt->bindParam(2, $ar);
+            $stmt->execute();
+        }
+        $currentYear = $_GET['yr'];
+    }else{
+        $currentYear = date('Y');
+        
+    }
+
     if (isset($_GET['tab'])) {
         $temp = explode("/", $_GET['tab']);
         $key = $temp[0];
@@ -238,7 +252,7 @@
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
                                         <tr>
-                                        <th class="text-center">Reports 6.1.1</th>
+                                            <th class="text-center">Reports 6.1.1</th>
                                             <th class="text-center" style="width: 200px">Attachments</th>
                                             <th class="text-center" style="width: 140px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
@@ -305,9 +319,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 6.1.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -370,9 +384,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 6.1.3</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -435,9 +449,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 6.1.4</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -506,7 +520,7 @@
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
                                         <tr>
-                                        <th class="text-center">Reports 6.2.1</th>
+                                            <th class="text-center">Reports 6.2.1</th>
                                             <th class="text-center" style="width: 200px">Attachments</th>
                                             <th class="text-center" style="width: 140px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
@@ -863,7 +877,7 @@
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
                                         <tr>
-                                        <th class="text-center">Reports 6.3.1</th>
+                                            <th class="text-center">Reports 6.3.1</th>
                                             <th class="text-center" style="width: 200px">Attachments</th>
                                             <th class="text-center" style="width: 140px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
