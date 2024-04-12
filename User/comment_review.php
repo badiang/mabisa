@@ -16,19 +16,19 @@
       die("ERROR: Unable to connect to database.");
     }
     $id = $_SESSION['id'];
-    if (!empty($_GET['alert'])) {
-        if ($_GET['alert'] == 1) {
-            $stmt = $dbconn->prepare("UPDATE area_assessment_points set noti_me=false where user_id=?");
-            $stmt->bindParam(1, $id);
-            $stmt->execute();
-        }
-        $currentYear = $_GET['yr'];
-    }else{
-        $currentYear = date('Y');
+    // if (!empty($_GET['alert'])) {
+    //     if ($_GET['alert'] == 1) {
+    //         $stmt = $dbconn->prepare("UPDATE area_assessment_points set noti_me=false where user_id=?");
+    //         $stmt->bindParam(1, $id);
+    //         $stmt->execute();
+    //     }
+    //     $currentYear = $_GET['yr'];
+    // }else{
+    //     $currentYear = date('Y');
         
-    }
+    // }
     
-    
+    $currentYear = date('Y');
 
     $stmt = $dbconn->prepare("SELECT COUNT(*) FROM assessment as a  inner join region as c on a.region_code=c.region_code inner join province as d on a.province_code=d.province_code inner join city as e on a.city_code=e.city_code inner join barangay as f on a.barangay_code=f.barangay_code where a.id=? and a.year=?");
     $stmt->bindParam(1, $id);

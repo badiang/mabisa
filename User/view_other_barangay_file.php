@@ -165,8 +165,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 1.1.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -404,8 +404,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 1.1.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -446,8 +446,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 1.2.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -488,8 +488,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 1.3.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -530,8 +530,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 1.4.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -572,8 +572,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 1.5.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -614,8 +614,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 1.6.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -723,8 +723,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 1.6.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -789,8 +789,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 1.7.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -839,8 +839,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 2.1.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -873,8 +873,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 2.1.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -904,8 +904,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 2.1.3</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -935,8 +935,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 2.1.4</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -995,8 +995,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 2.2.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1028,8 +1028,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 2.2.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1059,8 +1059,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 2.2.3</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1089,7 +1089,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
+                        
                         <div class="row bg-info">
                                 <div class="col-lg-12 text-center text-white"><b>2.3 Extend of Preparedness For Effective Response And Recovery</b></div>
                             </div>
@@ -1098,8 +1098,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 2.3.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1131,8 +1131,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 2.3.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1178,8 +1178,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 3.1.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1212,8 +1212,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 3.1.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1243,8 +1243,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 3.1.3</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1274,8 +1274,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 3.1.4</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1305,8 +1305,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 3.1.5</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1336,8 +1336,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 3.1.6</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1374,8 +1374,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 3.2.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1407,8 +1407,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 3.2.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1440,8 +1440,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 3.2.3</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1480,8 +1480,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 3.3.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1513,8 +1513,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 3.3.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1570,8 +1570,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 3.3.3</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1603,8 +1603,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 3.3.4</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1643,8 +1643,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 3.4.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1676,8 +1676,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 3.4.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1716,8 +1716,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 3.5.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1749,8 +1749,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 3.5.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1789,8 +1789,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 3.6.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1839,8 +1839,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.1.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1873,8 +1873,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.1.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1904,8 +1904,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.1.3</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1935,8 +1935,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.1.4</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1966,8 +1966,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.1.5</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1997,8 +1997,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.1.6</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2035,8 +2035,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.2.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2066,8 +2066,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.2.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2097,8 +2097,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.2.3</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2128,8 +2128,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.2.4</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2188,8 +2188,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.3.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2219,8 +2219,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.3.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2250,8 +2250,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.3.3</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2281,8 +2281,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.3.4</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2319,8 +2319,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.4.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2350,8 +2350,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.4.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2388,8 +2388,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.5.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2419,8 +2419,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.5.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2450,8 +2450,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.5.3</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2481,8 +2481,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.5.4</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2512,8 +2512,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.5.5</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2543,8 +2543,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.5.6</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2581,8 +2581,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.6.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2619,8 +2619,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.7.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2667,8 +2667,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 5.1.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2708,8 +2708,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 5.2.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2741,8 +2741,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 5.2.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2781,8 +2781,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 5.3.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2831,8 +2831,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 6.1.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2865,8 +2865,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 6.1.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2898,8 +2898,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 6.1.3</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2931,8 +2931,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 6.1.4</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2971,8 +2971,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 6.2.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -3141,8 +3141,8 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 6.3.1</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>

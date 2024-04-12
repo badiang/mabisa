@@ -17,6 +17,20 @@
     }
     $id = $_SESSION['id'];
 
+    if (!empty($_GET['alert'])) {
+        $ar = $_GET['ar'];
+        if ($_GET['alert'] == 1) {
+            $stmt = $dbconn->prepare("UPDATE area_assessment_points set noti_me=false where user_id=? and area_number=?");
+            $stmt->bindParam(1, $id);
+            $stmt->bindParam(2, $ar);
+            $stmt->execute();
+        }
+        $currentYear = $_GET['yr'];
+    }else{
+        $currentYear = date('Y');
+        
+    }
+
     if (isset($_GET['tab'])) {
         $temp = explode("/", $_GET['tab']);
         $key = $temp[0];
@@ -53,131 +67,152 @@
             $query41->bindParam(2, $year);
             $query41->execute();
             $result41 = $query41->fetch(PDO::FETCH_ASSOC);
-            $remarks41 = $result41['remarks'];
-            $area_points41 = $result41['area_points'];
-            $comment411 = $result41['comment1'];
-            $approved411 = $result41['approved1'];
-            $comment412 = $result41['comment2'];
-            $approved412 = $result41['approved2'];
-            $comment413 = $result41['comment3'];
-            $approved413 = $result41['approved3'];
-            $comment414 = $result41['comment4'];
-            $approved414 = $result41['approved4'];
-            $comment415 = $result41['comment5'];
-            $approved415 = $result41['approved5'];
-            $comment416 = $result41['comment6'];
-            $approved416 = $result41['approved6'];
 
-            $query42 = $dbconn->prepare("SELECT remarks,area_points,
-                comment1,approved1,
-                comment2,approved2,
-                comment3,approved3,
-                comment4,approved4,
-                comment5,approved5
-                FROM area_assessment_points where user_id=? and year_=? and area_number=4 and under_area=2");
-            $query42->bindParam(1, $id);
-            $query42->bindParam(2, $year);
-            $query42->execute();
-            $result42 = $query42->fetch(PDO::FETCH_ASSOC);
-            $remarks42 = $result42['remarks'];
-            $area_points42 = $result42['area_points'];
-            $comment421 = $result42['comment1'];
-            $approved421 = $result42['approved1'];
-            $comment422 = $result42['comment2'];
-            $approved422 = $result42['approved2'];
-            $comment423 = $result42['comment3'];
-            $approved423 = $result42['approved3'];
-            $comment424 = $result42['comment4'];
-            $approved424 = $result42['approved4'];
-            $comment425 = $result42['comment5'];
-            $approved425 = $result42['approved5'];
-
-            $query43 = $dbconn->prepare("SELECT remarks,area_points,
-                comment1,approved1,
-                comment2,approved2,
-                comment3,approved3,
-                comment4,approved4
-                FROM area_assessment_points where user_id=? and year_=? and area_number=4 and under_area=3");
-            $query43->bindParam(1, $id);
-            $query43->bindParam(2, $year);
-            $query43->execute();
-            $result43 = $query43->fetch(PDO::FETCH_ASSOC);
-            $remarks43 = $result43['remarks'];
-            $area_points43 = $result43['area_points'];
-            $comment431 = $result43['comment1'];
-            $approved431 = $result43['approved1'];
-            $comment432 = $result43['comment2'];
-            $approved432 = $result43['approved2'];
-            $comment433 = $result43['comment3'];
-            $approved433 = $result43['approved3'];
-            $comment434 = $result43['comment4'];
-            $approved434 = $result43['approved4'];
-
-            $query44 = $dbconn->prepare("SELECT remarks,area_points,
-                comment1,approved1,
-                comment2,approved2
-                FROM area_assessment_points where user_id=? and year_=? and area_number=4 and under_area=4");
-            $query44->bindParam(1, $id);
-            $query44->bindParam(2, $year);
-            $query44->execute();
-            $result44 = $query44->fetch(PDO::FETCH_ASSOC);
-            $remarks44 = $result44['remarks'];
-            $area_points44 = $result44['area_points'];
-            $comment441 = $result44['comment1'];
-            $approved441 = $result44['approved1'];
-            $comment442 = $result44['comment2'];
-            $approved442 = $result44['approved2'];
-
-            $query45 = $dbconn->prepare("SELECT remarks,area_points,
-                comment1,approved1,
-                comment2,approved2,
-                comment3,approved3,
-                comment4,approved4,
-                comment5,approved5,
-                comment6,approved6
-                FROM area_assessment_points where user_id=? and year_=? and area_number=4 and under_area=5");
-            $query45->bindParam(1, $id);
-            $query45->bindParam(2, $year);
-            $query45->execute();
-            $result45 = $query45->fetch(PDO::FETCH_ASSOC);
-            $remarks45 = $result45['remarks'];
-            $area_points45 = $result45['area_points'];
-            $comment451 = $result45['comment1'];
-            $approved451 = $result45['approved1'];
-            $comment452 = $result45['comment2'];
-            $approved452 = $result45['approved2'];
-            $comment453 = $result45['comment3'];
-            $approved453 = $result45['approved3'];
-            $comment454 = $result45['comment4'];
-            $approved454 = $result45['approved4'];
-            $comment455 = $result45['comment5'];
-            $approved455 = $result45['approved5'];
-            $comment456 = $result45['comment6'];
-            $approved456 = $result45['approved6'];
-
-            $query46 = $dbconn->prepare("SELECT remarks,area_points,
-                comment1,approved1 
-                FROM area_assessment_points where user_id=? and year_=? and area_number=4 and under_area=6");
-            $query46->bindParam(1, $id);
-            $query46->bindParam(2, $year);
-            $query46->execute();
-            $result46 = $query46->fetch(PDO::FETCH_ASSOC);
-            $remarks46 = $result46['remarks'];
-            $area_points46 = $result46['area_points'];
-            $comment461 = $result46['comment1'];
-            $approved461 = $result46['approved1'];
-
-            $query47 = $dbconn->prepare("SELECT remarks,area_points,
-                comment1,approved1 
-                FROM area_assessment_points where user_id=? and year_=? and area_number=4 and under_area=7");
-            $query47->bindParam(1, $id);
-            $query47->bindParam(2, $year);
-            $query47->execute();
-            $result47 = $query47->fetch(PDO::FETCH_ASSOC);
-            $remarks47 = $result47['remarks'];
-            $area_points47 = $result47['area_points'];
-            $comment471 = $result47['comment1'];
-            $approved471 = $result47['approved1'];
+            if ($result41 !== false) {
+                $remarks41 = $result41['remarks'];
+                $area_points41 = $result41['area_points'];
+                $comment411 = $result41['comment1'];
+                $approved411 = $result41['approved1'];
+                $comment412 = $result41['comment2'];
+                $approved412 = $result41['approved2'];
+                $comment413 = $result41['comment3'];
+                $approved413 = $result41['approved3'];
+                $comment414 = $result41['comment4'];
+                $approved414 = $result41['approved4'];
+                $comment415 = $result41['comment5'];
+                $approved415 = $result41['approved5'];
+                $comment416 = $result41['comment6'];
+                $approved416 = $result41['approved6'];
+            }
+        
+                $query42 = $dbconn->prepare("SELECT remarks,area_points,
+                    comment1,approved1,
+                    comment2,approved2,
+                    comment3,approved3,
+                    comment4,approved4,
+                    comment5,approved5
+                    FROM area_assessment_points where user_id=? and year_=? and area_number=4 and under_area=2");
+                $query42->bindParam(1, $id);
+                $query42->bindParam(2, $year);
+                $query42->execute();
+                $result42 = $query42->fetch(PDO::FETCH_ASSOC);
+        
+            if ($result42 !== false) {
+                $remarks42 = $result42['remarks'];
+                $area_points42 = $result42['area_points'];
+                $comment421 = $result42['comment1'];
+                $approved421 = $result42['approved1'];
+                $comment422 = $result42['comment2'];
+                $approved422 = $result42['approved2'];
+                $comment423 = $result42['comment3'];
+                $approved423 = $result42['approved3'];
+                $comment424 = $result42['comment4'];
+                $approved424 = $result42['approved4'];
+                $comment425 = $result42['comment5'];
+                $approved425 = $result42['approved5'];
+            }
+        
+                $query43 = $dbconn->prepare("SELECT remarks,area_points,
+                    comment1,approved1,
+                    comment2,approved2,
+                    comment3,approved3,
+                    comment4,approved4
+                    FROM area_assessment_points where user_id=? and year_=? and area_number=4 and under_area=3");
+                $query43->bindParam(1, $id);
+                $query43->bindParam(2, $year);
+                $query43->execute();
+                $result43 = $query43->fetch(PDO::FETCH_ASSOC);
+        
+            if ($result43 !== false) {
+                $remarks43 = $result43['remarks'];
+                $area_points43 = $result43['area_points'];
+                $comment431 = $result43['comment1'];
+                $approved431 = $result43['approved1'];
+                $comment432 = $result43['comment2'];
+                $approved432 = $result43['approved2'];
+                $comment433 = $result43['comment3'];
+                $approved433 = $result43['approved3'];
+                $comment434 = $result43['comment4'];
+                $approved434 = $result43['approved4'];
+            }
+        
+                $query44 = $dbconn->prepare("SELECT remarks,area_points,
+                    comment1,approved1,
+                    comment2,approved2
+                    FROM area_assessment_points where user_id=? and year_=? and area_number=4 and under_area=4");
+                $query44->bindParam(1, $id);
+                $query44->bindParam(2, $year);
+                $query44->execute();
+                $result44 = $query44->fetch(PDO::FETCH_ASSOC);
+        
+            if ($result44 !== false) {
+                $remarks44 = $result44['remarks'];
+                $area_points44 = $result44['area_points'];
+                $comment441 = $result44['comment1'];
+                $approved441 = $result44['approved1'];
+                $comment442 = $result44['comment2'];
+                $approved442 = $result44['approved2'];
+            }
+        
+                $query45 = $dbconn->prepare("SELECT remarks,area_points,
+                    comment1,approved1,
+                    comment2,approved2,
+                    comment3,approved3,
+                    comment4,approved4,
+                    comment5,approved5,
+                    comment6,approved6
+                    FROM area_assessment_points where user_id=? and year_=? and area_number=4 and under_area=5");
+                $query45->bindParam(1, $id);
+                $query45->bindParam(2, $year);
+                $query45->execute();
+                $result45 = $query45->fetch(PDO::FETCH_ASSOC);
+            
+            if ($result45 !== false) {
+                $remarks45 = $result45['remarks'];
+                $area_points45 = $result45['area_points'];
+                $comment451 = $result45['comment1'];
+                $approved451 = $result45['approved1'];
+                $comment452 = $result45['comment2'];
+                $approved452 = $result45['approved2'];
+                $comment453 = $result45['comment3'];
+                $approved453 = $result45['approved3'];
+                $comment454 = $result45['comment4'];
+                $approved454 = $result45['approved4'];
+                $comment455 = $result45['comment5'];
+                $approved455 = $result45['approved5'];
+                $comment456 = $result45['comment6'];
+                $approved456 = $result45['approved6'];
+            }
+        
+                $query46 = $dbconn->prepare("SELECT remarks,area_points,
+                    comment1,approved1 
+                    FROM area_assessment_points where user_id=? and year_=? and area_number=4 and under_area=6");
+                $query46->bindParam(1, $id);
+                $query46->bindParam(2, $year);
+                $query46->execute();
+                $result46 = $query46->fetch(PDO::FETCH_ASSOC);
+        
+            if ($result46 !== false) {
+                $remarks46 = $result46['remarks'];
+                $area_points46 = $result46['area_points'];
+                $comment461 = $result46['comment1'];
+                $approved461 = $result46['approved1'];
+            }
+        
+                $query47 = $dbconn->prepare("SELECT remarks,area_points,
+                    comment1,approved1 
+                    FROM area_assessment_points where user_id=? and year_=? and area_number=4 and under_area=7");
+                $query47->bindParam(1, $id);
+                $query47->bindParam(2, $year);
+                $query47->execute();
+                $result47 = $query47->fetch(PDO::FETCH_ASSOC);
+        
+            if ($result47 !== false) {
+                $remarks47 = $result47['remarks'];
+                $area_points47 = $result47['area_points'];
+                $comment471 = $result47['comment1'];
+                $approved471 = $result47['approved1'];
+            }
         }else{
 ?>
             <script type="text/javascript">
@@ -316,7 +351,7 @@
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
                                         <tr>
-                                        <th class="text-center">Reports 4.1.1</th>
+                                            <th class="text-center">Reports 4.1.1</th>
                                             <th class="text-center" style="width: 200px">Attachments</th>
                                             <th class="text-center" style="width: 140px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
@@ -354,7 +389,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment411 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment411) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -383,9 +418,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.1.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -417,7 +452,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment412 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment412) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -446,9 +481,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.1.3</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -480,7 +515,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment413 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment413) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -509,9 +544,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.1.4</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -543,7 +578,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment414 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment414) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -572,9 +607,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.1.5</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -606,7 +641,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment415 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment415) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -635,9 +670,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.1.6</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -669,7 +704,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment416 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment416) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -704,7 +739,7 @@
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
                                         <tr>
-                                        <th class="text-center">Reports 4.2.1</th>
+                                            <th class="text-center">Reports 4.2.1</th>
                                             <th class="text-center" style="width: 200px">Attachments</th>
                                             <th class="text-center" style="width: 140px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
@@ -740,7 +775,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment421 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment421) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -769,9 +804,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.2.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -803,7 +838,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment422 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment422) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -832,9 +867,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.2.3</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -866,7 +901,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment423 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment423) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -895,9 +930,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.2.4</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -929,7 +964,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment424 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment424) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -982,7 +1017,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment425 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment425) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1017,7 +1052,7 @@
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
                                         <tr>
-                                        <th class="text-center">Reports 4.3.1</th>
+                                            <th class="text-center">Reports 4.3.1</th>
                                             <th class="text-center" style="width: 200px">Attachments</th>
                                             <th class="text-center" style="width: 140px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
@@ -1052,7 +1087,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment431 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment431) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1081,9 +1116,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.3.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1115,7 +1150,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment432 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment432) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1144,9 +1179,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.3.3</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1178,7 +1213,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment433 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment433) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1207,9 +1242,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.3.4</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1241,7 +1276,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment434 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment434) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1276,7 +1311,7 @@
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
                                         <tr>
-                                        <th class="text-center">Reports 4.4.1</th>
+                                            <th class="text-center">Reports 4.4.1</th>
                                             <th class="text-center" style="width: 200px">Attachments</th>
                                             <th class="text-center" style="width: 140px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
@@ -1311,7 +1346,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment441 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment441) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1340,9 +1375,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.4.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1374,7 +1409,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment442 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment442) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1409,7 +1444,7 @@
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
                                         <tr>
-                                        <th class="text-center">Reports 4.5.1</th>
+                                            <th class="text-center">Reports 4.5.1</th>
                                             <th class="text-center" style="width: 200px">Attachments</th>
                                             <th class="text-center" style="width: 140px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
@@ -1444,7 +1479,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment451 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment451) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1473,9 +1508,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.5.2</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1507,7 +1542,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment452 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment452) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1536,9 +1571,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.5.3</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1570,7 +1605,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment453 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment453) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1599,9 +1634,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.5.4</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1633,7 +1668,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment454 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment454) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1662,9 +1697,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.5.5</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1696,7 +1731,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment455 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment455) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1725,9 +1760,9 @@
                                     <thead class="table-primary">
                                         <tr>
                                             <th class="text-center">Reports 4.5.6</th>
-                                            <th class="text-center">Attachments</th>
-                                            <th class="text-center">Actions</th>
-                                            <th class="text-center">Status</th>
+                                            <th class="text-center" style="width: 200px">Attachments</th>
+                                            <th class="text-center" style="width: 140px">Actions</th>
+                                            <th class="text-center" style="width: 50px">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1759,7 +1794,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment456 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment456) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1794,7 +1829,7 @@
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
                                         <tr>
-                                        <th class="text-center">Reports 4.6.1</th>
+                                            <th class="text-center">Reports 4.6.1</th>
                                             <th class="text-center" style="width: 200px">Attachments</th>
                                             <th class="text-center" style="width: 140px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
@@ -1829,7 +1864,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment461 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment461) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -1864,7 +1899,7 @@
                                 <table class="table table-bordered" id="" width="100%" cellspacing="0">
                                     <thead class="table-primary">
                                         <tr>
-                                        <th class="text-center">Reports 4.7.1</th>
+                                            <th class="text-center">Reports 4.7.1</th>
                                             <th class="text-center" style="width: 200px">Attachments</th>
                                             <th class="text-center" style="width: 140px">Actions</th>
                                             <th class="text-center" style="width: 50px">Status</th>
@@ -1899,7 +1934,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                             <div class="form-group mt-3">
-                                                                <label for=""><b>Admin Remarks:</b> <?php echo $comment471 ?></label>
+                                                                <label for=""><b>Admin Remarks:</b> <?php echo isset ($comment471) ?></label>
                                                             </div>
                                                             </div>
                                                         </div>

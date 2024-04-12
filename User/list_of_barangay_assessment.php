@@ -189,9 +189,9 @@
                                             $stmt->bindParam(1, $g_id);
                                             $stmt->bindParam(2, $g_year);
                                             $stmt->execute();
-                                            echo $count = $stmt->fetchColumn();
+                                            // echo $count = $stmt->fetchColumn();
 
-                                            $count_complete = $coun_complete+$count;
+                                            // $count_complete = $count_complete+$count;
                                        ?>
                                         <tr>
                                             <td><?php echo $num ?></td>
